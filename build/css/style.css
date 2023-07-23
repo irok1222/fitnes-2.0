@@ -1210,6 +1210,8 @@ button,
 }
 
 .header__intro {
+  padding-left: 5.3645833333%;
+  padding-right: 5.3645833333%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1219,25 +1221,56 @@ button,
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 30px;
+  gap: 10px;
 }
 @media (max-width: 767px) {
   .header__intro {
     padding-top: 40px;
     padding-bottom: 25px;
+    padding-left: 5.859375%;
+    padding-right: 5.859375%;
   }
 }
 @media (max-width: 319px) {
   .header__intro {
     padding-top: 15px;
     padding-bottom: 0;
+    padding-left: 4.6875%;
+    padding-right: 4.6875%;
   }
+}
+
+.header__logo {
+  width: 7.625em;
+  height: 1.5em;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .header__logo {
+    width: 5.125em;
+    height: 1.0625em;
+  }
+}
+@media (max-width: 319px) {
+  .header__logo {
+    width: 4.3125em;
+    height: 1.5em;
+  }
+}
+
+.header__svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .header__phone {
   padding: 0;
   margin: 0;
   font-family: Alumni Sans;
-  font-size: 26px;
+  font-size: 1.625em;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -1245,49 +1278,77 @@ button,
 }
 @media (max-width: 767px) {
   .header__phone {
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: 700;
     letter-spacing: 0.48px;
   }
 }
 @media (max-width: 319px) {
   .header__phone {
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: 600;
     letter-spacing: 0.4px;
     padding-top: 5px;
   }
 }
 
-@media (max-width: 767px) {
-  .header__logo {
-    width: 82px;
-    height: 17px;
-  }
+.hero__wrapper {
+  padding-left: 5.3645833333%;
+  padding-right: 5.3645833333%;
 }
-@media (max-width: 319px) {
-  .header__logo {
-    width: 69px;
-    height: 24px;
-  }
+
+.hero__city {
+  font-family: Alumni Sans;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.09em;
+  padding: 0;
+  margin: 0;
+}
+
+.hero__title {
+  font-family: Alumni Sans;
+  font-size: 5.75em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.2875em;
+  padding: 0;
+  margin: 0;
+}
+
+.hero__item {
+  padding: 0;
+  margin: 0;
+}
+
+.hero__button {
+  width: 230px;
+  height: 57px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .footer__wrapper {
   background: #030A1A;
   padding-top: 41px;
   padding-bottom: 32px;
-  padding-left: 8.5833333333%;
-  padding-right: 8.5833333333%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding-left: 5.3645833333%;
+  padding-right: 5.3645833333%;
 }
 @media (max-width: 767px) {
   .footer__wrapper {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     padding-left: 5.859375%;
     padding-right: 5.859375%;
+    grid-auto-flow: column;
   }
 }
 @media (max-width: 319px) {
@@ -1297,17 +1358,24 @@ button,
   }
 }
 
+.footer__logo {
+  width: 5.5em;
+  height: 2em;
+  position: relative;
+}
 @media (max-width: 767px) {
   .footer__logo {
-    width: 82px;
-    height: 18px;
+    width: 4.25em;
+    height: 0.9375em;
   }
 }
-@media (max-width: 319px) {
-  .footer__logo {
-    width: 68px;
-    height: 15px;
-  }
+
+.footer__svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .footer-nav__list {
@@ -1319,22 +1387,26 @@ button,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 40px;
+  gap: 2.5em;
 }
-@media (max-width: 319px) {
+@media (max-width: 767px) {
   .footer-nav__list {
     display: block;
-    gap: 30px;
   }
 }
 
 .footer-nav__link {
   font-family: Roboto Condensed;
-  font-size: 14px;
+  font-size: 0.875em;
   font-weight: 400;
   line-height: normal;
   padding-top: 8px;
   color: #ffffff;
+}
+@media (max-width: 767px) {
+  .footer-nav__link {
+    font-size: 1em;
+  }
 }
 
 .footer__social-list {
@@ -1347,7 +1419,7 @@ button,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0;
+  padding-left: 2.875em;
 }
 
 .footer__social-item {
@@ -1367,11 +1439,6 @@ button,
 
 .footer__social-item:disabled {
   opacity: "0.3";
-}
-
-.footer__social--reddit {
-  fill: red;
-  color: red;
 }
 
 /* @mixin hover-focus {

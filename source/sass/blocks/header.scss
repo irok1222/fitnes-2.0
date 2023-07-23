@@ -4,57 +4,74 @@
 }
 
 .header__intro {
+  padding-left: $padding-dst;
+  padding-right: $padding-dst;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 30px;
-
+  gap: 10px;
 
   @include vp-767 {
     padding-top: 40px;
     padding-bottom: 25px;
-
+    padding-left: $padding-tbl;
+    padding-right: $padding-tbl;
   }
 
   @include vp-319 {
     padding-top: 15px;
     padding-bottom: 0;
-
+    padding-left: $padding-mbl;
+    padding-right: $padding-mbl;
   }
+}
+
+.header__logo{
+  width: 7.625em;
+  height: 1.5em;
+  position: relative;
+
+  @include vp-767 {
+    width: 5.125em;
+    height: 1.0625em;
+  }
+
+  @include vp-319 {
+    width: 4.3125em;
+    height: 1.5em;
+  }
+}
+
+.header__svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .header__phone {
   padding: 0;
   margin: 0;
   font-family: Alumni Sans;
-  font-size: 26px;
+  font-size: 1.625em;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.78px;
 
   @include vp-767 {
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: 700;
     letter-spacing: 0.48px;
   }
 
   @include vp-319 {
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: 600;
     letter-spacing: 0.4px;
     padding-top: 5px;
   }
 }
 
-.header__logo {
-  @include vp-767 {
-    width: 82px;
-    height: 17px;
-  }
-
-  @include vp-319 {
-    width: 69px;
-    height: 24px;
-  }
-}

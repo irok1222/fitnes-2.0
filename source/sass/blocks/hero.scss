@@ -1,0 +1,37 @@
+.hero__wrapper {
+  padding-left: $padding-dst;
+  padding-right: $padding-dst;
+}
+
+.hero__city {
+  font-family: Alumni Sans;
+font-size: 3em;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 0.09em;
+padding: 0;
+margin: 0;
+}
+
+.hero__title {
+font-family: Alumni Sans;
+font-size: 5.75em;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 0.2875em;
+padding: 0;
+margin: 0;
+}
+
+.hero__item {
+  padding: 0;
+  margin: 0;
+}
+
+.hero__button {
+  width: 230px;
+height: 57px;
+flex-shrink: 0;
+}
