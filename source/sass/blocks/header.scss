@@ -13,24 +13,27 @@
   padding-top: 30px;
   gap: 10px;
 
+  // @include vp-1199 {
+  //   padding-left: $padding-tbl;
+  //   padding-right: $padding-tbl;
+  // }
+
   @include vp-767 {
     padding-top: 15px;
     padding-bottom: 0;
     padding-left: $padding-mbl;
     padding-right: $padding-mbl;
   }
-
-
 }
 
 .header__logo{
-  margin-top: 7px;
+    margin-top: 7px;
   margin-left: 28px;
   width: 7.625em;
   height: 1.5em;
   position: relative;
 
-  // @include vp-767 {
+  // @include vp-1199 {
   //   width: 5.125em;
   //   height: 1.0625em;
   // }
@@ -52,15 +55,15 @@
 
 .header__phone {
   padding: 0;
-  margin: 0 31px 0 0;
-  font-family: Alumni Sans;
+  margin: 0 31px 0;
+  font-family: $ff-as;
   font-size: 1.625em;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.78px;
 
-  // @include vp-767 {
+  // @include vp-1199 {
   //   font-size: 1.5em;
   //   font-weight: 700;
   //   letter-spacing: 0.48px;

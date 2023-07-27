@@ -16,7 +16,8 @@ $color-torch-red:                   #ff1553;
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
-
+$liner-gradient: linear-gradient(295deg, #D10A42 35%, #0041CA 49%);
+$gradient:  var(--1, linear-gradient(151deg, #ED0233 0%, #003EB7 100%));
 // Typography
 // ---------------------------------
 
@@ -29,6 +30,8 @@ $ff-rouble:                         "Rouble", "Arial", sans-serif;
 
 $ff-placeholder:                    "Placeholder", "Arial", sans-serif;
 
+$ff-rc: "Roboto Condensed", "Arial", sans-serif;
+$ff-as: "Alumni Sans", "Arial", sans-serif;
 // Animation
 // ---------------------------------
 
@@ -59,6 +62,6 @@ $retina-dppx:                       1.5dppx;
 
 //this proect
 
-$padding-dst: calc((103/1920)*100) + 0%;
+$padding-dst: calc((93/1200)*100) + 0%;
 $padding-tbl: calc((45/768)*100) + 0%;
 $padding-mbl: calc((15/320)*100) + 0%;

@@ -1,0 +1,53 @@
+.gym__wrapper {
+  padding-left: calc((163/1200)*100)+0%;
+  padding-right: calc((697/1200)*100)+0%;
+  padding-top: 120px;
+  padding-bottom: 235px;
+  color: #102654;
+  position: relative;
+}
+
+.gym__title {
+  font-family: $ff-as;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.44px;
+  margin: 0;
+  padding-top: 49px;
+}
+
+.gym__text {
+  font-family: $ff-rc;
+  font-size: 1.125em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 27px */
+  margin: 0;
+  padding-top: 25px;
+}
+
+.gym__description {
+  font-family: $ff-rc;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%; /* 24px */
+  margin: 0;
+  padding-top: 55px;
+}
+
+.gym__img {
+  width: 50%;
+  position: absolute;
+  left: calc((553/1200)*100)+0%;;
+  top: calc((190/1200)*100)+0%;
+}
+
+.gym__video {
+  width: 25%;
+  position: absolute;
+  top: calc((800/1200)*100)+0%;
+  left: calc((540/1200)*100)+0%;;
+}

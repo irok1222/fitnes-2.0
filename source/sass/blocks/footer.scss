@@ -14,11 +14,6 @@
     grid-auto-flow: column;
 
   }
-
-  @include vp-319 {
-    padding-left: $padding-mbl;
-    padding-right: $padding-mbl;
-  }
 }
 
 
@@ -59,7 +54,7 @@
 }
 
 .footer-nav__link {
-  font-family: Roboto Condensed;
+  font-family: $ff-rc;
   font-size: 0.875em;
   font-weight: 400;
   line-height: normal;

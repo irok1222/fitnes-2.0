@@ -1,0 +1,125 @@
+.promo__wrapper {
+  padding-left: $padding-dst;
+  padding-right: $padding-dst;
+  padding-top: 135px;
+  padding-bottom: 135px;
+
+}
+
+.promo__title {
+  color: #102654;
+  font-family: $ff-as;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.62px;
+  margin: 0;
+  padding-bottom: 34px;
+  text-align: center;
+}
+
+.promo__inro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.promo__hit {
+  color: $color-default-white;
+  font-family: $ff-rc;
+  padding-right: 280px;
+  position: relative;
+  background: #ED0233;
+}
+
+.promo__hit-header {
+  margin: 0;
+  padding-top: 35px;
+  padding-left: 20px;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 156%;
+  /* 43.68px */
+}
+
+.promo__hit-price {
+  margin: 0;
+  padding-bottom: 35px;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 156%;
+  /* 109.2px */
+}
+
+.promo__hit-description {
+  margin: 0;
+  padding-bottom: 198px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  /* 25.2px */
+}
+
+.promo__hit-link {
+  color: $color-default-white;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  border-bottom: 2px solid $color-default-white;
+}
+
+.promo__img {
+  position: absolute;
+  left: 280px;
+  top: 0px;
+}
+
+.promo__list {
+  list-style-type: none;
+}
+
+.promo__item {
+  border: 2px solid $gradient;
+  color: #1C3374;
+  font-family: $ff-rc;
+}
+
+.promo__header {
+  margin: 0;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150px;
+  /* 576.923% */
+  padding-top: 42px;
+  padding-left: 10px;
+}
+
+.promo__description {
+  margin: 0;
+  padding-bottom: 80px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  /* 22.4px */
+}
+
+.promo__link {
+  margin: 0;
+  padding: 0;
+  border: 2px solid #1C3374;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
