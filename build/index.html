@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Описание проекта">
   <title>Fitnes-2.0</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -34,6 +34,23 @@
             d="M8.72271 9.05176C9.16539 8.90867 9.73216 9.99638 10.3355 10.4127C10.7884 10.728 11.1352 10.6599 11.1352 10.6599L12.7434 10.6368C12.7434 10.6368 13.5838 10.5849 13.1865 9.9172C13.1536 9.86163 12.9536 9.4222 11.9895 8.51786C10.9815 7.57185 11.1181 7.72512 12.3317 6.08962C13.0712 5.09267 13.3671 4.48376 13.2745 4.22445C13.1856 3.97486 12.6424 4.03969 12.6424 4.03969L10.8305 4.05219C10.6541 4.05265 10.5045 4.10729 10.4365 4.29066C10.4351 4.29252 10.1489 5.06211 9.76735 5.7164C8.96118 7.10046 8.63936 7.17408 8.506 7.08749C8.19992 6.88699 8.27725 6.28317 8.27725 5.85392C8.27725 4.51246 8.47729 3.9531 7.88551 3.80863C7.68779 3.76047 7.54332 3.72898 7.03905 3.72435C6.39449 3.71463 5.84716 3.72435 5.53692 3.8767C5.33086 3.97996 5.17296 4.20639 5.26881 4.21935C5.3892 4.23556 5.65916 4.29344 5.80363 4.4907C5.98932 4.74631 5.98376 5.3191 5.98376 5.3191C5.98376 5.3191 6.0898 6.89857 5.73371 7.09444C5.48922 7.22872 5.1549 6.9546 4.43578 5.69788C4.06858 5.05516 3.79121 4.34484 3.79121 4.34484C3.79121 4.34484 3.7375 4.21287 3.64026 4.14063C3.52449 4.05497 3.36243 4.02765 3.36243 4.02765L1.64265 4.03876C1.64265 4.03876 1.38427 4.04617 1.28935 4.16008C1.20507 4.26103 1.2824 4.4694 1.2824 4.4694C1.2824 4.4694 2.62942 7.65566 4.15471 9.26059C5.55312 10.734 7.14231 10.6363 7.14231 10.6363H7.86236C7.86236 10.6363 8.07953 10.6113 8.19066 10.4918C8.29439 10.3807 8.28976 10.1719 8.28976 10.1719C8.28976 10.1719 8.2754 9.1953 8.72271 9.05176Z" />
         </g>
       </symbol>
+      <symbol id="open" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="21" cy="21" r="20.5" stroke="#1C3374" />
+        <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#1C3374" />
+      </symbol>
+      <symbol id="close" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="21" cy="21" r="20.5" fill="#1C3374" stroke="#1C3374" />
+        <path d="M30 21H21H12" stroke="white" />
+      </symbol>
+      <symbol id="active" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="21" cy="21" r="21" fill="#102654"/>
+        <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="white"/></symbol>
+        <symbol id="disable" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.3">
+          <circle cx="21" cy="21" r="20.5" stroke="#102654"/>
+          <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
+          </g>>
+        </symbol>
     </svg>
 
 
@@ -174,7 +191,7 @@
           <div class="coach__wrapper">
             <h2 class="coach__title">Тренеры</h3>
 
-              <div class="swiper mySwiper">
+              <div class="swiper coach__swiper">
                 <div class="swiper-wrapper">
 
                   <div class="swiper-slide">
@@ -269,17 +286,17 @@
                 <p class="feature__number">900</p>
                 <p class="feature__unit">кв/м</p>
                 <div class="features__text">
-                <p class="features__header">Площадь </p>
-                <p class="features__description">Занимайтесь без очередей и толкучки</p>
-              </div>
+                  <p class="features__header">Площадь </p>
+                  <p class="features__description">Занимайтесь без очередей и толкучки</p>
+                </div>
               </li>
 
               <li class="features__item features__item--rigth features__item--line">
                 <p class="feature__number">70</p>
                 <p class="feature__unit">машин</p>
                 <div class="features__text">
-                <p class="features__header">Собственная парковка </p>
-                <p class="features__description">Вы всегда найдете место для своей машины на нашей парковке</p>
+                  <p class="features__header">Собственная парковка </p>
+                  <p class="features__description">Вы всегда найдете место для своей машины на нашей парковке</p>
                 </div>
               </li>
 
@@ -287,9 +304,9 @@
                 <p class="feature__number">350</p>
                 <p class="feature__unit ">мест</p>
                 <div class="features__text">
-                <p class="features__header">Комфорт </p>
-                <p class="features__description">Просторные раздевалки,
-                  душевые, фен, Wi-Fi, кулеры</p>
+                  <p class="features__header">Комфорт </p>
+                  <p class="features__description">Просторные раздевалки,
+                    душевые, фен, Wi-Fi, кулеры</p>
                 </div>
               </li>
 
@@ -297,12 +314,12 @@
                 <p class="feature__number">5+</p>
                 <p class="feature__unit">лет </p>
                 <div class="features__text">
-                <p class="features__header">Тренерский опыт</p>
-                <p class="features__description">Добивайтесь своих целей быстрее с профессиональным тренером</p>
-</div>
+                  <p class="features__header">Тренерский опыт</p>
+                  <p class="features__description">Добивайтесь своих целей быстрее с профессиональным тренером</p>
+                </div>
               </li>
 
-              <li class= "features__item features__item--center">
+              <li class="features__item features__item--center">
                 <p class="feature__number-center">100</p>
                 <p class="features__header features__header--center">Тренажеров</p>
                 <p class="features__description features__description--center">Современные тренажеры на все группы мышц
@@ -317,89 +334,119 @@
       <section class="promo">
         <div class="container">
           <div class="promo__wrapper">
-          <h2 class="promo__title">Акции</h2>
+            <h2 class="promo__title">Акции</h2>
 
-<div class="promo__inro">
-            <section class="promo__hit">
-              <p class="promo__hit-header">Год</p>
-              <p class="promo__hit-price">4999</p>
-              <p class="promo__hit-description">Безлимитный абонемент в тренажерный зал</p>
-              <a class="promo__hit-link" href="#">подробнее</a>
-              <picture>
-                <source type="image/webp" srcset="./img/promo.webp 1x, ./img/promo@2x.webp 2x">
-                <img class="promo__img img" src="./img/promo.jpg" width="280" height="462" srcset="./img/promo@2x.jpg"
-                  alt="Девушка в спортивной голубом топе и штанах в полуобороте.">
-              </picture>
-            </section>
+            <div class="promo__inro">
+              <section class="promo__hit">
+                <p class="promo__hit-header">Год</p>
+                <p class="promo__hit-price">4999</p>
+                <p class="promo__hit-description">Безлимитный абонемент в тренажерный зал</p>
+                <a class="promo__hit-link" href="#">подробнее</a>
+                <picture>
+                  <source type="image/webp" srcset="./img/promo.webp 1x, ./img/promo@2x.webp 2x">
+                  <img class="promo__img img" src="./img/promo.jpg" width="280" height="462" srcset="./img/promo@2x.jpg"
+                    alt="Девушка в спортивной голубом топе и штанах в полуобороте.">
+                </picture>
+              </section>
 
-            <ul class="promo__list">
-            <li class="promo__item">
-              <p class="promo__header">Месяц бесплатно</p>
-              <p class="promo__description">Приведи друга, получи абонемент в подарок</p>
-              <a class="promo__link" href="#">подробнее</a>
-            </li>
+              <ul class="promo__list">
+                <li class="promo__item">
+                  <p class="promo__header">Месяц бесплатно</p>
+                  <p class="promo__description">Приведи друга, получи абонемент в подарок</p>
+                  <a class="promo__link" href="#">подробнее</a>
+                </li>
 
-            <li class="promo__item">
-              <p class="promo__header">Скидка 20%</p>
-              <p class="promo__description">Корпоративный фитнес с командой</p>
-              <a class="promo__link" href="#">подробнее</a>
-            </li>
+                <li class="promo__item">
+                  <p class="promo__header">Скидка 20%</p>
+                  <p class="promo__description">Корпоративный фитнес с командой</p>
+                  <a class="promo__link" href="#">подробнее</a>
+                </li>
 
-          </ul>
-</div>
-        </div>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="faq">
         <div class="container">
-          <ul class="faq__list">
-            <li>Центр</li>
-            <li>Абонемент</li>
-            <li>Услуги</li>
-            <li>Правила</li>
-          </ul>
+          <div class="faq__wrapper">
+          <h2 class="faq__title">Вопросы и ответы</h2>
+          <div class="faq__intro">
+            <div class="faq__list">
+              <button class="faq__item">Центр</button>
+              <button class="faq__item">Абонемент</button>
+              <button class="faq__item">Услуги</button>
+              <button class="faq__item">Правила</button>
+            </div>
 
-          <ul class="accordion">
-            <li class="accordion__item">
-              <p class="accordion__title">Занятия с тренером входят в абонемент?</p>
-              <p class="accordion__description">При посещении тренажерного зала вам необходимо оплатить занятия с
-                тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить
-                небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
-            </li>
+            <ul class="tab__list">
+              <li class="tab__item">
+                <p class="tab__header">Занятия с тренером входят в абонемент?</p>
+                <p class="tab__description">При посещении тренажерного зала вам необходимо оплатить занятия с
+                  тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить
+                  небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
 
-            <li class="accordion__item">
-              <p class="accordion__title">Можно ли заморозить абонемент?</p>
-              <p class="accordion__description">При посещении тренажерного зала вам необходимо оплатить занятия с
-                тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить
-                небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
-            </li>
+                <svg class="faq__icon" type="button" aria-hidden="true" focusable="false" width="42" height="42"
+                  fill="currentColor">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </li>
 
-            <li class="accordion__item">
-              <p class="accordion__title">Есть ли лимит по посещениям тренажерного зала и групповых занятий?</p>
-              <p class="accordion__description">При посещении тренажерного зала вам необходимо оплатить занятия с
-                тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить
-                небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
-            </li>
+              <li class="tab__item">
+                <p class="tab__header">Можно ли заморозить абонемент?</p>
+                <p class="tab__description">При посещении тренажерного зала вам необходимо оплатить занятия с
+                  тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить
+                  небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                  <svg class="faq__icon" type="button" aria-hidden="true" focusable="false" width="42" height="42"
+                  fill="currentColor">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </li>
 
-            <li class="accordion__item">
-              <p class="accordion__title">Что такое семейный доступ и доступ для друзей?</p>
-              <p class="accordion__description">При посещении тренажерного зала вам необходимо оплатить занятия с
-                тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить
-                небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
-            </li>
-          </ul>
+              <li class="tab__item">
+                <p class="tab__header">Есть ли лимит по посещениям тренажерного зала и групповых занятий?</p>
+                <p class="tab__description">При посещении тренажерного зала вам необходимо оплатить занятия с
+                  тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить
+                  небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                  <svg class="faq__icon" type="button" aria-hidden="true" focusable="false" width="42" height="42"
+                  fill="currentColor">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </li>
+
+              <li class="tab__item">
+                <p class="tab__header">Что такое семейный доступ и доступ для друзей?</p>
+                <p class="tab__description">При посещении тренажерного зала вам необходимо оплатить занятия с
+                  тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить
+                  небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                  <svg class="faq__icon" type="button" aria-hidden="true" focusable="false" width="42" height="42"
+                  fill="currentColor">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
+          </div>
         </div>
       </section>
 
       <section class="feedback">
         <div class="container">
+          <div class="feedback__wrappe">
           <h2 class="feedback__title">Отзывы</h2>
+
           <img src="./img/reviews.jpg" width="80" height="80" alt="фото человека, кто оставил отзыв.">
           <p class="feedbac__name">Анна Орлова</p>
           <p class="feedback__description">«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто,
             тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+
+            <img src="./img/reviews.jpg" width="80" height="80" alt="фото человека, кто оставил отзыв.">
+          <p class="feedbac__name">Анна Орлова</p>
+          <p class="feedback__description">«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто,
+            тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
         </div>
+      </div>
       </section>
 
       <form class="costumer">
@@ -515,10 +562,10 @@
     </footer>
   </div>
 
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script>
-    var swiper = new Swiper(".mySwiper", {
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+  <!-- <script>
+    var swiper = new Swiper(".coach__swiper", {
       cssMode: true,
       loop: true,
       slidesPerView: 4,
@@ -528,8 +575,8 @@
       },
     });
 
-  </script>
-  <script src="js/script.js"></script>
+  </script> -->
+  <script src="js/main.js"></script>
 
 </body>
 

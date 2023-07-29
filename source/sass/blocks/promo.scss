@@ -31,40 +31,38 @@
   padding-right: 280px;
   position: relative;
   background: #ED0233;
+  padding-top: 44px;
+  padding-left: 44px;
+  padding-bottom: 44px;
 }
 
 .promo__hit-header {
   margin: 0;
-  padding-top: 35px;
-  padding-left: 20px;
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
-  line-height: 156%;
-  /* 43.68px */
+
 }
 
 .promo__hit-price {
   margin: 0;
-  padding-bottom: 35px;
+  padding-top: 29px;
   font-size: 70px;
   font-style: normal;
   font-weight: 700;
-  line-height: 156%;
-  /* 109.2px */
 }
 
 .promo__hit-description {
   margin: 0;
-  padding-bottom: 198px;
+  padding-top: 42px;
+  padding-bottom: 184px;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 140%;
-  /* 25.2px */
 }
 
 .promo__hit-link {
+  padding-top: 213px;
   color: $color-default-white;
   font-size: 14px;
   font-style: normal;
@@ -73,9 +71,33 @@
   letter-spacing: 0.7px;
   text-transform: uppercase;
   border-bottom: 2px solid $color-default-white;
+
+  @include hover {
+    opacity: 0.8;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: rgb(255, 255, 255, 0.8);
+  }
+
+  @mixin focus {
+    border: 2px solid $color-default-white;
+    color: $color-default-white;
+  }
+
+  @include active {
+    border-bottom: 2px solid $color-default-white;
+    color: $color-default-white;
+  }
+
+  &:disabled {
+    border-bottom: 2px solid $color-default-white;
+    color: $color-default-white;
+  }
 }
 
+
 .promo__img {
+  width: 52%;
   position: absolute;
   left: 280px;
   top: 0px;
@@ -83,12 +105,20 @@
 
 .promo__list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .promo__item {
-  border: 2px solid $gradient;
+  border: 4px solid transparent;
+  border-image: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
+  border-image-slice: 1;
   color: #1C3374;
   font-family: $ff-rc;
+  padding: 32px;
 }
 
 .promo__header {
@@ -96,30 +126,48 @@
   font-size: 26px;
   font-style: normal;
   font-weight: 700;
-  line-height: 150px;
-  /* 576.923% */
-  padding-top: 42px;
-  padding-left: 10px;
 }
 
 .promo__description {
   margin: 0;
-  padding-bottom: 80px;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 140%;
-  /* 22.4px */
+  padding-top: 10px;
+  padding-bottom: 64px;
 }
 
 .promo__link {
   margin: 0;
   padding: 0;
-  border: 2px solid #1C3374;
+  border-bottom: 2px solid #1C3374;
+  color: #1C3374;
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.6px;
   text-transform: uppercase;
+
+  @include hover {
+    opacity: 0.6;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: rgb(28, 51, 116, 0.6);
+  }
+
+  @mixin focus {
+    border: 2px solid #1C3374;
+    color: #1C3374;
+  }
+
+  @include active {
+    border-bottom: 2px solid #1C3374;
+    color: #1C3374;
+  }
+
+  &:disabled {
+    border-bottom: 2px solid #1C3374;
+    color: #1C3374;
+  }
 }
