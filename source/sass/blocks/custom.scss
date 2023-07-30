@@ -1,0 +1,56 @@
+.wrapper__section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  padding: 0;
+}
+
+.custom__wrapper {
+  padding: 56px 103px 70px 100px;
+  color: $color-default-white;
+  background: #102654;
+}
+
+.custom__wrapper h2 {
+  font-family: $ff-as;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 800;
+  margin: 0;
+  padding-bottom: 22px;
+  letter-spacing: 2.62px;
+  line-height: 156%;
+}
+
+.custom__buttom {
+  font-family: $ff-rc;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  width: 409px;
+  height: 52px;
+  color: $color-default-white;
+  border: 2px solid $color-default-white;
+  background: #102654;
+  margin-top: 30px;
+}
+
+.input {
+  font-family: $ff-rc;
+  width: 192px;
+  border: none;
+  background: #102654;
+  border-bottom: 1px solid $color-default-white;
+  margin-right: 25px;
+}
+
+::placeholder {
+  font-family: $ff-rc ;
+  color: $color-default-white;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
