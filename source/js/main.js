@@ -1,18 +1,24 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-import {swiper} from './modules/slide/coach';
-import {initswiper} from './modules/slide/feedback';
+// import { swiper} from './modules/slide/coach';
+// import { initswiper} from './modules/slide/feedback';
+import {play} from './modules/video';
+import {initTabs} from './modules/tabs/init-tabs';
+
 
 window.addEventListener('DOMContentLoaded', () => {
+
 
   // Utils
   // ---------------------------------
   iosVhFix();
-
+  initTabs();
   // Modules
-  swiper();
-  initswiper();
+
+  // swiper();
+  // initswiper();
+  play();
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

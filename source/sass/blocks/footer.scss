@@ -22,10 +22,10 @@
   height: 2em;
   position: relative;
 
-  @mixin vp-1199 {
-    width: 5.125em;
-    height: 1.125em;
-  }
+  // @mixin vp-1199 {
+  //   width: 5.125em;
+  //   height: 1.125em;
+  // }
 
   @include vp-767 {
     width: 4.25em;

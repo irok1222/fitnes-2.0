@@ -2,27 +2,27 @@
   padding-left: $padding-dst;
   padding-right: $padding-dst;
   padding-top: 135px;
-  padding-bottom: 135px;
+  padding-bottom: 120px;
 
 }
 
 .promo__title {
   color: #102654;
   font-family: $ff-as;
-  font-size: 54px;
+  font-size: 3.375em;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   letter-spacing: 1.62px;
   margin: 0;
-  padding-bottom: 34px;
+  padding-bottom: 31px;
   text-align: center;
 }
 
 .promo__inro {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: calc((40/1200)*100)+0%;
 }
 
 .promo__hit {
@@ -32,13 +32,14 @@
   position: relative;
   background: #ED0233;
   padding-top: 44px;
-  padding-left: 44px;
   padding-bottom: 44px;
+  padding-left: calc((90/1200)*100)+0%;;
+  padding-right: calc((625/1200)*100)+0%;
 }
 
 .promo__hit-header {
   margin: 0;
-  font-size: 28px;
+  font-size: 1.75em;
   font-style: normal;
   font-weight: 700;
 
@@ -47,7 +48,7 @@
 .promo__hit-price {
   margin: 0;
   padding-top: 29px;
-  font-size: 70px;
+  font-size: 4.375em;
   font-style: normal;
   font-weight: 700;
 }
@@ -56,7 +57,7 @@
   margin: 0;
   padding-top: 42px;
   padding-bottom: 184px;
-  font-size: 18px;
+  font-size: 1.125em;
   font-style: normal;
   font-weight: 400;
 }
@@ -64,7 +65,7 @@
 .promo__hit-link {
   padding-top: 213px;
   color: $color-default-white;
-  font-size: 14px;
+  font-size: 0.875em;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -74,9 +75,9 @@
 
   @include hover {
     opacity: 0.8;
-    border-top-style: solid;
-    border-top-width: 2px;
-    border-top-color: rgb(255, 255, 255, 0.8);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: rgb(255, 255, 255, 0.8);
   }
 
   @mixin focus {
@@ -96,10 +97,12 @@
 }
 
 
-.promo__img {
+.promo img {
+  object-fit: cover;
   width: 52%;
+  height: 100%;
   position: absolute;
-  left: 280px;
+  left: calc((580/1200)*100)+0%;
   top: 0px;
 }
 
@@ -109,28 +112,31 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 42px;
 }
 
 .promo__item {
-  border: 4px solid transparent;
+  border: 7px solid transparent;
   border-image: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
   border-image-slice: 1;
   color: #1C3374;
   font-family: $ff-rc;
-  padding: 32px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  padding-right: calc((70/1200)*100)+0%;
+  padding-left: calc((70/1200)*100)+0%;;
 }
 
 .promo__header {
   margin: 0;
-  font-size: 26px;
+  font-size: 1.625em;
   font-style: normal;
   font-weight: 700;
 }
 
 .promo__description {
   margin: 0;
-  font-size: 16px;
+  font-size: 1em;
   font-style: normal;
   font-weight: 400;
   padding-top: 10px;
@@ -142,7 +148,7 @@
   padding: 0;
   border-bottom: 2px solid #1C3374;
   color: #1C3374;
-  font-size: 12px;
+  font-size: 0.75em;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -151,9 +157,9 @@
 
   @include hover {
     opacity: 0.6;
-    border-top-style: solid;
-    border-top-width: 2px;
-    border-top-color: rgb(28, 51, 116, 0.6);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: rgb(28, 51, 116, 0.6);
   }
 
   @mixin focus {

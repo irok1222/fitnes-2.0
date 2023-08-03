@@ -1,5 +1,6 @@
 .header__wrapper {
   color: $color-default-white;
+  background-color: conic-gradient(from 151deg at 16.03% 39.06%, #003D85 32.23633825778961deg, #B80027 313.3060026168823deg);
   background-image: url("/source/img/background.jpg");
   background-size: cover;
 }
@@ -27,7 +28,7 @@
 }
 
 .header__logo {
-  margin-top: 7px;
+  margin-top: 9px;
   width: 7.625em;
   height: 1.5em;
   position: relative;

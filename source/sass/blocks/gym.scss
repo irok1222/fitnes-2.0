@@ -1,8 +1,8 @@
 .gym__wrapper {
-  padding-left: calc((163/1200)*100)+0%;
-  padding-right: calc((697/1200)*100)+0%;
+  padding-left: calc((140 / 1200) * 100) + 0%;
+  padding-right: calc((720 / 1200) * 100) + 0%;
   padding-top: 120px;
-  padding-bottom: 235px;
+  padding-bottom: 262px;
   color: #102654;
   position: relative;
 }
@@ -15,7 +15,7 @@
   line-height: normal;
   letter-spacing: 1.44px;
   margin: 0;
-  padding-top: 49px;
+  padding-top: 39px;
 }
 
 .gym__text {
@@ -24,28 +24,69 @@
   font-style: normal;
   font-weight: 400;
   margin: 0;
-  padding-top: 25px;
+  padding-top: 9px;
 }
 
 .gym__description {
   font-family: $ff-rc;
   font-size: 1em;
   font-style: normal;
-  font-weight: 300;
   margin: 0;
-  padding-top: 55px;
+  padding-top: 41px;
+  line-height: 24px;
 }
 
-.gym__img {
-  width: 50%;
-  position: absolute;
-  left: calc((553/1200)*100)+0%;;
-  top: calc((190/1200)*100)+0%;
+.gym__description--second {
+  padding-top: 10px;
+  margin: 0;
 }
 
-.gym__video {
-  width: 25%;
+.gym img {
   position: absolute;
-  top: calc((800/1200)*100)+0%;
-  left: calc((540/1200)*100)+0%;;
+  width: 48%;
+  left: calc((535 / 1200) * 100) + 0%;
+  top: calc((190 / 1200) * 100) + 0%;
+  object-fit: cover;
+}
+
+video {
+  width: 27%;
+  height: 17vw;
+  position: absolute;
+  top: calc((660 / 1200) * 100) + 0%;
+  left: calc((480 / 1200) * 100) + 0%;
+}
+
+.gym__shadow::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 27%;
+  height: 17vw;
+  background-color: rgba(20, 54, 122, 0.5);
+  top: calc((660 / 1200) * 100) + 0%;
+  left: calc((480 / 1200) * 100) + 0%;
+}
+
+.gym__btn {
+  position: absolute;
+  top: calc((770/1200) * 100) + 0%;
+  right: calc((520/1200) * 100) + 0%;
+  background: transparent;
+  border: none;
+  background-image: url("/source/img/svg/video_btn.svg");
+  width: 6.25em;
+  height: 6.25em;
+
+  @include hover {
+    background-image: url("/source/img/svg/video-btn-hover.svg");
+  }
+
+   @include active {
+    background-image: url("/source/img/svg/video-btn-active.svg");
+  }
+
+  &:disabled {
+    background-image: url("/source/img/svg/video-btn-disabled.svg");
+  }
 }

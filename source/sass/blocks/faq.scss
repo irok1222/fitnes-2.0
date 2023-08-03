@@ -1,5 +1,5 @@
 .faq__wrapper {
-  padding: 120px $padding-dst $padding-dst 120px;
+  padding: 120px $padding-dst 120px $padding-dst;
   background: #F8F9FC;
 }
 
@@ -100,8 +100,7 @@
   z-index: 2;
 }
 
-
-.faq__icon {
+.tab__toggle {
   position: absolute;
   right: -19px;
   top: 24px

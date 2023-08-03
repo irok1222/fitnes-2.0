@@ -1,31 +1,36 @@
 .coach__wrapper {
   padding-left: $padding-dst;
   padding-right: $padding-dst;
-  padding-bottom: 105px;
+  padding-bottom: 91px;
   position: relative;
 }
 
 .swiper-button-prev::after {
   position: absolute;
   color: #AFAFAF;
-  font-size: 1em;
+  font-size: 2em;
+  left:  calc((23/1200)*100)+0%;
+  top: -2px
 }
 
 .swiper-button-next::after {
   position: absolute;
   color: #AFAFAF;
-  font-size: 1em;
+  font-size: 2em;
+  left:  calc((-24/1200)*100)+0%;
+  top: -2px;
 }
 
 .coach__title {
+  margin: 0;
   color: #102654;
   font-family: $ff-as;
-  font-size: 54px;
+  font-size: 3.375em;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   letter-spacing: 1.62px;
-  padding-bottom: 48px;
+  padding-bottom: 27px;
 }
 
 
@@ -37,7 +42,7 @@
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125em;
   background: #fff;
   display: flex;
   justify-content: center;
@@ -54,7 +59,7 @@
 }
 
 .swiper-wrapper {
-  gap: 11px;
+  gap: calc((11/1200)*100)+0%;;
 }
 
 .coach__name {
@@ -63,9 +68,10 @@
   bottom: 20px;
   color: $color-default-white;
   font-family: $ff-rc;
-  font-size: 18px;
+  font-size: 1.125em;
   font-style: normal;
   font-weight: 700;
+  margin: 0;
 }
 
 
