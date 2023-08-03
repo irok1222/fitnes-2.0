@@ -4,16 +4,16 @@ import {Form} from './modules/form-validate/form';
 // import { swiper} from './modules/slide/coach';
 // import { initswiper} from './modules/slide/feedback';
 import {play} from './modules/video';
-import {initTabs} from './modules/tabs/init-tabs';
+import {initTabs} from './vendor/init-tabs';
 
 
 window.addEventListener('DOMContentLoaded', () => {
 
-
+  initTabs();
   // Utils
   // ---------------------------------
   iosVhFix();
-  initTabs();
+
   // Modules
 
   // swiper();
