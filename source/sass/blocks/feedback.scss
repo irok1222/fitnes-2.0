@@ -1,11 +1,14 @@
 .feedback__wrapper {
-  padding: 120px 403px 120px 403px;
+  padding-top: 120px;
+  padding-left: 403px;
+  padding-bottom: 120px;
+  padding-right: 403px;
 }
 
 .feedback__title {
   color: #102654;
   font-family: $ff-as;
-  font-size: 54px;
+  font-size: 3.375em;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -24,10 +27,13 @@
   background: #1C3374;
   font-family: $ff-rc;
   color: $color-default-white;
-  padding: 62px;
+  padding-top: 62px;
+  padding-left: calc((62/1200)*100) + 0%;
+  padding-right: calc((62/1200)*100) + 0%;
+  padding-bottom: 62px;
   display: grid;
   grid-template-columns: max-content auto;
-  gap: 28px;
+  gap: calc((28/1200)*100) + 0%;
 }
 
 .feedback__name {

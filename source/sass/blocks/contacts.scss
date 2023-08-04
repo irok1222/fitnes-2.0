@@ -1,23 +1,27 @@
 .contacts__wrapper {
   color: #102654;
-  padding: 56px 2px 63px 122px;
+  padding-top: 56px;
+  padding-left: calc((122/1200)*100) + 0%;;
+  padding-bottom: 63px;
+  padding-right: calc((122/1200)*100) + 0%;
   font-family: $ff-rc;
 }
 
 .contacts__wrapper h2 {
   font-family: $ff-as;
-  font-size: 54px;
+  font-size: 3.375em;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   letter-spacing: 1.62px;
   margin: 0;
+  padding-left: calc((241/1200)*100) + 0%;
 }
 
 .contacts__intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: calc((120/1200)*100) + 0%;
   position: relative;
   padding-top: 38px;
 }
@@ -28,22 +32,23 @@
   border: 1px solid #74819C;
   width: 102px;
   transform: rotate(90deg);
-  top: 93px;
-  right: 275px;
+  top: calc((760/1200)*100) + 0%;
+  right: calc((460/1200)*100) + 0%;
 }
 
 .contacts__header {
-  font-size: 16px;
+  font-size: 1em;
   font-style: normal;
   font-weight: 700;
   margin: 0;
   padding: 0;
+  padding-left: calc((241/1200)*100) + 0%;
 }
 
 .contacts__description {
-  font-size: 14px;
+  padding-left: calc((241/1200)*100) + 0%;
+  font-size: 0.875em;
   font-style: normal;
   font-weight: 400;
   margin: 0;
-  padding: 0;
 }
