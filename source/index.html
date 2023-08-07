@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Описание проекта">
   <title>Fitnes-2.0</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -53,8 +52,6 @@
         </g>
       </symbol>
     </svg>
-
-
 
     <header>
       <div class="container">
@@ -117,820 +114,802 @@
                 alt="Фото спортивного зала Супер Джим.">
             </picture>
 
-              <div class="gym__shadow">
-                <video class="video" width="364" height="228" poster="./img/video/video.jpg">
-                  <source src="./img/video/video.ogv" type='video/ogg; codecs="theora, vorbis"'>
-                  <source src="./img/video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                  <source src="./img/video/video.webm" type='video/webm; codecs="vp8, vorbis"'>
-                </video>
-              </div>
-          <button class="gym__btn" type="button"></button>
+            <div class="gym__shadow">
+              <video class="video" width="364" height="228" poster="./img/video/video.jpg">
+                <source src="./img/video/video.ogv" type='video/ogg; codecs="theora, vorbis"'>
+                <source src="./img/video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                <source src="./img/video/video.webm" type='video/webm; codecs="vp8, vorbis"'>
+              </video>
+            </div>
+            <button class="gym__btn" type="button"></button>
+          </div>
         </div>
-  </div>
-  </section>
-
-  <section class="component" data-tabs="parent" data-delay="300">
-    <section class="component-heading">
-      <div class="component-heading__head">
-        <h1 class="title">Табы</h1>
-        <div class="component-heading__tabs">
-          <button class="component-heading__tab-control" type="button" data-tabs="control" data-index="0">Описание</button>
-          <button class="component-heading__tab-control is-active" type="button" data-tabs="control" data-index="1">Демо</button>
-        </div>
-      </div><a class="component-heading__download-link btn" href="zip-components/tabs.zip" download="">Скачать компонент</a>
-    </section>
-    <div class="component__content" data-tabs="content" style="height: 2391px;">
-      <section class="component-description" data-tabs="element">
-        <p>В данной реализации используется делегирование, но это не решает вопрос с открытием активного таба так как высота у него устанавливается в JS, этот вопрос решается методом класса. Добавлен ResizeObserver, что помогает менять высоту блока при изменении размеров его содержимого без вызова дополнительных методов или функций (например если в табе будет кнопка показать ещё которая будет разворачивать дополнительный текст)</p>
-        <p>Табы состоят из следующих файлов: <b>tabs.js, init-tabs.js, data-tabs.scss</b> все файлы обязательны к переносу в проект! Файл <b>tabs.scss</b> добавлен только для стилизации, в нём вы можете менять всё что угодно</p>
-        <p>В файле <b>init-tabs.js</b> создаётся экземпляр класса <b>Tabs</b> который записывается в переменную <b>tabs</b>, им вы можете пользоваться по проекту при необходимости, так же он записывается в <b>window.tabs</b>.</p>
-        <p>Если табы находятся на первом экране, во избежание дёрганья во время расчёты высоты элемента, активному элементу <b>data-tabs="element"</b> нужно добавить класс <b>.for-load</b>, после инициализации табов он снимется.</p>
-        <p><b>Используйте в разработке экспортируемую переменную tabs, window сделан для бэкэнда</b></p>
-        <h2 class="subtitle">Обязательные data атрибуты</h2>
-        <table>
-          <tbody><tr>
-            <th>
-              <p>data-tabs="parent"</p>
-            </th>
-            <td>
-              <p>Устанавливается на родителе</p>
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <p>data-tabs="controls"</p>
-            </th>
-            <td>
-              <p>Устанавливается на родителе контролов (кнопок)</p>
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <p>data-tabs="control"</p>
-            </th>
-            <td>
-              <p>Устанавливается на контроле (кнопке)</p>
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <p>data-tabs="content"</p>
-            </th>
-            <td>
-              <p>Устанавливается на родителе показываемых элементов</p>
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <p>data-tabs="element"</p>
-            </th>
-            <td>
-              <p>Устанавливается на показываемом элементе</p>
-            </td>
-          </tr>
-        </tbody></table>
-        <h2 class="subtitle">Не обязательные data атрибуты</h2>
-        <table>
-          <tbody><tr>
-            <th>
-              <p>data-delay="время в милисекундах"</p>
-            </th>
-            <td>
-              <p>Устанавливается на родителе отвечает за задержку при смене табов, а именно задержку между убиранием активного класса у активного элемента и установкой активного класса на выбранном элементе</p>
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <p>data-height="max"</p>
-            </th>
-            <td>
-              <p>Устанавливается на родителе, если он установлен, то высота блока будет равна максимальной высоте элементов таба.</p>
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <p>data-height="unset"</p>
-            </th>
-            <td>
-              <p>Устанавливается на родителе, если он установлен, то высота блока не будет рассчитываться из js, а будет зависеть от стилей. Полезно для кейсов когда у контента фиксированная высота и в табе нужна прокрутка. Пример модалка на весь экран с табами</p>
-            </td>
-          </tr>
-        </tbody></table>
-        <h2 class="subtitle">Методы экземпляра класса tabs</h2>
-        <table>
-          <tbody><tr>
-            <th>
-              <p>tabs.openTab(control)</p>
-            </th>
-            <td>
-              <p>принимает контрол (кнопку) в виде дом элемента отвечающую за открытие таба</p>
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <p>tabs.reInit()</p>
-            </th>
-            <td>
-              <p>Вызывается при динамическом добавлении новых табов, никак не влияет на те табы что уже есть на странице</p>
-            </td>
-          </tr>
-        </tbody></table>
-        <h2 class="subtitle">Инициализация</h2>
-        <p>По умолчанию открыт первый элемент таба, все классы расставляются автоматом. Если нужно, что бы был открыт не первый элемент таба, то нужно установить класс <b>is-active</b> на нужный вам контрол (кнопку). Если вы установите этот класс на всех контролах (кнопках), то он снимется со всех контролов (кнопок) кроме первого по порядку в HTML относящихся к своему родителю <b>(data-tabs="parent")</b>, во вложенных родителях <b>(data-tabs="parent")</b> произойдёт тоже самое но относительно своего родителя.</p>
       </section>
-      <section class="component-demo is-active" data-tabs="element">
-        <h2 class="subtitle">Пример без data-height="max"</h2>
-        <div class="tabs" data-tabs="parent" data-delay="300">
-          <div class="tabs__controls" data-tabs="controls">
-            <button class="tabs__control btn" type="button" data-tabs="control" data-index="0">Таб 1</button>
-            <button class="tabs__control btn is-active" type="button" data-tabs="control" data-index="1">Таб 2</button>
-            <button class="tabs__control btn" type="button" data-tabs="control" data-index="2">Таб 3</button>
-            <button class="tabs__control btn" type="button" data-tabs="control" data-index="3">Таб 4</button>
-          </div>
-          <div class="tabs__content" data-tabs="content" style="height: 365px;">
-            <div class="tabs__element" data-tabs="element">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
+
+      <section class="subscription">
+        <div class="container">
+          <div class="subscription__wrapper" data-tabs="parent">
+            <h2 class="subscription__header">Абонементы</h2>
+            <div class="subscription__controls" data-tabs="controls">
+              <button class="subscription__control subscription__control--month is-active" type="button"
+                data-tabs="control">1 месяц</button>
+              <button class="subscription__control subscription__control--six-month" type="button" data-tabs="control">6
+                месяцев</button>
+              <button class="subscription__control subscription__control--year" type="button" data-tabs="control">12
+                месяцев</button>
             </div>
-            <div class="tabs__element is-active" data-tabs="element">
-              <div class="tabs" data-tabs="parent" data-delay="300">
-                <div class="tabs__controls" data-tabs="controls">
-                  <button class="tabs__control btn" type="button" data-tabs="control" data-index="0">Sub Таб 1</button>
-                  <button class="tabs__control btn" type="button" data-tabs="control" data-index="1">Sub Таб 2</button>
-                  <button class="tabs__control btn" type="button" data-tabs="control" data-index="2">Sub Таб 3</button>
-                  <button class="tabs__control btn is-active" type="button" data-tabs="control" data-index="3">Sub Таб 4</button>
-                </div>
-                <div class="tabs__content" data-tabs="content" style="height: 185px;">
-                  <div class="tabs__element" data-tabs="element">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-                  </div>
-                  <div class="tabs__element" data-tabs="element">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-                  </div>
-                  <div class="tabs__element" data-tabs="element">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-                  </div>
-                  <div class="tabs__element is-active" data-tabs="element">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tabs__element" data-tabs="element">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-            </div>
-            <div class="tabs__element" data-tabs="element">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-            </div>
-          </div>
-        </div>
-        <h2 class="subtitle">Пример с data-height="max"</h2>
-        <div class="tabs" data-tabs="parent" data-delay="300" data-height="max">
-          <div class="tabs__controls" data-tabs="controls">
-            <button class="tabs__control btn is-active" type="button" data-tabs="control" data-index="0">Таб 1</button>
-            <button class="tabs__control btn" type="button" data-tabs="control" data-index="1">Таб 2</button>
-            <button class="tabs__control btn" type="button" data-tabs="control" data-index="2">Таб 3</button>
-            <button class="tabs__control btn" type="button" data-tabs="control" data-index="3">Таб 4</button>
-          </div>
-          <div class="tabs__content" data-tabs="content" style="height: 401px;">
-            <div class="tabs__element is-active" data-tabs="element">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-            </div>
-            <div class="tabs__element" data-tabs="element">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-            </div>
-            <div class="tabs__element" data-tabs="element">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-            </div>
-            <div class="tabs__element" data-tabs="element">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-            </div>
-          </div>
-        </div>
-        <h2 class="subtitle">Пример с data-height="unset"</h2>
-        <div class="tabs tabs--unset" data-tabs="parent" data-delay="300" data-height="unset">
-          <div class="tabs__controls" data-tabs="controls">
-            <button class="tabs__control btn is-active" type="button" data-tabs="control" data-index="0">Таб 1</button>
-            <button class="tabs__control btn" type="button" data-tabs="control" data-index="1">Таб 2</button>
-            <button class="tabs__control btn" type="button" data-tabs="control" data-index="2">Таб 3</button>
-            <button class="tabs__control btn" type="button" data-tabs="control" data-index="3">Таб 4</button>
-          </div>
-          <div class="tabs__content" data-tabs="content">
-            <div class="tabs__element is-active" data-tabs="element">
-              <p>Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-            </div>
-            <div class="tabs__element" data-tabs="element">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-            </div>
-            <div class="tabs__element" data-tabs="element">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-            </div>
-            <div class="tabs__element" data-tabs="element">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-            </div>
-          </div>
-        </div>
-        <h2 class="subtitle">Пример без data-delay</h2>
-        <div class="tabs" data-tabs="parent">
-          <div class="tabs__controls" data-tabs="controls">
-            <button class="tabs__control btn is-active" type="button" data-tabs="control" data-index="0">Таб 1</button>
-            <button class="tabs__control btn" type="button" data-tabs="control" data-index="1">Таб 2</button>
-            <button class="tabs__control btn" type="button" data-tabs="control" data-index="2">Таб 3</button>
-            <button class="tabs__control btn" type="button" data-tabs="control" data-index="3">Таб 4</button>
-          </div>
-          <div class="tabs__content" data-tabs="content" style="height: 293px;">
-            <div class="tabs__element is-active" data-tabs="element">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-            </div>
-            <div class="tabs__element" data-tabs="element">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-            </div>
-            <div class="tabs__element" data-tabs="element">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-            </div>
-            <div class="tabs__element" data-tabs="element">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
+
+            <div class="subscription__programs" data-tabs="content">
+              <ul class="subscription__list subscription__list--month" data-tabs="element">
+
+                <li class="subscription__item">
+                  <p class="subscription__title">С тренером</p>
+                  <p class="subscription__time">12 занятий</p>
+                  <p class="subscription__price">5000</p>
+                  <p class="subscription__price--shadow">5000</p>
+                  <button class="subscription__buttom buttom">купить абонемент</button>
+                </li>
+
+                <li class="subscription__item">
+                  <p class="subscription__title">Дневной</p>
+                  <p class="subscription__time">с 8:00 до 17:00 </p>
+                  <p class="subscription__price">1700</p>
+                  <p class="subscription__price--shadow">1700</p>
+                  <button class="subscription__buttom buttom">купить абонемент</button>
+                </li>
+
+                <li class="subscription__item">
+                  <p class="subscription__title">Полный день</p>
+                  <p class="subscription__time">с 8:00 до 22:00 </p>
+                  <p class="subscription__price">2700</p>
+                  <p class="subscription__price--shadow">2700</p>
+                  <button class="subscription__buttom buttom">купить абонемент</button>
+                </li>
+
+              </ul>
+
+              <ul class="subscription__list subscription__list--six-month" data-tabs="element">
+
+                <li class="subscription__item">
+                  <p class="subscription__title">С тренером</p>
+                  <p class="subscription__time">12 занятий</p>
+                  <p class="subscription__price">10000</p>
+                  <p class="subscription__price--shadow">10000</p>
+                  <button class="subscription__buttom buttom">купить абонемент</button>
+                </li>
+
+                <li class="subscription__item">
+                  <p class="subscription__title">Дневной</p>
+                  <p class="subscription__time">с 8:00 до 17:00 </p>
+                  <p class="subscription__price">3600</p>
+                  <p class="subscription__price--shadow">3600</p>
+                  <button class="subscription__buttom buttom">купить абонемент</button>
+                </li>
+
+                <li class="subscription__item">
+                  <p class="subscription__title">Полный день</p>
+                  <p class="subscription__time">с 8:00 до 22:00 </p>
+                  <p class="subscription__price">5200</p>
+                  <p class="subscription__price--shadow">5200</p>
+                  <button class="subscription__buttom buttom">купить абонемент</button>
+                </li>
+
+              </ul>
+
+              <ul class="subscription__list subscription__list--year" data-tabs="element">
+
+                <li class="subscription__item">
+                  <p class="subscription__title">С тренером</p>
+                  <p class="subscription__time">12 занятий</p>
+                  <p class="subscription__price">20000</p>
+                  <p class="subscription__price--shadow">20000</p>
+                  <button class="subscription__buttom buttom">купить абонемент</button>
+                </li>
+
+                <li class="subscription__item">
+                  <p class="subscription__title">Дневной</p>
+                  <p class="subscription__time">с 8:00 до 17:00 </p>
+                  <p class="subscription__price">4700</p>
+                  <p class="subscription__price--shadow">4700</p>
+                  <button class="subscription__buttom buttom">купить абонемент</button>
+                </li>
+
+                <li class="subscription__item">
+                  <p class="subscription__title">Полный день</p>
+                  <p class="subscription__time">с 8:00 до 22:00 </p>
+                  <p class="subscription__price">6700</p>
+                  <p class="subscription__price--shadow">6700</p>
+                  <button class="subscription__buttom buttom">купить абонемент</button>
+                </li>
+
+              </ul>
             </div>
           </div>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci beatae blanditiis consectetur dolores doloribus earum error et excepturi fugiat, illo magnam maxime molestiae, natus nemo non nostrum porro provident quae quibusdam quisquam quos sed soluta velit veritatis vitae, voluptatem voluptatibus! Ab accusamus amet atque earum incidunt numquam officia optio perferendis. Ad alias doloremque ea eaque eos fugiat impedit itaque maxime nostrum omnis, perferendis placeat provident reprehenderit saepe temporibus? Aliquid fugit inventore laudantium neque repellat! Accusamus adipisci aspernatur atque dolor dolore dolorum earum est et explicabo id impedit inventore magnam maxime nihil, nobis numquam odit quis, quo repudiandae tempora? Aliquam consectetur unde voluptates. A accusamus aspernatur aut beatae corporis, eum incidunt minus necessitatibus repellendus totam ut voluptas! Ab architecto consequuntur dicta dignissimos enim eveniet inventore nulla quibusdam ratione sed. Assumenda cupiditate distinctio dolores, eaque esse facere obcaecati omnis quia repellendus? A adipisci assumenda beatae consequatur cupiditate dolorem dolores eligendi esse ex, fugiat fugit hic illo iure nemo non, nulla possimus praesentium quas quo tempora, temporibus veniam vero? Adipisci aperiam architecto assumenda at autem beatae dicta dolorum esse est et exercitationem expedita in laudantium molestiae nemo nisi nostrum perspiciatis possimus quis rem sapiente soluta tenetur velit voluptas, voluptates! Distinctio, id, quis.</p>
       </section>
-    </div>
-  </section>
 
-  <!-- <section class="subscription">
-    <div class="container">
-      <div class="subscription__wrapper" data-tabs="parent">
-        <h2 class="subscription__header">Абонементы</h2>
-        <div class="subscription__controls" data-tabs="controls">
-          <button class="subscription__control subscription__control--month is-active" type="button" data-tabs="control">1 месяц</button>
-          <button class="subscription__control subscription__control--six-month" type="button" data-tabs="control">6 месяцев</button>
-          <button class="subscription__control subscription__control--year" type="button" data-tabs="control">12 месяцев</button>
-        </div>
+      <section class="games">
+        <div class="container">
+          <div class="games__wrapper">
+            <div class="games__text">
+              <h2 class="games__title"> Super games </h2>
+              <p class="games__header">Ежегодные соревнования по CrossFit</p>
+              <p class="games__dait">Дата</p>
+              <p class="games__number">7</p>
+              <p class="games__month">Марта</p>
+              <p class="games__year">2019</p>
+              <p class="games__time">Время</p>
+              <p class="games__hours">12:00</p>
 
-        <div class="subscription__programs" data-tabs="content">
-        <ul class="subscription__list subscription__list--month"  data-tabs="element">
-
-          <li class="subscription__item">
-            <p class="subscription__title">С тренером</p>
-            <p class="subscription__time">12 занятий</p>
-            <p class="subscription__price">5000</p>
-            <p class="subscription__price--shadow">5000</p>
-            <button class="subscription__buttom buttom">купить абонемент</button>
-          </li>
-
-          <li class="subscription__item">
-            <p class="subscription__title">Дневной</p>
-            <p class="subscription__time">с 8:00 до 17:00 </p>
-            <p class="subscription__price">1700</p>
-            <p class="subscription__price--shadow">1700</p>
-            <button class="subscription__buttom buttom">купить абонемент</button>
-          </li>
-
-          <li class="subscription__item">
-            <p class="subscription__title">Полный день</p>
-            <p class="subscription__time">с 8:00 до 22:00 </p>
-            <p class="subscription__price">2700</p>
-            <p class="subscription__price--shadow">2700</p>
-            <button class="subscription__buttom buttom">купить абонемент</button>
-          </li>
-
-        </ul>
-
-        <ul class="subscription__list subscription__list--six-month" data-tabs="element">
-
-          <li class="subscription__item">
-            <p class="subscription__title">С тренером</p>
-            <p class="subscription__time">12 занятий</p>
-            <p class="subscription__price">10000</p>
-            <p class="subscription__price--shadow">10000</p>
-            <button class="subscription__buttom buttom">купить абонемент</button>
-          </li>
-
-          <li class="subscription__item">
-            <p class="subscription__title">Дневной</p>
-            <p class="subscription__time">с 8:00 до 17:00 </p>
-            <p class="subscription__price">3600</p>
-            <p class="subscription__price--shadow">3600</p>
-            <button class="subscription__buttom buttom">купить абонемент</button>
-          </li>
-
-          <li class="subscription__item">
-            <p class="subscription__title">Полный день</p>
-            <p class="subscription__time">с 8:00 до 22:00 </p>
-            <p class="subscription__price">5200</p>
-            <p class="subscription__price--shadow">5200</p>
-            <button class="subscription__buttom buttom">купить абонемент</button>
-          </li>
-
-        </ul>
-
-        <ul class="subscription__list subscription__list--year" data-tabs="element">
-
-          <li class="subscription__item">
-            <p class="subscription__title">С тренером</p>
-            <p class="subscription__time">12 занятий</p>
-            <p class="subscription__price">20000</p>
-            <p class="subscription__price--shadow">20000</p>
-            <button class="subscription__buttom buttom">купить абонемент</button>
-          </li>
-
-          <li class="subscription__item">
-            <p class="subscription__title">Дневной</p>
-            <p class="subscription__time">с 8:00 до 17:00 </p>
-            <p class="subscription__price">4700</p>
-            <p class="subscription__price--shadow">4700</p>
-            <button class="subscription__buttom buttom">купить абонемент</button>
-          </li>
-
-          <li class="subscription__item">
-            <p class="subscription__title">Полный день</p>
-            <p class="subscription__time">с 8:00 до 22:00 </p>
-            <p class="subscription__price">6700</p>
-            <p class="subscription__price--shadow">6700</p>
-            <button class="subscription__buttom buttom">купить абонемент</button>
-          </li>
-
-        </ul>
-      </div>
-      </div>
-    </div>
-  </section> -->
-
-
-  <section class="games">
-    <div class="container">
-      <div class="games__wrapper">
-        <div class="games__text">
-          <h2 class="games__title"> Super games </h2>
-          <p class="games__header">Ежегодные соревнования по CrossFit</p>
-          <p class="games__dait">Дата</p>
-          <p class="games__number">7</p>
-          <p class="games__month">Марта</p>
-          <p class="games__year">2019</p>
-          <p class="games__time">Время</p>
-          <p class="games__hours">12:00</p>
-
-          <button class="games__buttom buttom">заполнить заявку</button>
-        </div>
-        <picture>
-          <source type="image/webp" srcset="./img/supergym.webp 1x, ./img/supergym@2x.webp 2x">
-          <img src="./img/supergym.jpg" width="660" height="500" srcset="./img/supergym@2x.jpg"
-            alt="мужчина в спортивной форме бьет по полу рукой и разлетается пыль.">
-        </picture>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="coach">
-    <div class="container">
-      <div class="coach__wrapper">
-        <h2 class="coach__title">Тренеры</h2>
-
-        <div class="swiper coach__swiper">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <p class="coach__name">Алексей Лавров</p>
-              <picture>
-                <source type="image/webp" srcset="./img/coach/coach.webp 1x, ./img/coach/coach@2x.webp 2x">
-                <img class="coach__img img" src="./img/coach/coach.jpg" width="260" height="294"
-                  srcset="./img/coach/coach@2x.jpg 2x" alt="тренер.">
-              </picture>
+              <a class="games__buttom buttom" href="#">заполнить заявку</a>
             </div>
-
-            <div class="swiper-slide">
-              <p class="coach__name">Алексей Лавров</p>
-              <picture>
-                <source type="image/webp" srcset="./img/coach/coach.webp 1x, ./img/coach/coach@2x.webp 2x">
-                <img class="coach__img img" src="./img/coach/coach.jpg" width="260" height="294"
-                  srcset="./img/coach/coach@2x.jpg 2x" alt="тренер.">
-              </picture>
-            </div>
-
-            <div class="swiper-slide">
-              <p class="coach__name">Мария Кетова</p>
-              <picture>
-                <source type="image/webp" srcset="./img/coach/coach1.webp 1x, ./img/coach/coach1@2x.webp 2x">
-                <img class="coach__img img" src="./img/coach/coach1.jpg" width="260" height="294"
-                  srcset="./img/coach/coach1@2x.jpg 2x" alt="тренер.">
-              </picture>
-            </div>
-
-            <div class="swiper-slide">
-              <p class="coach__name">Анна Павлова</p>
-              <picture>
-                <source type="image/webp" srcset="./img/coach/coach2.webp 1x, ./img/coach/coach2@2x.webp 2x">
-                <img class="coach__img img" src="./img/coach2.jpg" width="260" height="294"
-                  srcset="./img/coach/coach2@2x.jpg 2x" alt="тренер.">
-              </picture>
-            </div>
-
-            <div class="swiper-slide">
-              <p class="coach__name">Алексей Лавров</p>
-              <picture>
-                <source type="image/webp" srcset="./img/coach/coach.webp 1x, ./img/coach/coach@2x.webp 2x">
-                <img class="coach__img img" src="./img/coach/coach.jpg" width="260" height="294"
-                  srcset="./img/coach/coach@2x.jpg 2x" alt="тренер.">
-              </picture>
-            </div>
-
-            <div class="swiper-slide">
-              <p class="coach__name">Алексей Лавров</p>
-              <picture>
-                <source type="image/webp" srcset="./img/coach/coach.webp 1x, ./img/coach/сoach@2x.webp 2x">
-                <img class="coach__img img" src="./img/coach/coach.jpg" width="260" height="294"
-                  srcset="./img/coach/coach@2x.jpg 2x" alt="тренер.">
-              </picture>
-            </div>
-
-            <div class="swiper-slide">
-              <p class="coach__name">Алексей Лавров</p>
-              <picture>
-                <source type="image/webp" srcset="./img/coach/coach.webp 1x, ./img/coach/coach@2x.webp 2x">
-                <img class="coach__img img" src="./img/coach/coach.jpg" width="260" height="294"
-                  srcset="./img/coach/coach@2x.jpg 2x" alt="тренер.">
-              </picture>
-            </div>
-
-            <div class="swiper-slide">
-              <p class="coach__name">Алексей Лавров</p>
-              <picture>
-                <source type="image/webp" srcset="./img/coach/coach.webp 1x, ./img/coach/сoach@2x.webp 2x">
-                <img class="coach__img img" src="./img/coach/coach.jpg" width="260" height="294"
-                  srcset="./img/coach/coach@2x.jpg 2x" alt="тренер.">
-              </picture>
-            </div>
-
-          </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="features">
-    <div class="container">
-      <div class="features__wrapper">
-        <h2 class="features__title">Наши преимущества</h2>
-
-        <ul class="features__list">
-
-          <li class="features__item features__item--left features__item--line">
-            <p class="feature__number">900</p>
-            <p class="feature__unit">кв/м</p>
-            <div class="features__text">
-              <p class="features__header">Площадь </p>
-              <p class="features__description">Занимайтесь без очередей и толкучки</p>
-            </div>
-          </li>
-
-          <li class="features__item features__item--rigth features__item--line">
-            <p class="feature__number">70</p>
-            <p class="feature__unit">машин</p>
-            <div class="features__text">
-              <p class="features__header">Собственная парковка </p>
-              <p class="features__description">Вы всегда найдете место для своей машины на нашей парковке</p>
-            </div>
-          </li>
-
-          <li class="features__item features__item--left ">
-            <p class="feature__number">350</p>
-            <p class="feature__unit ">мест</p>
-            <div class="features__text">
-              <p class="features__header">Комфорт </p>
-              <p class="features__description">Просторные раздевалки,
-                душевые, фен, Wi-Fi, кулеры</p>
-            </div>
-          </li>
-
-          <li class="features__item features__item--rigth ">
-            <p class="feature__number">5+</p>
-            <p class="feature__unit">лет </p>
-            <div class="features__text">
-              <p class="features__header">Тренерский опыт</p>
-              <p class="features__description">Добивайтесь своих целей быстрее с профессиональным тренером</p>
-            </div>
-          </li>
-
-          <li class="features__item features__item--center">
-            <p class="feature__number-center">100</p>
-            <p class="features__header features__header--center">Тренажеров</p>
-            <p class="features__description features__description--center">Современные тренажеры на все группы мышц
-            </p>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="promo">
-    <div class="container">
-      <div class="promo__wrapper">
-        <h2 class="promo__title">Акции</h2>
-
-        <div class="promo__inro">
-          <section class="promo__hit">
-            <p class="promo__hit-header">Год</p>
-            <p class="promo__hit-price">4999</p>
-            <p class="promo__hit-description">Безлимитный абонемент в тренажерный зал</p>
-            <a class="promo__hit-link" href="#">подробнее</a>
             <picture>
-              <source type="image/webp" srcset="./img/promo.webp 1x, ./img/promo@2x.webp 2x">
-              <img src="./img/promo.jpg" width="280" height="462" srcset="./img/promo@2x.jpg"
-                alt="Девушка в спортивной голубом топе и штанах в полуобороте.">
+              <source type="image/webp" srcset="./img/supergym.webp 1x, ./img/supergym@2x.webp 2x">
+              <img src="./img/supergym.jpg" width="660" height="500" srcset="./img/supergym@2x.jpg"
+                alt="мужчина в спортивной форме бьет по полу рукой и разлетается пыль.">
             </picture>
-          </section>
 
-          <ul class="promo__list">
-            <li class="promo__item">
-              <p class="promo__header">Месяц бесплатно</p>
-              <p class="promo__description">Приведи друга, получи абонемент в подарок</p>
-              <a class="promo__link" href="#">подробнее</a>
-            </li>
-
-            <li class="promo__item">
-              <p class="promo__header">Скидка 20%</p>
-              <p class="promo__description">Корпоративный фитнес с командой</p>
-              <a class="promo__link" href="#">подробнее</a>
-            </li>
-
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="faq">
-    <div class="container">
-      <div class="faq__wrapper">
-        <h2 class="faq__title">Вопросы и ответы</h2>
-        <div class="faq__intro" >
-          <div class="faq__list">
-            <button class="faq__item"   >Центр</button>
-            <button class="faq__item"   >Абонемент</button>
-            <button class="faq__item"   >Услуги</button>
-            <button class="faq__item"   >Правила</button>
           </div>
-
-          <ul class="tab__list">
-            <li class="tab__item">
-              <p class="tab__header">Занятия с тренером входят в абонемент?</p>
-              <p class="tab__description">При посещении тренажерного зала вам необходимо оплатить занятия с
-                тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
-                получить
-                небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
-
-              <button class="tab__toggle" type="button">
-                <span class="visually-hidden">Открыть или закрыть.</span>
-                <svg class="faq__icon" aria-hidden="true" focusable="false" width="42" height="42" fill="currentColor">
-                  <use xlink:href="#close"></use>
-                  <use xlink:href="#open"></use>
-                </svg>
-              </button>
-            </li>
-
-            <li class="tab__item">
-              <p class="tab__header">Можно ли заморозить абонемент?</p>
-              <p class="tab__description">При посещении тренажерного зала вам необходимо оплатить занятия с
-                тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
-                получить
-                небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
-              <button class="tab__toggle" type="button">
-                <span class="visually-hidden">Открыть или закрыть меню.</span>
-                <svg class="faq__icon" aria-hidden="true" focusable="false" width="42" height="42" fill="currentColor">
-                  <use xlink:href="#close"></use>
-                  <use xlink:href="#open"></use>
-                </svg>
-              </button>
-            </li>
-
-            <li class="tab__item">
-              <p class="tab__header">Есть ли лимит по посещениям тренажерного зала и групповых занятий?</p>
-              <p class="tab__description">При посещении тренажерного зала вам необходимо оплатить занятия с
-                тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
-                получить
-                небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
-              <button class="tab__toggle" type="button">
-                <span class="visually-hidden">Открыть или закрыть меню.</span>
-                <svg class="faq__icon" aria-hidden="true" focusable="false" width="42" height="42" fill="currentColor">
-                  <use xlink:href="#close"></use>
-                  <use xlink:href="#open"></use>
-                </svg>
-              </button>
-            </li>
-
-            <li class="tab__item">
-              <p class="tab__header">Что такое семейный доступ и доступ для друзей?</p>
-              <p class="tab__description">При посещении тренажерного зала вам необходимо оплатить занятия с
-                тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
-                получить
-                небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
-
-              <button class="tab__toggle" type="button">
-                <span class="visually-hidden">Открыть или закрыть меню.</span>
-                <svg class="faq__icon" aria-hidden="true" focusable="false" width="42" height="42" fill="currentColor">
-                  <use xlink:href="#close"></use>
-                  <use xlink:href="#open"></use>
-                </svg>
-              </button>
-
-            </li>
-          </ul>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section class="feedback">
-    <div class="container">
-      <div class="feedback__wrapper">
-        <h2 class="feedback__title">Отзывы</h2>
+      <section class="coach">
+        <div class="container">
+          <div class="coach__wrapper">
+            <h2 class="coach__title">Тренеры</h2>
 
-        <div class="swiper feedback__swiper">
-          <div class="swiper-wrapper">
+            <div class="swiper coach__swiper">
+              <div class="swiper-wrapper">
 
-            <div class="feedback__slide">
-              <img src="./img/feedback.png" width="80" height="80" alt="фото человека, кто оставил отзыв.">
-              <div class="feedback__text">
-                <p class="feedback__name">Анна Орлова</p>
-                <p class="feedback__description">«Хожу в Supergym уже больше года. Нравится, что в клубе всегда
-                  чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет
-                  очередей»</p>
+                <div class="swiper-slide">
+                  <p class="coach__name">Анна Павлова</p>
+                  <picture>
+                    <source type="image/webp" srcset="./img/coach/coach1.webp 1x, ./img/coach/coach1@2x.webp 2x">
+                    <img src="./img/coach1.jpg" width="260" height="294" srcset="./img/coach/coach1@2x.jpg 2x"
+                      alt="тренер.">
+                  </picture>
+                </div>
+
+                <div class="swiper-slide">
+                  <p class="coach__name">Алексей Лавров</p>
+                  <picture>
+                    <source type="image/webp" srcset="./img/coach/coach.webp 1x, ./img/coach/coach@2x.webp 2x">
+                    <img src="./img/coach/coach.jpg" width="260" height="294" srcset="./img/coach/coach@2x.jpg 2x"
+                      alt="тренер.">
+                  </picture>
+                </div>
+
+                <div class="swiper-slide">
+                  <p class="coach__name">Александр Пашков</p>
+                  <picture>
+                    <source type="image/webp" srcset="./img/coach/coach4.webp 1x, ./img/coach/coach4@2x.webp 2x">
+                    <img src="./img/coach/coach4.jpg" width="260" height="294" srcset="./img/coach/coach4@2x.jpg 2x"
+                      alt="тренер.">
+                  </picture>
+                </div>
+
+                <div class="swiper-slide">
+                  <p class="coach__name">Мария Кетова</p>
+                  <picture>
+                    <source type="image/webp" srcset="./img/coach/coach2.webp 1x, ./img/coach/coach2@2x.webp 2x">
+                    <img src="./img/coach/coach2.jpg" width="260" height="294" srcset="./img/coach/coach2@2x.jpg 2x"
+                      alt="тренер.">
+                  </picture>
+                </div>
+
+                <div class="swiper-slide">
+                  <p class="coach__name">Анна Павлова</p>
+                  <picture>
+                    <source type="image/webp" srcset="./img/coach/coach1.webp 1x, ./img/coach/coach1@2x.webp 2x">
+                    <img src="./img/coach1.jpg" width="260" height="294" srcset="./img/coach/coach1@2x.jpg 2x"
+                      alt="тренер.">
+                  </picture>
+                </div>
+
+                <div class="swiper-slide">
+                  <p class="coach__name">Алексей Лавров</p>
+                  <picture>
+                    <source type="image/webp" srcset="./img/coach/coach.webp 1x, ./img/coach/coach@2x.webp 2x">
+                    <img src="./img/coach/coach.jpg" width="260" height="294" srcset="./img/coach/coach@2x.jpg 2x"
+                      alt="тренер.">
+                  </picture>
+                </div>
+
+                <div class="swiper-slide">
+                  <p class="coach__name">Александр Пашков</p>
+                  <picture>
+                    <source type="image/webp" srcset="./img/coach/coach4.webp 1x, ./img/coach/coach4@2x.webp 2x">
+                    <img src="./img/coach/coach4.jpg" width="260" height="294" srcset="./img/coach/coach4@2x.jpg 2x"
+                      alt="тренер.">
+                  </picture>
+                </div>
+
+                <div class="swiper-slide">
+                  <p class="coach__name">Мария Кетова</p>
+                  <picture>
+                    <source type="image/webp" srcset="./img/coach/coach2.webp 1x, ./img/coach/coach2@2x.webp 2x">
+                    <img src="./img/coach/coach2.jpg" width="260" height="294" srcset="./img/coach/coach2@2x.jpg 2x"
+                      alt="тренер.">
+                  </picture>
+                </div>
               </div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
 
-            <!-- <div class="feedback__slide">
+      <section class="features">
+        <div class="container">
+          <div class="features__wrapper">
+            <h2 class="features__title">Наши преимущества</h2>
+
+            <ul class="features__list">
+
+              <li class="features__item features__item--left features__item--line">
+                <p class="feature__number">900</p>
+                <p class="feature__unit">кв/м</p>
+                <div class="features__text">
+                  <p class="features__header">Площадь </p>
+                  <p class="features__description">Занимайтесь без очередей и толкучки</p>
+                </div>
+              </li>
+
+              <li class="features__item features__item--rigth features__item--line">
+                <p class="feature__number">70</p>
+                <p class="feature__unit">машин</p>
+                <div class="features__text">
+                  <p class="features__header">Собственная парковка </p>
+                  <p class="features__description">Вы всегда найдете место для своей машины на нашей парковке</p>
+                </div>
+              </li>
+
+              <li class="features__item features__item--left ">
+                <p class="feature__number">350</p>
+                <p class="feature__unit ">мест</p>
+                <div class="features__text">
+                  <p class="features__header">Комфорт </p>
+                  <p class="features__description">Просторные раздевалки,
+                    душевые, фен, Wi-Fi, кулеры</p>
+                </div>
+              </li>
+
+              <li class="features__item features__item--rigth ">
+                <p class="feature__number">5+</p>
+                <p class="feature__unit">лет </p>
+                <div class="features__text">
+                  <p class="features__header">Тренерский опыт</p>
+                  <p class="features__description">Добивайтесь своих целей быстрее с профессиональным тренером</p>
+                </div>
+              </li>
+
+              <li class="features__item features__item--center">
+                <p class="feature__number-center">100</p>
+                <p class="features__header features__header--center">Тренажеров</p>
+                <p class="features__description features__description--center">Современные тренажеры на все группы мышц
+                </p>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="promo">
+        <div class="container">
+          <div class="promo__wrapper">
+            <h2 class="promo__title">Акции</h2>
+
+            <div class="promo__inro">
+              <section class="promo__hit">
+                <p class="promo__hit-header">Год</p>
+                <p class="promo__hit-price">4999</p>
+                <p class="promo__hit-description">Безлимитный абонемент в тренажерный зал</p>
+                <a class="promo__hit-link" href="#">подробнее</a>
+                <picture>
+                  <source type="image/webp" srcset="./img/promo.webp 1x, ./img/promo@2x.webp 2x">
+                  <img src="./img/promo.jpg" width="280" height="462" srcset="./img/promo@2x.jpg"
+                    alt="Девушка в спортивной голубом топе и штанах в полуобороте.">
+                </picture>
+              </section>
+
+              <ul class="promo__list">
+                <li class="promo__item">
+                  <p class="promo__header">Месяц бесплатно</p>
+                  <p class="promo__description">Приведи друга, получи абонемент в подарок</p>
+                  <a class="promo__link" href="#">подробнее</a>
+                </li>
+
+                <li class="promo__item">
+                  <p class="promo__header">Скидка 20%</p>
+                  <p class="promo__description">Корпоративный фитнес с командой</p>
+                  <a class="promo__link" href="#">подробнее</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="container">
+          <div class="faq__wrapper" data-tabs="parent">
+            <h2 class="faq__title">Вопросы и ответы</h2>
+            <div class="faq__intro">
+              <div class="faq__controls" data-tabs="controls">
+                <button class="faq__control faq__control--club" type="button" data-tabs="control">Центр</button>
+                <button class="faq__control faq__control--subscription" type="button"
+                  data-tabs="control">Абонемент</button>
+                <button class="faq__control faq__control--services" type="button" data-tabs="control">Услуги</button>
+                <button class="faq__control faq__control--ruls" type="button" data-tabs="control">Правила</button>
+              </div>
+
+              <div class="faq__programs" data-tabs="content">
+                <div class="accordeon"  data-accordion="parent">
+                <ul class="faq__accordion faq__accordion--club" data-tabs="element">
+
+                  <li class="faq__item" data-accordion="element">
+                    <p class="faq__header">Сколько тренажоров?</p>
+                    <div class="faq__content" data-accordion="content">
+                      <div class="faq__description">
+                        <p>
+                      При посещении тренажерного зала вам необходимо оплатить занятия с
+                      тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
+                      получить
+                      небольшую консультацию по тренажеру или технике выполнения упражнения.
+                        </p>
+                      </div>
+                    </div>
+                    <button class="faq__toggle" type="button" data-accordion="button">
+                      <span class="visually-hidden">Открыть или закрыть.</span>
+                      <svg aria-hidden="true" focusable="false" width="42" height="42"
+                        fill="currentColor">
+                      </svg>
+                    </button>
+
+                  </li>
+
+                  <li class="faq__item" data-accordion="element">
+                    <p class="faq__header">Есть ли персональный тренер?</p>
+
+                    <div class="faq__content" data-accordion="content">
+                      <div class="faq__description">
+                        <p>При посещении тренажерного зала вам необходимо оплатить занятия с
+                      тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
+                      получить
+                      небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                      </div>
+                    </div>
+                    <button class="faq__toggle" type="button" data-accordion="button">
+                      <span class="visually-hidden">Открыть или закрыть меню.</span>
+                      <svg aria-hidden="true" focusable="false" width="42" height="42"
+                        fill="currentColor">
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="faq__item" data-accordion="element">
+                    <p class="faq__header">Есть ли парковка</p>
+                    <div class="faq__content" data-accordion="content">
+                      <div class="faq__description">
+                        <p>При посещении тренажерного зала вам необходимо оплатить занятия с
+                      тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
+                      получить
+                      небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                      </div></div>
+                    <button class="faq__toggle" type="button" data-accordion="button">
+                      <span class="visually-hidden">Открыть или закрыть меню.</span>
+                      <svg aria-hidden="true" focusable="false" width="42" height="42"
+                        fill="currentColor">
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="faq__item" data-accordion="element">
+                    <p class="faq__header">есть ли питьевая вода? </p>
+                    <div class="faq__content" data-accordion="content">
+                      <div class="faq__description">
+                        <p>При посещении тренажерного зала вам необходимо оплатить занятия с
+                      тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
+                      получить
+                      небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                      </div></div>
+                    <button class="faq__toggle" type="button" data-accordion="button">
+                      <span class="visually-hidden">Открыть или закрыть меню.</span>
+                      <svg aria-hidden="true" focusable="false" width="42" height="42"
+                        fill="currentColor">
+                      </svg>
+                    </button>
+
+                  </li>
+                </ul>
+
+                <ul class="faq__accordion faq__accordion--subscription " data-tabs="element">
+                  <li class="faq__item" data-accordion="element">
+                    <p class="faq__header">Занятия с тренером входят в абонемент?</p>
+                    <div class="faq__content" data-accordion="content">
+                      <div class="faq__description">
+                        <p>При посещении тренажерного зала вам необходимо оплатить занятия с
+                      тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
+                      получить
+                      небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                      </div></div>
+                    <button class="faq__toggle" type="button" data-accordion="button">
+                      <span class="visually-hidden">Открыть или закрыть.</span>
+                      <svg aria-hidden="true" focusable="false" width="42" height="42"
+                        fill="currentColor">
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="faq__item" data-accordion="element">
+                    <p class="faq__header">Можно ли заморозить абонемент?</p>
+                    <div class="faq__content" data-accordion="content">
+                      <div class="faq__description">
+                        <p>При посещении тренажерного зала вам необходимо оплатить занятия с
+                      тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
+                      получить
+                      небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                      </div></div>
+                    <button class="faq__toggle" type="button" data-accordion="button">
+                      <span class="visually-hidden">Открыть или закрыть меню.</span>
+                      <svg aria-hidden="true" focusable="false" width="42" height="42"
+                        fill="currentColor">
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="faq__item" data-accordion="element">
+                    <p class="faq__header">Есть ли лимит по посещениям тренажерного зала и групповых занятий?</p>
+                    <div class="faq__content" data-accordion="content">
+                      <div class="faq__description">
+                        <p>При посещении тренажерного зала вам необходимо оплатить занятия с
+                      тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
+                      получить
+                      небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                      </div></div>
+                    <button class="faq__toggle" type="button" data-accordion="button">
+                      <span class="visually-hidden">Открыть или закрыть меню.</span>
+                      <svg aria-hidden="true" focusable="false" width="42" height="42"
+                        fill="currentColor">
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="faq__item" data-accordion="element">
+                    <p class="faq__header">Что такое семейный доступ и доступ для друзей?</p>
+                    <div class="faq__content" data-accordion="content">
+                      <div class="faq__description">
+                        <p>При посещении тренажерного зала вам необходимо оплатить занятия с
+                      тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
+                      получить
+                      небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                      </div></div>
+                    <button class="faq__toggle" type="button" data-accordion="button">
+                      <span class="visually-hidden">Открыть или закрыть меню.</span>
+                      <svg aria-hidden="true" focusable="false" width="42" height="42"
+                        fill="currentColor">
+                      </svg>
+                    </button>
+
+                  </li>
+                </ul>
+
+                <ul class="faq__accordion faq__accordion--services" data-tabs="element">
+                  <li class="faq__item" data-accordion="element">
+                    <p class="faq__header">Есть ли фитнес-бар?</p>
+                    <div class="faq__content" data-accordion="content">
+                      <div class="faq__description">
+                        <p>При посещении тренажерного зала вам необходимо оплатить занятия с
+                      тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
+                      получить
+                      небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                      </div></div>
+                    <button class="faq__toggle" type="button" data-accordion="button">
+                      <span class="visually-hidden">Открыть или закрыть.</span>
+                      <svg aria-hidden="true" focusable="false" width="42" height="42"
+                        fill="currentColor">
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="faq__item" data-accordion="element">
+                    <p class="faq__header">Есть ли spa-зона??</p>
+                    <div class="faq__content" data-accordion="content">
+                      <div class="faq__description">
+                        <p>При посещении тренажерного зала вам необходимо оплатить занятия с
+                      тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
+                      получить
+                      небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                      </div></div>
+                    <button class="faq__toggle" type="button" data-accordion="button">
+                      <span class="visually-hidden">Открыть или закрыть меню.</span>
+                      <svg aria-hidden="true" focusable="false" width="42" height="42"
+                        fill="currentColor">
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="faq__item" data-accordion="element">
+                    <p class="faq__header">Есть ли солярий?</p>
+                    <div class="faq__content" data-accordion="content">
+                      <div class="faq__description">
+                        <p>При посещении тренажерного зала вам необходимо оплатить занятия с
+                      тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
+                      получить
+                      небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                      </div></div>
+                    <button class="faq__toggle" type="button" data-accordion="button">
+                      <span class="visually-hidden">Открыть или закрыть меню.</span>
+                      <svg aria-hidden="true" focusable="false" width="42" height="42"
+                        fill="currentColor">
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="faq__item" data-accordion="element">
+                    <p class="faq__header">Есть ли полотенце?</p>
+                    <div class="faq__content" data-accordion="content">
+                      <div class="faq__description">
+                        <p>При посещении тренажерного зала вам необходимо оплатить занятия с
+                      тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
+                      получить
+                      небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                      </div></div>
+                    <button class="faq__toggle" type="button" data-accordion="button">
+                      <span class="visually-hidden">Открыть или закрыть меню.</span>
+                      <svg aria-hidden="true" focusable="false" width="42" height="42"
+                        fill="currentColor">
+                      </svg>
+                    </button>
+
+                  </li>
+                </ul>
+
+                <ul class="faq__accordion faq__accordion--ruls" data-tabs="element">
+                  <li class="faq__item" data-accordion="element">
+                    <p class="faq__header">Правила оплаты?</p>
+                    <div class="faq__content" data-accordion="content">
+                      <div class="faq__description">
+                        <p>При посещении тренажерного зала вам необходимо оплатить занятия с
+                      тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
+                      получить
+                      небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                      </div>
+                    </div>
+                    <button class="faq__toggle" type="button" data-accordion="button">
+                      <span class="visually-hidden">Открыть или закрыть.</span>
+                      <svg aria-hidden="true" focusable="false" width="42" height="42"
+                        fill="currentColor">
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="faq__item" data-accordion="element">
+                    <p class="faq__header">Правила отмены</p>
+                    <div class="faq__content" data-accordion="content">
+                      <div class="faq__description">
+                        <p>При посещении тренажерного зала вам необходимо оплатить занятия с
+                      тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
+                      получить
+                      небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                      </div></div>
+                    <button class="faq__toggle" type="button" data-accordion="button">
+                      <span class="visually-hidden">Открыть или закрыть меню.</span>
+                      <svg aria-hidden="true" focusable="false" width="42" height="42"
+                        fill="currentColor">
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="faq__item" data-accordion="element">
+                    <p class="faq__header">Правила клуба</p>
+                    <div class="faq__content" data-accordion="content">
+                      <div class="faq__description">
+                        <p>При посещении тренажерного зала вам необходимо оплатить занятия с
+                      тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
+                      получить
+                      небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                      </div></div>
+                    <button class="faq__toggle" type="button" data-accordion="button">
+                      <span class="visually-hidden">Открыть или закрыть меню.</span>
+                      <svg aria-hidden="true" focusable="false" width="42" height="42"
+                        fill="currentColor">
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="faq__item" data-accordion="element">
+                    <p class="faq__header">Юридическая информация</p>
+                    <div class="faq__content" data-accordion="content">
+                      <div class="faq__description">
+                        <p>При посещении тренажерного зала вам необходимо оплатить занятия с
+                      тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,
+                      получить
+                      небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                      </div></div>
+                    <button class="faq__toggle" type="button" data-accordion="button">
+                      <span class="visually-hidden">Открыть или закрыть меню.</span>
+                      <svg aria-hidden="true" focusable="false" width="42" height="42"
+                        fill="currentColor">
+                      </svg>
+                    </button>
+
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="feedback">
+        <div class="container">
+          <div class="feedback__wrapper">
+            <h2 class="feedback__title">Отзывы</h2>
+
+            <div class="swiper feedback__swiper">
+              <div class="swiper-wrapper">
+
+                <div class="feedback__slide">
+                  <img src="./img/feedback.png" width="80" height="80" alt="фото человека, кто оставил отзыв.">
+                  <div class="feedback__text">
+                    <p class="feedback__name">Анна Орлова</p>
+                    <p class="feedback__description">«Хожу в Supergym уже больше года. Нравится, что в клубе всегда
+                      чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет
+                      очередей»</p>
+                  </div>
+                </div>
+
+                <div class="feedback__slide">
                   <img src="./img/feedback.png" width="80" height="80" alt="фото человека, кто оставил отзыв.">
                   <div class="feedback__text">
                     <p class="feedback__name">Анна Орлова</p>
                     <p class="feedback__description">«Хожу в Supergym уже больше года. Нравится, что в клубе всегда
                       чисто,
                       тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
-                  </div> -->
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
+                  </div>
+                </div>
+                <div class="feedback-button-next"></div>
+                <div class="feedback-button-prev"></div>
+              </div>
 
-
-      </div>
-    </div>
-  </section>
-
-  <div class="wrapper__section">
-    <form class="custom">
-      <div class="container">
-        <div class="custom__wrapper">
-          <h2>Бесплатное занятие </h2>
-          <label>
-            <input class="input" type="text" placeholder="Имя">
-          </label>
-
-          <label>
-            <input class="input" type="tel" placeholder="Телефон" autocomplete="off">
-          </label>
-
-          <button class="custom__buttom buttom" type="button">отправить</button>
-        </div>
-      </div>
-    </form>
-
-    <section class="contacts">
-      <div class="container">
-        <div class="contacts__wrapper">
-          <h2>Контакты</h2>
-
-          <div class="contacts__intro">
-            <div>
-              <p class="contacts__header">Адрес:</p>
-              <p class="contacts__description">г. Омск, ул. 60 лет Октября, 7</p>
-            </div>
-            <div>
-              <p class="contacts__header">Телефон:</p>
-              <p class="contacts__description">8-800-555-55-55</p>
-            </div>
-            <div>
-              <p class="contacts__header">График работы:</p>
-              <p class="contacts__description">Пн-Вс: с 8:00 до 22:00</p>
-            </div>
-            <div>
-              <p class="contacts__header">Email:</p>
-              <p class="contacts__description">omsk@supergym.ru</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
+      </section>
 
-  </main>
+      <div class="wrapper__section">
+        <form class="custom">
+          <div class="container">
+            <div class="custom__wrapper">
+              <h2>Бесплатное занятие </h2>
+              <label>
+                <input class="input" type="text" placeholder="Имя">
+              </label>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__wrapper">
+              <label>
+                <input class="input" type="tel" placeholder="Телефон" autocomplete="off">
+              </label>
 
-        <a class="footer__logo" href="index.html">
-          <svg class="footer__svg" aria-hidden="true" focusable="false" fill="currentColor">
-            <use xlink:href="#logo"></use>
-          </svg>
-        </a>
-        <nav class="footer__nav ">
+              <button class="custom__buttom buttom" type="button">отправить</button>
+            </div>
+          </div>
+        </form>
 
-          <ul class="footer-nav__list">
+        <section class="contacts">
+          <div class="container">
+            <div class="contacts__wrapper">
+              <h2>Контакты</h2>
 
-            <li class="footer-nav__item">
-              <a class="footer-nav__link" href="#">Услуги
-              </a>
-            </li>
-            <li class="footer-nav__item">
-              <a class="footer-nav__link" href="#"> Абонементы
-              </a>
-            </li>
-            <li class="footer-nav__item">
-              <a class="footer-nav__link" href="#">Акции
-              </a>
-            </li>
-            <li class="footer-nav__item">
-              <a class="footer-nav__link" href="#"> Тренеры
-              </a>
-            </li>
-            <li class="footer-nav__item">
-              <a class="footer-nav__link" href="#"> Расписание
-              </a>
-            </li>
-          </ul>
-
-        </nav>
-
-        <section class="footer__social">
-          <ul class="footer__social-list">
-
-            <li class="footer__social-item">
-              <a class="footer__social-link footer__social--vk" href="#">
-                <svg class="footer__img" transform="translate(5,3)" aria-hidden="true" focusable="false" width="14"
-                  height="14" fill="currentColor">
-                  <use xlink:href="#vk"></use>
-                </svg>
-                <span class="visually-hidden">ВКонтакте.</span>
-              </a>
-            </li>
-
-            <li class="footer__social-item">
-              <a class="footer__social-link footer__social--ok" href="#">
-                <svg class="footer__img" transform="translate(5,3)" aria-hidden="true" focusable="false" width="14"
-                  height="14" fill="currentColor">
-                  <use xlink:href="#ok"></use>
-                </svg>
-                <span class="visually-hidden">Одноклассники.</span>
-              </a>
-            </li>
-
-            <li class="footer__social-item">
-              <a class="footer__social-link footer__social--reddit" href="#">
-                <svg class="footer__img" transform="translate(5,3)" aria-hidden="true" focusable="false" width="14"
-                  height="14" fill="currentColor">
-                  <use xlink:href="#reddit"></use>
-                </svg>
-                <span class="visually-hidden">Reddit.</span>
-              </a>
-            </li>
-          </ul>
+              <div class="contacts__intro">
+                <div>
+                  <p class="contacts__header">Адрес:</p>
+                  <p class="contacts__description">г. Омск, ул. 60 лет Октября, 7</p>
+                </div>
+                <div>
+                  <p class="contacts__header">Телефон:</p>
+                  <p class="contacts__description">8-800-555-55-55</p>
+                </div>
+                <div>
+                  <p class="contacts__header">График работы:</p>
+                  <p class="contacts__description">Пн-Вс: с 8:00 до 22:00</p>
+                </div>
+                <div>
+                  <p class="contacts__header">Email:</p>
+                  <p class="contacts__description">omsk@supergym.ru</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
-
       </div>
-    </div>
-  </footer>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+
+          <a class="footer__logo" href="index.html">
+            <svg class="footer__svg" aria-hidden="true" focusable="false" fill="currentColor">
+              <use xlink:href="#logo"></use>
+            </svg>
+          </a>
+          <nav class="footer__nav ">
+
+            <ul class="footer-nav__list">
+
+              <li class="footer-nav__item">
+                <a class="footer-nav__link" href="#">Услуги
+                </a>
+              </li>
+              <li class="footer-nav__item">
+                <a class="footer-nav__link" href="#"> Абонементы
+                </a>
+              </li>
+              <li class="footer-nav__item">
+                <a class="footer-nav__link" href="#">Акции
+                </a>
+              </li>
+              <li class="footer-nav__item">
+                <a class="footer-nav__link" href="#"> Тренеры
+                </a>
+              </li>
+              <li class="footer-nav__item">
+                <a class="footer-nav__link" href="#"> Расписание
+                </a>
+              </li>
+            </ul>
+
+          </nav>
+
+          <section class="footer__social">
+            <ul class="footer__social-list">
+
+              <li class="footer__social-item">
+                <a class="footer__social-link footer__social--vk" href="#">
+                  <svg class="footer__img" aria-hidden="true" focusable="false" width="14" height="14"
+                    fill="currentColor">
+                    <use xlink:href="#vk"></use>
+                  </svg>
+                  <span class="visually-hidden">ВКонтакте.</span>
+                </a>
+              </li>
+
+              <li class="footer__social-item">
+                <a class="footer__social-link footer__social--ok" href="#">
+                  <svg class="footer__img" aria-hidden="true" focusable="false" width="14" height="14"
+                    fill="currentColor">
+                    <use xlink:href="#ok"></use>
+                  </svg>
+                  <span class="visually-hidden">Одноклассники.</span>
+                </a>
+              </li>
+
+              <li class="footer__social-item">
+                <a class="footer__social-link footer__social--reddit" href="#">
+                  <svg class="footer__img" aria-hidden="true" focusable="false" width="14" height="14"
+                    fill="currentColor">
+                    <use xlink:href="#reddit"></use>
+                  </svg>
+                  <span class="visually-hidden">Reddit.</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+        </div>
+      </div>
+    </footer>
   </div>
 
-
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script>
-    var swiper = new Swiper(".coach__swiper", {
-      cssMode: true,
-      loop: true,
-      slidesPerView: 4,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-
-  </script>
-  <!-- <script>
-    const swiper = new Swiper('.feedback__swiper', {
-      cssMode: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script> -->
   <script src="js/vendor.min.js"></script>
-   <script src="js/main.min.js"></script>
+  <script src="js/main.min.js"></script>
 
 </body>
 

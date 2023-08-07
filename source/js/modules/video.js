@@ -10,6 +10,3 @@ const play = () => button.addEventListener('click', function () {
 });
 
 export {play};
-
-
-l

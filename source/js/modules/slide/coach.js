@@ -1,6 +1,5 @@
-import {Swiper} from '../../vendor/swiper';
 
-export const swiper = new Swiper('.coach__swiper', {
+const swiper = new Swiper('.coach__swiper', {
   cssMode: true,
   loop: true,
   slidesPerView: 4,
@@ -10,3 +9,4 @@ export const swiper = new Swiper('.coach__swiper', {
   },
 });
 
+export {swiper};

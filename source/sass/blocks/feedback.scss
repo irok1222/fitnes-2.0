@@ -3,6 +3,7 @@
   padding-left: 403px;
   padding-bottom: 120px;
   padding-right: 403px;
+  position: relative;
 }
 
 .feedback__title {
@@ -52,23 +53,23 @@
   line-height: 140%;
 }
 
-
 .feedback-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: relative;
 }
 
-// .feedback-button-prev::after {
-//   position: absolute;
-//   color: #AFAFAF;
-//   font-size: 1em;
-// }
+.feedback-button-prev::after {
+  position: absolute;
+  color: #AFAFAF;
+  font-size: 1em;
+  height: 1em;
+}
 
-// .feedback-button-next::after {
-//   position: absolute;
-//   color: #AFAFAF;
-//   font-size: 1em;
-// }
+.feedback-button-next::after {
+  position: absolute;
+  color: #AFAFAF;
+  font-size: 1em;
+  height: 1em;
+}

@@ -10,7 +10,7 @@
 
   @include vp-1199 {
     padding-left: $padding-tbl;
-    padding-right: 399px;
+    padding-right:calc((375/768)*100)+0%;
   }
 
   @include vp-767 {
@@ -28,10 +28,11 @@
   padding-top: 98px;
   margin: 0;
 
-  // @include vp-1199 {
-  //   padding-top: 82px;
-  //   font-size: 2.125em;
-  // }
+   @include vp-1199 {
+    padding-right: calc((69/768)*100)+0%;
+  padding-top: 71px;
+    font-size: 2.125em;
+  }
 
   @include vp-767 {
     padding-top: 68px;
@@ -50,10 +51,13 @@
   padding-top: 14px;
   letter-spacing: 4.6px;
 
-  // @include vp-1199 {
-  //   padding-top: 20px;
-  //   font-size: 4.5em;
-  // }
+  @include vp-1199 {
+    padding-top: 5px;
+    padding-right:  calc((55/768)*100)+0%;
+    font-size: 4.5em;
+    letter-spacing: 3.6px;
+    text-transform: lowercase;
+  }
 
   @include vp-767 {
     padding-top: 15px;
@@ -66,13 +70,13 @@
   position: absolute;
   margin: 0;
   padding: 0;
-  top: calc((580/1200)*100)+0%;
-  left: calc((100/1200)*100)+0%;
+  top: calc((588/1200)*100)+0%;
+  left: calc((110/1200)*100)+0%;
 
-  // @include vp-1199 {
-  //   top: calc((274/768)*100)+0%;
-  //   left: calc((45/768)*100)+0%;
-  // }
+  @include vp-1199 {
+    top: calc((320/768)*100)+0%;
+    left: calc((45/768)*100)+0%;
+  }
 
   @include vp-767 {
     top: calc((129/320)*100)+0%;
@@ -86,6 +90,7 @@
   font-size: 0.875em;
   font-style: normal;
   font-weight: 400;
+  line-height: 150%;
 }
 
 .hero__button {
@@ -120,11 +125,12 @@
     opacity: 0.5;
   }
 
-  // @include vp-1199 {
-  //   width: 183px;
-  //   margin-top:calc((60/768)*100)+0%;
-  //   margin-bottom: 107px;
-  // }
+  @include vp-1199 {
+    padding: 19px 29px;
+    width: 183px;
+    margin-top:calc((78/768)*100)+0%;
+    margin-bottom: 107px;
+  }
 
   @include vp-767 {
     margin-top:calc((20/320)*100)+0%;
@@ -142,11 +148,12 @@
   right: calc((260/1200)*100)+0%;
   object-fit: cover;
 
-  // @include vp-1199 {
-  //   max-width: 42%;;
-  //   top: calc((82/1200)*100)+0%;
-  //   right: calc((399/1200)*100)+0%
-  // }
+  @include vp-1199 {
+    width: 42%;
+    height: 51vw;
+    top: calc((28/768)*100)+0%;
+    right: calc((45/768)*100)+0%
+  }
 
   @include vp-767 {
     display: none;
