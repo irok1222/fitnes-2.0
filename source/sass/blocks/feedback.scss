@@ -1,9 +1,23 @@
 .feedback__wrapper {
   padding-top: 120px;
-  padding-left: 403px;
-  padding-bottom: 120px;
-  padding-right: 403px;
+  padding-left: $padding-dst;
+  padding-bottom: 102px;
+  padding-right: $padding-dst;
   position: relative;
+
+  @include vp-1199 {
+    padding-left: calc((105 / 768) * 100) + 0%;
+    padding-right: calc((105 / 768) * 100) + 0%;
+    padding-top: 87px;
+    padding-bottom: 83px;
+  }
+
+  @include vp-767 {
+    padding-left: calc((47 / 320) * 100) + 0%;
+    padding-right: calc((47 / 320) * 100) + 0%;
+    padding-top: 66px;
+    padding-bottom: 50px;
+  }
 }
 
 .feedback__title {
@@ -13,28 +27,85 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  padding-bottom: 37px;
+  padding-bottom: 17px;
   margin: 0;
   text-align: center;
+
+  @include vp-1199 {
+    font-size: 2.625em;
+  }
+
+  @include vp-767 {
+    font-size: 2em;
+  }
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
-  margin: 20px auto;
+.feedback__swiper {
+  width: 50%;
+
+  @include vp-1199 {
+    width: 100%;
+  }
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .feedback__slide {
-  background: #1C3374;
+  background: #1c3374;
   font-family: $ff-rc;
   color: $color-default-white;
-  padding-top: 62px;
-  padding-left: calc((62/1200)*100) + 0%;
-  padding-right: calc((62/1200)*100) + 0%;
-  padding-bottom: 62px;
-  display: grid;
-  grid-template-columns: max-content auto;
-  gap: calc((28/1200)*100) + 0%;
+  padding-top: 56px;
+  padding-left: calc((372 / 1200) * 100) + 0%;
+  padding-right: calc((135 / 1200) * 100) + 0%;
+  padding-bottom: 57px;
+  text-align: left;
+
+  @include vp-1199 {
+    padding-left: calc((225 / 768) * 100) + 0%;
+  }
+
+  @include vp-767 {
+    padding-top: 53px;
+    padding-left: calc((32 / 320) * 100) + 0%;
+    padding-right: calc((32 / 320) * 100) + 0%;
+    padding-bottom: 36px;
+  }
+
+}
+
+.feedback__slide .feedback__img {
+  display: block;
+  position: absolute;
+  width: 14%;
+  top: 61px;
+  left: calc((145 / 1200) * 100) + 0%;
+  height: 6vw;
+  border-radius: 57px;
+
+  @include vp-1199 {
+    position: absolute;
+    width: 13%;
+    top: 64px;
+    left: calc((90 / 768) * 100) + 0%;
+    height: 11vw;
+  }
+
+  @include vp-767 {
+    width:68px;
+    height: 68px;
+    top: 1.5em;
+    left: 40px;
+  }
+
+  @include vp-374 {
+    top: 2.5em;
+    left: 40px;
+  }
 }
 
 .feedback__name {
@@ -43,6 +114,12 @@
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
+  padding-bottom: 10px;
+
+  @include vp-767 {
+    padding-left: calc((180 / 320) * 100) + 0%;
+    line-height: 130%;
+  }
 }
 
 .feedback__description {
@@ -51,25 +128,114 @@
   font-weight: 400;
   margin: 0;
   line-height: 140%;
+
+  @include vp-767 {
+    padding-top: 10px;
+  text-align: center;
+  }
 }
 
-.feedback-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.feedback-button-prev::after {
+.feedback__button--next {
   position: absolute;
-  color: #AFAFAF;
-  font-size: 1em;
-  height: 1em;
+  width: 56px;
+  height: 56px;
+  border: 1px solid transparent;
+  right: calc((287 / 1200) * 100) + 0%;
+  top: 316px;
+
+  @include vp-1199 {
+    right: calc((28 / 768) * 100) + 0%;
+    top: 275px;
+  }
+
+  @include vp-767 {
+    width: 35px;
+    height: 35px;
+    right: calc((4 / 320) * 100) + 0%;
+    top: 295px;
+  }
+
+  @include hover {
+    border: 1px solid #102654;
+    border-radius: 50%;
+
+    &:active {
+      background-color: #102654;
+    }
+
+    &:disabled {
+      opacity: "0.3";
+    }
+  }
 }
 
-.feedback-button-next::after {
+.feedback__button--next svg {
   position: absolute;
-  color: #AFAFAF;
-  font-size: 1em;
-  height: 1em;
+  color: #102654;
+  right: calc((383 / 1200) * 100) + 0%;
+  top: 10px;
+  transform: rotate(180deg);
+
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
+    right: calc((100 / 320) * 100) + 0%;
+    top: 9px;
+  }
+
+  &:active {
+    color: $color-default-white;
+  }
+}
+
+.feedback__button--prev {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border: 1px solid transparent;
+  left: calc((287 / 1200) * 100) + 0%;
+  top: 316px;
+
+  @include vp-1199 {
+    left: calc((28 / 768) * 100) + 0%;
+    top: 275px;
+  }
+
+  @include vp-767 {
+    width: 35px;
+    height: 35px;
+    left: calc((4 / 320) * 100) + 0%;
+    top: 295px;
+  }
+
+  @include hover {
+    border: 1px solid #102654;
+    border-radius: 50%;
+
+    &:active {
+      background-color: #102654;
+    }
+
+    &:disabled {
+      opacity: "0.3";
+    }
+  }
+}
+
+.feedback__button--prev svg {
+  position: absolute;
+  color: #102654;
+  left: calc((383 / 1200) * 100) + 0%;
+  top: 10px;
+
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
+    left: calc((100 / 320) * 100) + 0%;
+    top: 9px;
+  }
+
+  &:active {
+    color: $color-default-white;
+  }
 }

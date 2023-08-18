@@ -1,6 +1,6 @@
 .gym__wrapper {
   padding-left: calc((140 / 1200) * 100) + 0%;
-  padding-right: calc((720 / 1200) * 100) + 0%;
+  padding-right: calc((745 / 1200) * 100) + 0%;
   padding-top: 120px;
   padding-bottom: 262px;
   color: #102654;
@@ -8,13 +8,20 @@
 
   @include vp-1199 {
     padding-top: 100px;
-    padding-left:calc((130/ 768) * 100) + 0%;
+    padding-left: calc((130 / 768) * 100) + 0%;
     padding-right: $padding-tbl;
-    padding-bottom: 200px;
+    padding-bottom: 569px;
+  }
+
+  @include vp-767 {
+    padding-top: 62px;
+    padding-bottom: 624px;
+    padding-left: $padding-mbl;
+    padding-right: $padding-mbl;
   }
 }
 
-.gym__title {
+.gym h2 {
   font-family: $ff-as;
   font-size: 3em;
   font-style: normal;
@@ -28,7 +35,12 @@
     font-size: 2.625em;
     letter-spacing: 1.26px;
     padding-top: 0;
-    padding-left:calc((160/ 768) * 100) + 0%;
+    padding-left: calc((160 / 768) * 100) + 0%;
+  }
+
+  @include vp-767 {
+    font-size: 2em;
+    padding-left: 0;
   }
 }
 
@@ -42,7 +54,12 @@
 
   @include vp-1199 {
     padding-top: 2px;
-    padding-left:calc((150/ 768) * 100) + 0%;
+    padding-left: calc((150 / 768) * 100) + 0%;
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+    padding-top: 7px;
   }
 }
 
@@ -52,10 +69,17 @@
   font-style: normal;
   margin: 0;
   padding-top: 41px;
-  line-height: 24px;
 
   @include vp-1199 {
+    padding-right: 73px;
     padding-top: 35px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    padding-right: 29px;
+    padding-top: 23px;
+    text-align: left;
   }
 }
 
@@ -71,50 +95,107 @@
 .gym img {
   position: absolute;
   width: 48%;
-  left: calc((535 / 1200) * 100) + 0%;
-  top: calc((190 / 1200) * 100) + 0%;
+  left: calc((531 / 1200) * 100) + 0%;
+  top: calc((201 / 1200) * 100) + 0%;
   object-fit: cover;
 
   @include vp-1199 {
+    width: 89%;
+    height: 45vw;
+    left: calc((43 / 768) * 100) + 0%;
+    top: 326px;
+  }
+
+  @include vp-767 {
     width: 100%;
-    top: calc((500/ 768) * 100) + 0%;
+    height: 34%;
+    top: 334px;
+    left: 0;
   }
 }
 
 video {
-  width: 27%;
-  height: 17vw;
+  width: 26%;
+  height: auto;
   position: absolute;
   top: calc((660 / 1200) * 100) + 0%;
-  left: calc((480 / 1200) * 100) + 0%;
+  left: calc((477 / 1200) * 100) + 0%;
+
+  @include vp-1199 {
+    width: 43%;
+    height: 21vw;
+    position: absolute;
+    left: calc((225 / 768) * 100) + 0%;
+    top: calc((530 / 768) * 100) + 0%;
+  }
+
+  @include vp-767 {
+    position: absolute;
+    width: 100%;
+    height: 63vw;
+    top: calc((237 / 320) * 100) + 0%;
+    left: 0;
+  }
 }
 
 .gym__shadow::after {
-  content: "";
-  display: block;
   position: absolute;
-  width: 27%;
-  height: 17vw;
-  background-color: rgba(20, 54, 122, 0.5);
+  content: "";
+  width: 26%;
+  height: 16.2vw;
+  background: rgba(20, 54, 122, 0.50);
   top: calc((660 / 1200) * 100) + 0%;
-  left: calc((480 / 1200) * 100) + 0%;
+  left: calc((477 / 1200) * 100) + 0%;
+
+  @include vp-1199 {
+    width: 33.8%;
+    height: 21vw;
+    left: calc((260 / 768) * 100) + 0%;
+    top: calc((530 / 768) * 100) + 0%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 63vw;
+    top: calc((237 / 320) * 100) + 0%;
+    left: 0;
+  }
 }
 
 .gym__btn {
   position: absolute;
-  top: calc((770/1200) * 100) + 0%;
-  right: calc((520/1200) * 100) + 0%;
+  top: 492px;
+  right: calc((520 / 1200) * 100) + 0%;
   background: transparent;
   border: none;
   background-image: url("/source/img/svg/video_btn.svg");
   width: 6.25em;
   height: 6.25em;
 
+  @include vp-1199 {
+    width: 4.5625em;
+    height: 4.5625em;
+    background-size: cover;
+    top: calc((570 / 768) * 100) + 0%;
+    right: calc((346 / 768) * 100) + 0%;
+  }
+
+  @include vp-767 {
+    top: calc((265 / 320) * 100) + 0%;
+    right: calc((133 / 320) * 100) + 0%;
+  }
+
+  @include vp-374 {
+    top: calc((255 / 320) * 100) + 0%;
+    right: calc((120 / 320) * 100) + 0%;
+  }
+
+
   @include hover {
     background-image: url("/source/img/svg/video-btn-hover.svg");
   }
 
-   @include active {
+  &:active {
     background-image: url("/source/img/svg/video-btn-active.svg");
   }
 

@@ -1,10 +1,20 @@
 .contacts__wrapper {
   color: #102654;
   padding-top: 56px;
-  padding-left: calc((122/1200)*100) + 0%;;
+  padding-left: calc((122 / 1200) * 100) + 0%;
   padding-bottom: 63px;
-  padding-right: calc((122/1200)*100) + 0%;
+  padding-right: calc((122 / 1200) * 100) + 0%;
   font-family: $ff-rc;
+
+  @include vp-1199 {
+    padding-top: 62px;
+    padding-bottom: 65px;
+  }
+
+  @include vp-767 {
+    padding-left: $padding-mbl;
+    padding-right: $padding-mbl;
+  }
 }
 
 .contacts__wrapper h2 {
@@ -15,25 +25,62 @@
   line-height: normal;
   letter-spacing: 1.62px;
   margin: 0;
-  padding-left: calc((241/1200)*100) + 0%;
+  padding-left: calc((110 / 1200) * 100) + 0%;
+
+  @include vp-1199 {
+    font-size: 2.625em;
+    letter-spacing: 1.5px;
+    padding-left: calc((70 / 768) * 100) + 0%;
+  }
+
+  @include vp-767 {
+    font-size: 2em;
+    letter-spacing: 1.5px;
+    padding-left: 0;
+    text-align: left;
+  }
 }
 
 .contacts__intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: calc((120/1200)*100) + 0%;
+  row-gap: 18px;
+  column-gap: calc((72 / 1200) * 100) + 0%;
   position: relative;
   padding-top: 38px;
+
+  @include vp-1199 {
+    padding-top: 32px;
+    column-gap: calc((13 / 768) * 100) + 0%;
+    row-gap: calc((165 / 768) * 100) + 0%;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    padding-top: 38px;
+    gap: 24px;
+  }
 }
 
 .contacts__intro::after {
   content: "";
   position: absolute;
-  border: 1px solid #74819C;
+  border: 1px solid #74819c;
   width: 102px;
   transform: rotate(90deg);
-  top: calc((760/1200)*100) + 0%;
-  right: calc((460/1200)*100) + 0%;
+  top: calc((760 / 1200) * 100) + 0%;
+  right: calc((460 / 1200) * 100) + 0%;
+
+  @include vp-1199 {
+    width: 129px;
+    right: calc((285 / 768) * 100) + 0%;
+    top: 102px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
 }
 
 .contacts__header {
@@ -42,13 +89,50 @@
   font-weight: 700;
   margin: 0;
   padding: 0;
-  padding-left: calc((241/1200)*100) + 0%;
+  padding-left: calc((265 / 1200) * 100) + 0%;
+
+  @include vp-1199 {
+    font-size: 1.25em;
+    padding-left: calc((139 / 768) * 100) + 0%;
+    padding-bottom: 10px;
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+  }
 }
 
 .contacts__description {
-  padding-left: calc((241/1200)*100) + 0%;
+  padding-left: calc((260 / 1200) * 100) + 0%;
   font-size: 0.875em;
   font-style: normal;
   font-weight: 400;
   margin: 0;
+
+  @include vp-1199 {
+    font-size: 1.125em;
+    padding-left: calc((139 / 768) * 100) + 0%;
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+  }
+}
+
+.contacts__block--second {
+  @include vp-767 {
+    order: 2;
+  }
+}
+
+.contacts__block--third {
+  @include vp-767 {
+    order: 1;
+  }
+}
+
+.contacts__block--four {
+  @include vp-767 {
+    order: 3;
+  }
 }

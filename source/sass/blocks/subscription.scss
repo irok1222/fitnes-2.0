@@ -1,8 +1,19 @@
 .subscription__wrapper {
-  padding: 120px $padding-dst  120px $padding-dst;
-  background: #F8F9FC;
+  padding: 120px $padding-dst 120px $padding-dst;
+  background: #f8f9fc;
   color: #102654;
   position: relative;
+
+  @include vp-1199 {
+    padding: 100px $padding-tbl 100px $padding-tbl;
+  }
+
+  @include vp-767 {
+    padding-left: $padding-mbl;
+    padding-right: $padding-mbl;
+    padding-top: 68px;
+    padding-bottom: 63px;
+  }
 }
 
 .subscription__header {
@@ -14,64 +25,168 @@
   text-align: center;
   margin: 0;
   letter-spacing: 1.62px;
+
+  @include vp-1199 {
+    font-size: 2.625em;
+    letter-spacing: 1.26px;
+  }
+
+  @include vp-767 {
+    font-size: 2em;
+  }
 }
 
 .subscription__controls {
-  padding-left: 366px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   padding-top: 19px;
-  padding-left: 0;
   margin: 0;
+  gap: 36px;
   position: relative;
-  padding-left: calc((390/1200)*100)+0%;
+
+
+  @include vp-1199 {
+    padding-top: 22px;
+    gap: 44px;
+  }
 }
 
 .subscription__controls::after {
   content: "";
-    position: absolute;
-    width: 21.3125em;
-    border-bottom: 2px solid #787878;
-    opacity: 0.2;
-    bottom: -10px;
-    right: calc((432/1200)*100)+0%;
-    left: calc((432/1200)*100)+0%;
+  position: absolute;
+  width: 21.3125em;
+  border-bottom: 2px solid #787878;
+  opacity: 0.2;
+  bottom: -17px;
+
+
+  @include vp-1199 {
+    width: 20.75em;
   }
 
+  @include vp-767 {
+    width: 18em;
+    bottom: -14px;
+  }
+}
+
 .subscription__control {
-  padding-left: 36px;
   background: transparent;
   border: none;
-  color: rgba(16, 38, 84, 0.50);
+  color: rgba(16, 38, 84, 0.5);
   font-family: $ff-rc;
   font-size: 1.25em;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%;
+
+  @include vp-1199 {
+    font-size: 1.125em;
+  }
+
+  @include vp-767 {
+    font-size: 1em;
+    padding: 0;
+  }
 }
 
-.subscription__control.is-active::before {
+.subscription__control--month.is-active::before {
   content: "";
   position: absolute;
-  width: 7%;
-  border-bottom: 2px solid #D10A42;
-  bottom: -10px;
+  width: 67px;
+  border-bottom: 2px solid #d10a42;
+  bottom: -17px;
+
+  @include vp-1199 {
+    width: 60px;
+  }
+
+  @include vp-767 {
+    bottom: -14px;
+    width: 55px;
+  }
 
   &:disabled {
     border-bottom: none;
   }
 }
 
+.subscription__control--six-month.is-active::before {
+  content: "";
+  position: absolute;
+  width: 87px;
+  border-bottom: 2px solid #d10a42;
+  bottom: -17px;
+
+  @include vp-1199 {
+    width: 80px;
+  }
+
+  @include vp-767 {
+    width: 70px;
+    bottom: -14px;
+  }
+
+  &:disabled {
+    border-bottom: none;
+  }
+}
+
+.subscription__control--year.is-active::before {
+  content: "";
+  position: absolute;
+  width: 95px;
+  border-bottom: 2px solid #d10a42;
+  bottom: -17px;
+
+  @include vp-1199 {
+    width: 85px;
+  }
+
+  @include vp-767 {
+    width: 77px;
+    bottom: -14px;
+  }
+
+  &:disabled {
+    border-bottom: none;
+  }
+}
+
+.subscription__programs {
+  @include vp-1199 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
 .subscription__list {
   width: 100%;
   list-style-type: none;
-  display:flex;
-  gap: calc((52/1200)*100)+0%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: calc((29 / 1200) * 100) + 0%;
   padding-right: 0;
   padding-left: 0;
   padding-top: 39px;
   margin: 0;
   position: relative;
-}
 
+  @include vp-1199 {
+    flex-direction: column;
+    width: 442px;
+    padding-top: 48px;
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    padding-top: 41px;
+    gap: 16px;
+    align-items: center;
+  }
+}
 
 .subscription__item {
   margin-top: 10px;
@@ -79,16 +194,31 @@
   text-align: center;
   font-family: $ff-rc;
   background: $color-default-white;
-  padding-top: calc((61/1200)*100)+0%;
-  padding-bottom: calc((61/1200)*100)+0%;
-  padding-right: calc((70/1200)*100)+0%;
-  padding-left: calc((70/1200)*100)+0%;
+  padding-top: calc((65 / 1200) * 100) + 0%;
+  padding-bottom: calc((61 / 1200) * 100) + 0%;
+  padding-right: calc((60 / 1200) * 100) + 0%;
+  padding-left: calc((60 / 1200) * 100) + 0%;
   border: 7px solid transparent;
 
   @include hover {
-  border: 7px solid transparent;
-  border-image: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
-  border-image-slice: 1;
+    border: 7px solid transparent;
+    border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+    border-image-slice: 1;
+  }
+
+  @include vp-1199 {
+    padding-top: 58px;
+    padding-bottom: 61px;
+    padding-right: 110px;
+    padding-left: 110px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+    padding-top: 45px;
+    padding-bottom: 55px;
+    padding-right: 42px;
+    padding-left: 42px;
   }
 }
 
@@ -99,6 +229,10 @@
   font-size: 1.625em;
   font-style: normal;
   font-weight: 700;
+
+  @include vp-767 {
+    font-size: 1.375em;
+  }
 }
 
 .subscription__time {
@@ -106,12 +240,15 @@
   font-style: normal;
   font-weight: 400;
   padding-top: 13px;
-  margin:0;
+  margin: 0;
 
+  @include vp-767 {
+    padding-top: 8px;
+  }
 }
 
 .subscription__price {
-  color: #103AAE;
+  color: #103aae;
   font-size: 3.75em;
   font-style: normal;
   font-weight: 700;
@@ -119,13 +256,18 @@
   padding-top: 96px;
   position: relative;
   z-index: 3;
-  text-align: left;
-  padding-left: calc((20/1200)*100)+0%;;
+  padding-right: calc((490 / 1200) * 100) + 0%;
+
+  @include vp-767 {
+    font-size: 3em;
+    padding-top: 80px;
+    padding-left: calc((40 / 320) * 100) + 0%;
+  }
 }
 
-.subscription__price--shadow {
+.subscription__shadow {
   position: absolute;
-  color: #E8E8E8;
+  color: #e8e8e8;
   opacity: 0.47999998927116394;
   font-family: $ff-rc;
   font-size: 6.25em;
@@ -133,16 +275,64 @@
   font-weight: 700;
   margin: 0;
   top: 247px;
+
+  @include vp-767 {
+    font-size: 5em;
+    padding-left: 15px;
+  }
+}
+
+.subscription__shadow--first {
+  @include vp-1199 {
+    position: absolute;
+    top: 257px;
+  }
+
+  @include vp-767 {
+    top: 217px;
+  }
+}
+
+.subscription__shadow--second {
+  @include vp-1199 {
+    position: absolute;
+    top: 743px;
+  }
+
+  @include vp-767 {
+    top: 634px;
+  }
+}
+
+.subscription__shadow--third {
+  @include vp-1199 {
+    position: absolute;
+    top: 1232px;
+  }
+
+  @include vp-767 {
+    top: 1054px;
+  }
 }
 
 .subscription__price::after {
   content: "";
   position: absolute;
   background-image: url("/source/img/svg/rubl.svg");
+  background-repeat: no-repeat;
   width: 30px;
   height: 42px;
-  top: calc((883/1200)*100)+0%;
-  right: calc((113/1200)*100)+0%;
+  top: calc((883 / 1200) * 100) + 0%;
+  right: calc((113 / 1200) * 100) + 0%;
+
+  @include vp-767 {
+    background-image: url("/source/img/svg/ruble-tbl.svg");
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 33px;
+    top: calc((227 / 320) * 100) + 0%;
+    right: calc((52 / 320) * 100) + 0%;
+  }
 }
 
 .subscription__buttom {
@@ -160,13 +350,18 @@
   padding: 25px 44px;
   margin-top: 68px;
 
+  @include vp-767 {
+    margin-top: 52px;
+    margin-left: -7px;
+  }
+
   @include hover {
     background: $gradient;
     color: $color-default-white;
     border: none;
   }
 
-  @include active {
+  &:active {
     opacity: 0.699999988079071;
   }
 

@@ -1,10 +1,6 @@
 .header__wrapper {
   color: $color-default-white;
-  background-color: conic-gradient(
-    from 151deg at 16.03% 39.06%,
-    #003d85 32.23633825778961deg,
-    #b80027 313.3060026168823deg
-  );
+  background-color: rgb(142, 6, 137);
   background-image: url("/source/img/background.jpg");
   background-size: cover;
 }

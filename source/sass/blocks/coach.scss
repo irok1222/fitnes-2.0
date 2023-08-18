@@ -3,22 +3,131 @@
   padding-right: $padding-dst;
   padding-bottom: 84px;
   position: relative;
+
+  @include vp-1199 {
+    padding-left: calc((90 / 768) * 100) + 0%;
+    padding-right: calc((90 / 768) * 100) + 0%;
+    padding-bottom: 78px;
+  }
+
+  @include vp-767 {
+    padding-left: calc((47 / 320) * 100) + 0%;
+    padding-right: calc((47 / 320) * 100) + 0%;
+    padding-bottom: 51px;
+  }
 }
 
-.swiper-button-prev::after {
+.coach__button--prev {
   position: absolute;
-  color: #AFAFAF;
-  font-size: 2em;
-  left:  calc((23/1200)*100)+0%;
-  top: -2px
+  width: 56px;
+  height: 56px;
+  border: 1px solid transparent;
+  left: calc((23 / 1200) * 100) + 0%;
+  top: 230px;
+
+  @include vp-1199 {
+    width: 56px;
+    height: 56px;
+    left: calc((23 / 768) * 100) + 0%;
+    top: 210px;
+  }
+
+  @include vp-767 {
+    width: 47px;
+    height: 47px;
+    left: calc((0.6 / 320) * 100) + 0%;
+    top: 210px;
+  }
+
+  @include hover {
+    border: 1px solid #102654;
+    border-radius: 50%;
+
+    &:active {
+      background-color: #102654;
+    }
+
+    &:disabled {
+      opacity: "0.3";
+    }
+  }
 }
 
-.swiper-button-next::after {
+.coach__button--prev svg {
   position: absolute;
-  color: #AFAFAF;
-  font-size: 2em;
-  left:  calc((-24/1200)*100)+0%;
-  top: -2px;
+  color: #102654;
+  left: calc((383 / 1200) * 100) + 0%;
+  top: 10px;
+
+  @include vp-1199 {
+    left: calc((285 / 768) * 100) + 0%;
+    top: 7px;
+  }
+
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
+    left: calc((103 / 320) * 100) + 0%;
+    top: 15px;
+  }
+
+  &:active {
+    color: $color-default-white;
+  }
+}
+
+.coach__button--next {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border: 1px solid transparent;
+  right: calc((23 / 1200) * 100) + 0%;
+  top: 230px;
+
+  @include vp-1199 {
+    width: 56px;
+    height: 56px;
+    right: calc((0.6 / 768) * 100) + 0%;
+    top: 210px;
+  }
+
+  @include vp-767 {
+    width: 47px;
+    height: 47px;
+    right: calc((23 / 320) * 100) + 0%;
+    top: 210px;
+  }
+
+  @include hover {
+    border: 1px solid #102654;
+    border-radius: 50%;
+
+    &:active {
+      background-color: #102654;
+    }
+
+    &:disabled {
+      opacity: "0.3";
+    }
+  }
+}
+
+.coach__button--next svg {
+  position: absolute;
+  color: #102654;
+  right: calc((383 / 1200) * 100) + 0%;
+  top: 10px;
+  transform: rotate(180deg);
+
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
+    right: calc((-60 / 320) * 100) + 0%;
+    top: 15px;
+  }
+  &:active {
+    color: $color-default-white;
+  }
 }
 
 .coach__title {
@@ -31,8 +140,20 @@
   line-height: normal;
   letter-spacing: 1.62px;
   padding-bottom: 27px;
-}
 
+  @include vp-1199 {
+    font-size: 2.625em;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  @include vp-767 {
+    font-size: 2em;
+    padding-top: 14px;
+    padding-bottom: 23px;
+  }
+}
 
 .swiper {
   width: 100%;
@@ -48,6 +169,7 @@
   justify-content: center;
   align-items: center;
   width: 260px;
+  position: relative;
 }
 
 .swiper-slide img {
@@ -56,10 +178,87 @@
   height: 100%;
   object-fit: cover;
   position: relative;
+
+  @include vp-767 {
+    height: 274px;
+  }
 }
 
 .swiper-wrapper {
-  gap: calc((11/1200)*100)+0%;;
+  gap: calc((11 / 1200) * 100) + 0%;
+}
+
+.coach__hover--name {
+  opacity: 1;
+  font-family: $ff-rc;
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.coach__hover {
+  opacity: 0;
+  position: absolute;
+
+  @include hover {
+  opacity: 1;
+  width: 260px;
+  background-color: rgba(16, 38, 84, 0.89);
+  color: $color-default-white;
+  padding-top: 50px;
+  padding-bottom: 42px;
+  padding-left: 26px;
+  padding-right: 26px;
+  font-family: $ff-rc;
+  }
+}
+
+@include vp-1199 {
+  @media (max-width: ($vp-1200 - 1px)) {
+    .coach__hover {
+      opacity: 0;
+      position: absolute;
+
+      &:active {
+      opacity: 1;
+      width: 260px;
+      background-color: rgba(16, 38, 84, 0.89);
+      color: $color-default-white;
+      padding-top: 50px;
+      padding-bottom: 42px;
+      padding-left: 26px;
+      padding-right: 26px;
+      font-family: $ff-rc;
+      }
+    }
+  }
+}
+
+.coach__hover--line {
+  color: #b6bdcc;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  font-family: $ff-rc;
+  line-height: 150%;
+  padding-bottom: 28px;
+}
+
+.coach__hover--list {
+  margin: 0;
+  list-style-type: disc;
+}
+
+.coach__hover--item {
+  text-align: left;
+  font-size: 0.875em;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  padding-bottom: 9px;
 }
 
 .coach__name {
@@ -73,6 +272,4 @@
   font-weight: 700;
   margin: 0;
 }
-
-
 

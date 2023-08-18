@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initAccordions();
   initSwiper();
   swiper();
-
+  // play();
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
