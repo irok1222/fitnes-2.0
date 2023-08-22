@@ -31,7 +31,7 @@
 
 .custom__wrapper h2 {
   font-family: $ff-as;
-  font-size: 3.375em;
+  font-size: 3.38em;
   font-style: normal;
   font-weight: 800;
   margin: 0;
@@ -40,7 +40,7 @@
   line-height: 156%;
 
   @include vp-1199 {
-    font-size: 2.625em;
+    font-size: 2.63em;
     letter-spacing: 1.26px;
     padding-bottom: 29px;
   }
@@ -49,6 +49,16 @@
     font-size: 2em;
     letter-spacing: 0.96px;
     padding-bottom: 29px;
+  }
+}
+
+.custom__intro {
+  display: flex;
+  gap: calc((60 / 1200) * 100) + 0%;
+
+  @include vp-767 {
+    flex-direction: column;
+    row-gap: 31px;
   }
 }
 
@@ -73,29 +83,52 @@
 
   @include vp-767 {
     width: 290px;
-    margin-top: 8px;
+    margin-top: 41px;
   }
 }
 
-.input {
+.custom-input {
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.5);
+}
+
+.custom-input.is-invalid {
+  border-bottom: 1px solid #ff121f;
+}
+
+input {
   font-family: $ff-rc;
   width: 192px;
   border: none;
   background: #102654;
-  border-bottom: 1px solid $color-default-white;
-  margin-right: 25px;
   padding-bottom: 5px;
+  color: $color-default-white;
 
-  @include vp-1199 {
-    width: 208px;
-    margin-right: 56px;
+  @include hover {
+    border-bottom: 1px solid $color-default-white;
   }
 
-  @include vp-767 {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 32px;
-    padding-bottom: 5px;
+  &.active {
+    border: 1px solid $color-default-white;
+  }
+
+  &.disabled {
+    border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+  }
+}
+
+.input-message {
+  position: absolute;
+  font-size: 10px;
+  bottom: -24px;
+
+  &.is-invalid {
+    color: #ff0000;
+  }
+
+  &.is-valid {
+    color: #15ab07;
   }
 }
 
@@ -106,4 +139,8 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+
+  &.disabled {
+    color: rgb(255, 255, 255, 0.4);
+  }
 }

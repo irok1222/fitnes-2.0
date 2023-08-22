@@ -79,7 +79,7 @@
                 </ul>
 
                 <p class="hero__title">фитнес <br> центр</p>
-                <a class="hero__button button" href="#"> Купить абонимент</a>
+                <button class="hero__button buttom" type="button"> Купить абонимент</button>
 
                 <picture>
                   <source type="image/webp" srcset="./img/hero-dst.webp 1x, ./img/hero-dst@2x.webp 2x">
@@ -114,19 +114,20 @@
                 alt="Фото спортивного зала Супер Джим.">
             </picture>
 
-            <div class="gym__shadow">
-              <video id="video" width="320" height="167" poster="./img/video/video.jpg">
-                <source src="./img/video/video.ogv" type='video/ogg; codecs="theora, vorbis"'>
-                <source src="./img/video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                <source src="./img/video/video.webm" type='video/webm; codecs="vp8, vorbis"'>
-              </video>
-            </div>
-            <button class="gym__btn" type="button"></button>
+
+            <div class="video__shadow"></div>
+            <video class="video" width="364" height="228" poster="./img/video/video.jpg">
+              <source src="./img/video/video.ogv" type='video/ogg; codecs="theora, vorbis"'>
+              <source src="./img/video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+              <source src="./img/video/video.webm" type='video/webm; codecs="vp8, vorbis"'>
+            </video>
+            <button class="video-play" type="button"></button>
+
           </div>
         </div>
       </section>
 
-      <section class="subscription">
+      <section class="subscription" id="subscription">
         <div class="container">
           <div class="subscription__wrapper" data-tabs="parent">
             <h2 class="subscription__header">Абонементы</h2>
@@ -147,7 +148,7 @@
                   <p class="subscription__time">12 занятий</p>
                   <p class="subscription__price">5000</p>
                   <p class="subscription__shadow subscription__shadow--first">5000</p>
-                  <button class="subscription__buttom buttom">купить абонемент</button>
+                  <a class="subscription__buttom" href="#">купить абонемент</a>
                 </li>
 
                 <li class="subscription__item">
@@ -155,7 +156,7 @@
                   <p class="subscription__time">с 8:00 до 17:00 </p>
                   <p class="subscription__price">1700</p>
                   <p class="subscription__shadow subscription__shadow--second">1700</p>
-                  <button class="subscription__buttom buttom">купить абонемент</button>
+                  <a class="subscription__buttom" href="#">купить абонемент</a>
                 </li>
 
                 <li class="subscription__item">
@@ -163,7 +164,7 @@
                   <p class="subscription__time">с 8:00 до 22:00 </p>
                   <p class="subscription__price">2700</p>
                   <p class="subscription__shadow subscription__shadow--third">2700</p>
-                  <button class="subscription__buttom buttom">купить абонемент</button>
+                  <a class="subscription__buttom" href="#">купить абонемент</a>
                 </li>
 
               </ul>
@@ -175,7 +176,7 @@
                   <p class="subscription__time">12 занятий</p>
                   <p class="subscription__price">10000</p>
                   <p class="subscription__shadow subscription__shadow--first ">10000</p>
-                  <button class="subscription__buttom buttom">купить абонемент</button>
+                  <a class="subscription__buttom" href="#">купить абонемент</a>
                 </li>
 
                 <li class="subscription__item">
@@ -183,7 +184,7 @@
                   <p class="subscription__time">с 8:00 до 17:00 </p>
                   <p class="subscription__price">3600</p>
                   <p class="subscription__shadow subscription__shadow--second">3600</p>
-                  <button class="subscription__buttom buttom">купить абонемент</button>
+                  <a class="subscription__buttom" href="#">купить абонемент</a>
                 </li>
 
                 <li class="subscription__item">
@@ -191,7 +192,7 @@
                   <p class="subscription__time">с 8:00 до 22:00 </p>
                   <p class="subscription__price">5200</p>
                   <p class="subscription__shadow subscription__shadow--third">5200</p>
-                  <button class="subscription__buttom buttom">купить абонемент</button>
+                  <a class="subscription__buttom" href="#">купить абонемент</a>
                 </li>
 
               </ul>
@@ -203,7 +204,7 @@
                   <p class="subscription__time">12 занятий</p>
                   <p class="subscription__price">20000</p>
                   <p class="subscription__shadow subscription__shadow--first">20000</p>
-                  <button class="subscription__buttom buttom">купить абонемент</button>
+                  <a class="subscription__buttom" href="#">купить абонемент</a>
                 </li>
 
                 <li class="subscription__item">
@@ -211,7 +212,7 @@
                   <p class="subscription__time">с 8:00 до 17:00 </p>
                   <p class="subscription__price">4700</p>
                   <p class="subscription__shadow subscription__shadow--second">4700</p>
-                  <button class="subscription__buttom buttom">купить абонемент</button>
+                  <a class="subscription__buttom" href="#">купить абонемент</a>
                 </li>
 
                 <li class="subscription__item">
@@ -219,7 +220,7 @@
                   <p class="subscription__time">с 8:00 до 22:00 </p>
                   <p class="subscription__price">6700</p>
                   <p class="subscription__shadow subscription__shadow--third">6700</p>
-                  <button class="subscription__buttom buttom">купить абонемент</button>
+                  <a class="subscription__buttom" href="#">купить абонемент</a>
                 </li>
 
               </ul>
@@ -234,6 +235,7 @@
             <div class="games__text">
               <h2 class="games__title"> Super games </h2>
               <p class="games__header">Ежегодные соревнования по CrossFit</p>
+
               <p class="games__dait">Дата</p>
               <p class="games__number">7</p>
               <p class="games__month">Марта</p>
@@ -248,9 +250,8 @@
               <img src="./img/supergym.jpg" width="660" height="500" srcset="./img/supergym@2x.jpg"
                 alt="мужчина в спортивной форме бьет по полу рукой и разлетается пыль.">
             </picture>
-
           </div>
-        </div>
+          </div>
       </section>
 
       <section class="coach">
@@ -262,23 +263,23 @@
               <div class="swiper-wrapper">
 
                 <div class="swiper-slide">
-                  <p class="coach__name">Анна Павлова</p>
                   <picture>
                     <source type="image/webp" srcset="./img/coach/coach1.webp 1x, ./img/coach/coach1@2x.webp 2x">
                     <img src="./img/coach1.jpg" width="260" height="294" srcset="./img/coach/coach1@2x.jpg 2x"
                       alt="тренер.">
                   </picture>
-                  <div class="coach__hover">
-                    <p class="coach__hover--name">Александр Пашков</p>
-                    <p class="coach__hover--line">CrossFit</p>
-                    <ul class="coach__hover--list">
-                      <li class="coach__hover--item">
+                  <p class="coach__name">Анна Павлова</p>
+                  <div class="coach__card">
+                    <p class="coach__card--name">Александр Пашков</p>
+                    <p class="coach__card--line">CrossFit</p>
+                    <ul class="coach__card--list">
+                      <li class="coach__card--item">
                         Certified Level 3 Trainer
                       </li>
-                      <li class="coach__hover--item">
+                      <li class="coach__card--item">
                         Победитель чемпионата России по CrossFit
                       </li>
-                      <li class="coach__hover--item">Опыт — 6 лет</li>
+                      <li class="coach__card--item">Опыт — 6 лет</li>
                     </ul>
                   </div>
                 </div>
@@ -291,19 +292,19 @@
                       alt="тренер.">
                   </picture>
 
-                <div class="coach__hover">
-                  <p class="coach__hover--name">Александр Пашков</p>
-                  <p class="coach__hover--line">CrossFit</p>
-                  <ul class="coach__hover--list">
-                    <li class="coach__hover--item">
-                      Certified Level 3 Trainer
-                    </li>
-                    <li class="coach__hover--item">
-                      Победитель чемпионата России по CrossFit
-                    </li>
-                    <li class="coach__hover--item">Опыт — 6 лет</li>
-                  </ul>
-                </div>
+                  <div class="coach__card">
+                    <p class="coach__card--name">Александр Пашков</p>
+                    <p class="coach__card--line">CrossFit</p>
+                    <ul class="coach__card--list">
+                      <li class="coach__card--item">
+                        Certified Level 3 Trainer
+                      </li>
+                      <li class="coach__card--item">
+                        Победитель чемпионата России по CrossFit
+                      </li>
+                      <li class="coach__card--item">Опыт — 6 лет</li>
+                    </ul>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
@@ -314,19 +315,19 @@
                       alt="тренер.">
                   </picture>
 
-                <div class="coach__hover">
-                  <p class="coach__hover--name">Александр Пашков</p>
-                  <p class="coach__hover--line">CrossFit</p>
-                  <ul class="coach__hover--list">
-                    <li class="coach__hover--item">
-                      Certified Level 3 Trainer
-                    </li>
-                    <li class="coach__hover--item">
-                      Победитель чемпионата России по CrossFit
-                    </li>
-                    <li class="coach__hover--item">Опыт — 6 лет</li>
-                  </ul>
-                </div>
+                  <div class="coach__card">
+                    <p class="coach__card--name">Александр Пашков</p>
+                    <p class="coach__card--line">CrossFit</p>
+                    <ul class="coach__card--list">
+                      <li class="coach__card--item">
+                        Certified Level 3 Trainer
+                      </li>
+                      <li class="coach__card--item">
+                        Победитель чемпионата России по CrossFit
+                      </li>
+                      <li class="coach__card--item">Опыт — 6 лет</li>
+                    </ul>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
@@ -337,20 +338,20 @@
                       alt="тренер.">
                   </picture>
 
-                <div class="coach__hover">
-                  <p class="coach__hover--name">Александр Пашков</p>
-                  <p class="coach__hover--line">CrossFit</p>
-                  <ul class="coach__hover--list">
-                    <li class="coach__hover--item">
-                      Certified Level 3 Trainer
-                    </li>
-                    <li class="coach__hover--item">
-                      Победитель чемпионата России по CrossFit
-                    </li>
-                    <li class="coach__hover--item">Опыт — 6 лет</li>
-                  </ul>
+                  <div class="coach__card">
+                    <p class="coach__card--name">Александр Пашков</p>
+                    <p class="coach__card--line">CrossFit</p>
+                    <ul class="coach__card--list">
+                      <li class="coach__card--item">
+                        Certified Level 3 Trainer
+                      </li>
+                      <li class="coach__card--item">
+                        Победитель чемпионата России по CrossFit
+                      </li>
+                      <li class="coach__card--item">Опыт — 6 лет</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
 
                 <div class="swiper-slide">
                   <p class="coach__name">Анна Павлова</p>
@@ -360,19 +361,19 @@
                       alt="тренер.">
                   </picture>
 
-                <div class="coach__hover">
-                  <p class="coach__hover--name">Александр Пашков</p>
-                  <p class="coach__hover--line">CrossFit</p>
-                  <ul class="coach__hover--list">
-                    <li class="coach__hover--item">
-                      Certified Level 3 Trainer
-                    </li>
-                    <li class="coach__hover--item">
-                      Победитель чемпионата России по CrossFit
-                    </li>
-                    <li class="coach__hover--item">Опыт — 6 лет</li>
-                  </ul>
-                </div>
+                  <div class="coach__card">
+                    <p class="coach__card--name">Александр Пашков</p>
+                    <p class="coach__card--line">CrossFit</p>
+                    <ul class="coach__card--list">
+                      <li class="coach__card--item">
+                        Certified Level 3 Trainer
+                      </li>
+                      <li class="coach__card--item">
+                        Победитель чемпионата России по CrossFit
+                      </li>
+                      <li class="coach__card--item">Опыт — 6 лет</li>
+                    </ul>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
@@ -383,20 +384,20 @@
                       alt="тренер.">
                   </picture>
 
-                <div class="coach__hover">
-                  <p class="coach__hover--name">Александр Пашков</p>
-                  <p class="coach__hover--line">CrossFit</p>
-                  <ul class="coach__hover--list">
-                    <li class="coach__hover--item">
-                      Certified Level 3 Trainer
-                    </li>
-                    <li class="coach__hover--item">
-                      Победитель чемпионата России по CrossFit
-                    </li>
-                    <li class="coach__hover--item">Опыт — 6 лет</li>
-                  </ul>
+                  <div class="coach__card">
+                    <p class="coach__card--name">Александр Пашков</p>
+                    <p class="coach__card--line">CrossFit</p>
+                    <ul class="coach__card--list">
+                      <li class="coach__card--item">
+                        Certified Level 3 Trainer
+                      </li>
+                      <li class="coach__card--item">
+                        Победитель чемпионата России по CrossFit
+                      </li>
+                      <li class="coach__card--item">Опыт — 6 лет</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
 
                 <div class="swiper-slide">
                   <p class="coach__name">Александр Пашков</p>
@@ -407,19 +408,19 @@
                   </picture>
 
 
-                <div class="coach__hover">
-                  <p class="coach__hover--name">Александр Пашков</p>
-                  <p class="coach__hover--line">CrossFit</p>
-                  <ul class="coach__hover--list">
-                    <li class="coach__hover--item">
-                      Certified Level 3 Trainer
-                    </li>
-                    <li class="coach__hover--item">
-                      Победитель чемпионата России по CrossFit
-                    </li>
-                    <li class="coach__hover--item">Опыт — 6 лет</li>
-                  </ul>
-                </div>
+                  <div class="coach__card">
+                    <p class="coach__card--name">Александр Пашков</p>
+                    <p class="coach__card--line">CrossFit</p>
+                    <ul class="coach__card--list">
+                      <li class="coach__card--item">
+                        Certified Level 3 Trainer
+                      </li>
+                      <li class="coach__card--item">
+                        Победитель чемпионата России по CrossFit
+                      </li>
+                      <li class="coach__card--item">Опыт — 6 лет</li>
+                    </ul>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
@@ -430,26 +431,26 @@
                       alt="тренер.">
                   </picture>
 
-                <div class="coach__hover">
-                  <p class="coach__hover--name">Александр Пашков</p>
-                  <p class="coach__hover--line">CrossFit</p>
-                  <ul class="coach__hover--list">
-                    <li class="coach__hover--item">
-                      Certified Level 3 Trainer
-                    </li>
-                    <li class="coach__hover--item">
-                      Победитель чемпионата России по CrossFit
-                    </li>
-                    <li class="coach__hover--item">Опыт — 6 лет</li>
-                  </ul>
+                  <div class="coach__card">
+                    <p class="coach__card--name">Александр Пашков</p>
+                    <p class="coach__card--line">CrossFit</p>
+                    <ul class="coach__card--list">
+                      <li class="coach__card--item">
+                        Certified Level 3 Trainer
+                      </li>
+                      <li class="coach__card--item">
+                        Победитель чемпионата России по CrossFit
+                      </li>
+                      <li class="coach__card--item">Опыт — 6 лет</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
 
-            </div>
+              </div>
             </div>
             <div class="coach-button coach__button--next">
               <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path  d="M17 1L0.999999 17L17 33" stroke="currentColor" aria-label="Назад." />
+                <path d="M17 1L0.999999 17L17 33" stroke="currentColor" aria-label="Назад." />
               </svg>
             </div>
             <div class="coach-button coach__button--prev">
@@ -469,8 +470,8 @@
             <ul class="features__list">
 
               <li class="features__item features__item--left features__item--line features__item--w">
-                <p class="feature__number">900</p>
-                <p class="feature__unit">кв/м</p>
+                <p class="features__number">900</p>
+                <p class="features__unit">кв/м</p>
                 <div class="features__text">
                   <p class="features__header">Площадь </p>
                   <p class="features__description">Занимайтесь без очередей <br> и толкучки</p>
@@ -478,17 +479,24 @@
               </li>
 
               <li class="features__item features__item--rigth features__item--line features__item--b">
-                <p class="feature__number">70</p>
-                <p class="feature__unit">машин</p>
+                <p class="features__number">70</p>
+                <p class="features__unit">машин</p>
                 <div class="features__text">
                   <p class="features__header">Собственная парковка </p>
                   <p class="features__description">Вы всегда найдете место для <br> своей машины на нашей парковке</p>
                 </div>
               </li>
 
+              <li class="features__item features__item--center">
+                <p class="features__number-center">100</p>
+                <p class="features__header features__header--center">Тренажеров</p>
+                <p class="features__description features__description--center">Современные тренажеры на все группы мышц
+                </p>
+              </li>
+
               <li class="features__item features__item--left features__item--c ">
-                <p class="feature__number">350</p>
-                <p class="feature__unit ">мест</p>
+                <p class="features__number">350</p>
+                <p class="features__unit ">мест</p>
                 <div class="features__text">
                   <p class="features__header">Комфорт </p>
                   <p class="features__description">Просторные раздевалки,<br>
@@ -497,20 +505,15 @@
               </li>
 
               <li class="features__item features__item--rigth features__item--d ">
-                <p class="feature__number">5+</p>
-                <p class="feature__unit">лет </p>
+                <p class="features__number">5+</p>
+                <p class="features__unit">лет </p>
                 <div class="features__text">
                   <p class="features__header">Тренерский опыт</p>
                   <p class="features__description">Добивайтесь своих целей быстрее с профессиональным тренером</p>
                 </div>
               </li>
 
-              <li class="features__item features__item--center">
-                <p class="feature__number-center">100</p>
-                <p class="features__header features__header--center">Тренажеров</p>
-                <p class="features__description features__description--center">Современные тренажеры на все группы мышц
-                </p>
-              </li>
+
 
             </ul>
           </div>
@@ -722,7 +725,8 @@
                         по вопросам питания?</p>
                       <div class="faq__content" data-accordion="content">
                         <div class="faq__description">
-                          <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
+                          <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист
+                            уточнит ваши данные, цели и предложит программу питания.</p>
                         </div>
                       </div>
                       <button class="faq__toggle" type="button" data-accordion="button">
@@ -886,7 +890,7 @@
 
                 <div class="swiper-slide">
                   <div class="feedback__slide">
-                    <img class="feedback__img" src="./img/feedback.png" width="80" height="80"
+                    <img class="feedback__img" src="./img/feedback.jpg" width="80" height="80"
                       alt="фото человека, кто оставил отзыв.">
                     <div class="feedback__text">
                       <p class="feedback__name">Анна Орлова</p>
@@ -900,7 +904,7 @@
               </div>
             </div>
 
-            <div class="feedback-button feedback__button--next">
+            <div class="feedback-button feedback__button--next" >
               <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17 1L0.999999 17L17 33" stroke="currentColor" aria-label="Назад." />
               </svg>
@@ -916,22 +920,34 @@
       </section>
 
       <div class="wrapper__section">
-        <form class="custom">
-          <div class="container">
-            <div class="custom__wrapper">
-              <h2>Бесплатное занятие </h2>
-              <label>
-                <input class="input" type="text" placeholder="Имя">
-              </label>
+        <div class="custom" data-form-validate data-callback="base">
+          <form method="post">
+            <div class="container">
+              <div class="custom__wrapper">
+                <h2>Бесплатное занятие </h2>
+                <div class="custom__intro">
+                  <div class="custom-input" data-validate-type="text"  data-limitation="letters"
+                    data-message-base="Поле обязательно к заполнению"
+                    data-message-extra="Проверьте корректность заполнения поля"  data-required>
+                    <label>
+                      <input type="text" name="user-name" placeholder="Имя">
+                    </label>
+                  </div>
 
-              <label>
-                <input class="input" type="tel" placeholder="Телефон" autocomplete="off">
-              </label>
-
-              <button class="custom__buttom buttom" type="button">отправить</button>
+                  <div class="custom-input" data-validate-type="phone"  data-matrix-limitation="digit"
+                    data-message-base="Поле обязательно к заполнению"
+                    data-message-extra="Проверьте корректность заполнения поля" data-required data-phone-length>
+                    <label>
+                      <input type="tel" name="user-phone" placeholder="Телефон" autocomplete="off">
+                    </label>
+                  </div>
+                </div>
+                <button class="custom__buttom buttom" type="submit">отправить</button>
+              </div>
             </div>
-          </div>
-        </form>
+
+          </form>
+        </div>
 
         <section class="contacts">
           <div class="container">
@@ -943,7 +959,7 @@
                   <p class="contacts__header">Адрес:</p>
                   <p class="contacts__description">г. Омск, ул. 60 лет Октября, 7</p>
                 </div>
-                <div class="contacts__block contacts__block--second" >
+                <div class="contacts__block contacts__block--second">
                   <p class="contacts__header">Телефон:</p>
                   <p class="contacts__description">8-800-555-55-55</p>
                 </div>
@@ -961,88 +977,88 @@
         </section>
       </div>
 
-    </main>
+  </main>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__wrapper">
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
 
-          <a class="footer__logo" href="index.html">
-            <svg class="footer__svg" aria-hidden="true" focusable="false" fill="currentColor">
-              <use xlink:href="#logo"></use>
-            </svg>
-          </a>
-          <nav class="footer__nav ">
+        <a class="footer__logo" href="index.html">
+          <svg class="footer__svg" aria-hidden="true" focusable="false" fill="currentColor">
+            <use xlink:href="#logo"></use>
+          </svg>
+        </a>
+        <nav class="footer-nav ">
 
-            <ul class="footer-nav__list">
+          <ul class="footer-nav__list">
 
-              <li class="footer-nav__item footer-nav__item--first">
-                <a class="footer-nav__link" href="#">
-                </a>
-              </li>
+            <li class="footer-nav__item footer-nav__item--first">
+              <a class="footer-nav__link" href="#">
+              </a>
+            </li>
 
-              <li class="footer-nav__item footer-nav__item--second">
-                <a class="footer-nav__link" href="#">Услуги
-                </a>
-              </li>
-              <li class="footer-nav__item footer-nav__item--third">
-                <a class="footer-nav__link" href="#"> Абонементы
-                </a>
-              </li>
-              <li class="footer-nav__item footer-nav__item--four" >
-                <a class="footer-nav__link" href="#">Акции
-                </a>
-              </li>
-              <li class="footer-nav__item footer-nav__item--five">
-                <a class="footer-nav__link" href="#"> Тренеры
-                </a>
-              </li>
-              <li class="footer-nav__item footer-nav__item--six">
-                <a class="footer-nav__link" href="#"> Расписание
-                </a>
-              </li>
-            </ul>
+            <li class="footer-nav__item footer-nav__item--second">
+              <a class="footer-nav__link" href="#">Услуги
+              </a>
+            </li>
+            <li class="footer-nav__item footer-nav__item--third">
+              <a class="footer-nav__link" href="#"> Абонементы
+              </a>
+            </li>
+            <li class="footer-nav__item footer-nav__item--four">
+              <a class="footer-nav__link" href="#">Акции
+              </a>
+            </li>
+            <li class="footer-nav__item footer-nav__item--five">
+              <a class="footer-nav__link" href="#"> Тренеры
+              </a>
+            </li>
+            <li class="footer-nav__item footer-nav__item--six">
+              <a class="footer-nav__link" href="#"> Расписание
+              </a>
+            </li>
+          </ul>
 
-          </nav>
+        </nav>
 
-          <section class="footer__social">
-            <ul class="footer__social-list">
+        <section class="footer__social">
+          <ul class="footer__social-list">
 
-              <li class="footer__social-item">
-                <a class="footer__social-link" href="#">
-                  <svg class="footer__icon footer__icon--vk" aria-hidden="true" focusable="false" width="14" height="14"
-                    fill="currentColor">
-                    <use xlink:href="#vk"></use>
-                  </svg>
-                  <span class="visually-hidden">ВКонтакте.</span>
-                </a>
-              </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#">
+                <svg class="footer__icon footer__icon--vk" aria-hidden="true" focusable="false" width="25" height="25"
+                  fill="currentColor">
+                  <use xlink:href="#vk"></use>
+                </svg>
+                <span class="visually-hidden">ВКонтакте.</span>
+              </a>
+            </li>
 
-              <li class="footer__social-item">
-                <a class="footer__social-link" href="#">
-                  <svg class="footer__icon footer__icon--ok" aria-hidden="true" focusable="false" width="25" height="25"
-                    fill="currentColor">
-                    <use xlink:href="#ok"></use>
-                  </svg>
-                  <span class="visually-hidden">Одноклассники.</span>
-                </a>
-              </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#">
+                <svg class="footer__icon footer__icon--ok" aria-hidden="true" focusable="false" width="25" height="25"
+                  fill="currentColor">
+                  <use xlink:href="#ok"></use>
+                </svg>
+                <span class="visually-hidden">Одноклассники.</span>
+              </a>
+            </li>
 
-              <li class="footer__social-item">
-                <a class="footer__social-link" href="#">
-                  <svg class="footer__icon footer__icon--reddit" aria-hidden="true" focusable="false" width="25" height="25"
-                    fill="currentColor">
-                    <use xlink:href="#reddit"></use>
-                  </svg>
-                  <span class="visually-hidden">Reddit.</span>
-                </a>
-              </li>
-            </ul>
-          </section>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#">
+                <svg class="footer__icon footer__icon--reddit" aria-hidden="true" focusable="false" width="25"
+                  height="25" fill="currentColor">
+                  <use xlink:href="#reddit"></use>
+                </svg>
+                <span class="visually-hidden">Reddit.</span>
+              </a>
+            </li>
+          </ul>
+        </section>
 
-        </div>
       </div>
-    </footer>
+    </div>
+  </footer>
   </div>
 
   <script src="js/vendor.min.js"></script>

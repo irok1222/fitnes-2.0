@@ -1,11 +1,10 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {Form} from './modules/form-validate/form';
-import {initModals} from './modules/modals/init-modals';
-import {swiper} from './modules/slide/coach';
-import {initSwiper} from './modules/slide/feedback';
-// import {play} from './modules/video';
-import {initTabs} from './modules/init-tabs';
-import {initAccordions} from './modules/init-accordion';
+import { iosVhFix } from './utils/ios-vh-fix';
+import { Form } from './modules/form-validate/form';
+import { initModals } from './modules/modals/init-modals';
+import { swiper } from './modules/slide/coach';
+import { initSwiper } from './modules/slide/feedback';
+import { initTabs } from './modules/init-tabs';
+import { initAccordions } from './modules/init-accordion';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -15,11 +14,32 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
 
   // Modules
+  const viewElement = document.getElementById('subscription');
+  const btn = document.querySelector('.hero__button');
+
+  function handleButtonClick() {
+    viewElement.scrollIntoView({block: 'center', behavior: 'smooth'});
+  }
+
+  btn.addEventListener('click', handleButtonClick);
+
+  const video = document.querySelector('.video');
+  const button = document.querySelector('.video-play');
+  const shadow = document.querySelector('.video__shadow');
+
+  button.addEventListener('click', function () {
+    if (video.paused) {
+      video.play();
+      shadow.style.opacity = '0';
+      button.style.opacity = '0';
+    } else {
+      video.pause();
+      button.style.opacity = '1';
+    }
+  }, false);
   initTabs();
   initAccordions();
-  initSwiper();
-  swiper();
-  // play();
+
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

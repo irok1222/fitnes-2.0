@@ -20,7 +20,7 @@
 .faq__title {
   color: #102654;
   font-family: $ff-as;
-  font-size: 3.375em;
+  font-size: 3.38em;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -29,7 +29,7 @@
   padding-bottom: 40px;
 
   @include vp-1199 {
-    font-size: 2.625em;
+    font-size: 2.63em;
     text-align: center;
   }
 
@@ -38,7 +38,6 @@
     letter-spacing: 1px;
     padding-bottom: 35px;
   }
-
 }
 
 .faq__intro {
@@ -66,6 +65,7 @@
   @include vp-767 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-items: center;
     row-gap: 8px;
     padding-bottom: 18px;
   }
@@ -75,7 +75,7 @@
   color: #102654;
   text-align: center;
   font-family: $ff-rc;
-  font-size: 1.125em;
+  font-size: 1.13em;
   font-style: normal;
   font-weight: 500;
   border: 1px solid rgba(16, 38, 84, 0.2);
@@ -170,7 +170,7 @@
   }
 
   @include vp-767 {
-    font-size: 1.125em;
+    font-size: 1.13em;
     font-weight: 400;
     padding-right: calc((48 / 320) * 100) + 0%;
     padding-bottom: 8px;
@@ -194,7 +194,6 @@
     top: -14px;
     padding-right: calc((89 / 768) * 100) + 0%;
   }
-
 }
 
 .faq__item:last-child::before {
@@ -202,7 +201,6 @@
   position: absolute;
   width: 100%;
   border: 1px solid rgba(28, 51, 116, 0.2);
-  top: -14px;
   z-index: 2;
   top: 92px;
 
@@ -219,7 +217,6 @@
   content: "";
   position: absolute;
   width: 100%;
-  border: 1px solid rgba(28, 51, 116, 0.2);
   bottom: 28px;
   z-index: 2;
   top: 78px;
@@ -234,12 +231,12 @@
 
 .faq__description p {
   margin: 0;
-  font-size: 1.125em;
+  font-size: 1.13em;
   font-weight: 300;
   padding-right: calc((171 / 1200) * 100) + 0%;
 
   @include vp-1199 {
-    font-size: 1.125em;
+    font-size: 1.13em;
     padding: 0;
     margin: 0;
     line-height: 140%;
@@ -260,7 +257,7 @@
   top: 28px;
 
   @include vp-1199 {
-    right:  calc((-14 / 768) * 100) + 0%;
+    right: calc((-14 / 768) * 100) + 0%;
     top: 9px;
   }
 
@@ -282,7 +279,7 @@
 }
 
 .faq__toggle--last {
-    top: 19px;
+  top: 19px;
 }
 
 .faq__item.is-active .faq__toggle {

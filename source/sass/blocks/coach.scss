@@ -1,7 +1,7 @@
 .coach__wrapper {
   padding-left: $padding-dst;
   padding-right: $padding-dst;
-  padding-bottom: 84px;
+  padding-bottom: 82px;
   position: relative;
 
   @include vp-1199 {
@@ -125,6 +125,7 @@
     right: calc((-60 / 320) * 100) + 0%;
     top: 15px;
   }
+
   &:active {
     color: $color-default-white;
   }
@@ -134,7 +135,7 @@
   margin: 0;
   color: #102654;
   font-family: $ff-as;
-  font-size: 3.375em;
+  font-size: 3.38em;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -142,7 +143,7 @@
   padding-bottom: 27px;
 
   @include vp-1199 {
-    font-size: 2.625em;
+    font-size: 2.63em;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -163,8 +164,8 @@
 
 .swiper-slide {
   text-align: center;
-  font-size: 1.125em;
-  background: #fff;
+  font-size: 1.13em;
+  background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -188,7 +189,7 @@
   gap: calc((11 / 1200) * 100) + 0%;
 }
 
-.coach__hover--name {
+.coach__card--name {
   opacity: 1;
   font-family: $ff-rc;
   padding: 0;
@@ -198,20 +199,20 @@
   font-weight: 700;
 }
 
-.coach__hover {
+.coach__card {
   opacity: 0;
   position: absolute;
 
   @include hover {
-  opacity: 1;
-  width: 260px;
-  background-color: rgba(16, 38, 84, 0.89);
-  color: $color-default-white;
-  padding-top: 50px;
-  padding-bottom: 42px;
-  padding-left: 26px;
-  padding-right: 26px;
-  font-family: $ff-rc;
+    opacity: 1;
+    width: 260px;
+    background-color: rgba(16, 38, 84, 0.89);
+    color: $color-default-white;
+    padding-top: 50px;
+    padding-bottom: 42px;
+    padding-left: 26px;
+    padding-right: 26px;
+    font-family: $ff-rc;
   }
 }
 
@@ -222,21 +223,21 @@
       position: absolute;
 
       &:active {
-      opacity: 1;
-      width: 260px;
-      background-color: rgba(16, 38, 84, 0.89);
-      color: $color-default-white;
-      padding-top: 50px;
-      padding-bottom: 42px;
-      padding-left: 26px;
-      padding-right: 26px;
-      font-family: $ff-rc;
+        opacity: 1;
+        width: 260px;
+        background-color: rgba(16, 38, 84, 0.89);
+        color: $color-default-white;
+        padding-top: 50px;
+        padding-bottom: 42px;
+        padding-left: 26px;
+        padding-right: 26px;
+        font-family: $ff-rc;
       }
     }
   }
 }
 
-.coach__hover--line {
+.coach__card--line {
   color: #b6bdcc;
   font-size: 1em;
   font-style: normal;
@@ -247,14 +248,14 @@
   padding-bottom: 28px;
 }
 
-.coach__hover--list {
+.coach__card--list {
   margin: 0;
   list-style-type: disc;
 }
 
-.coach__hover--item {
+.coach__card--item {
   text-align: left;
-  font-size: 0.875em;
+  font-size: 0.88em;
   font-style: normal;
   font-weight: 400;
   margin: 0;
@@ -267,9 +268,12 @@
   bottom: 20px;
   color: $color-default-white;
   font-family: $ff-rc;
-  font-size: 1.125em;
+  font-size: 1.13em;
   font-style: normal;
   font-weight: 700;
   margin: 0;
 }
 
+.swiper-slide:hover .coach__name {
+  display: none;
+}

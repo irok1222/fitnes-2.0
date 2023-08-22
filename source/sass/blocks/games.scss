@@ -52,37 +52,9 @@
 
   @include vp-767 {
     padding-top: calc((51 / 320) * 100) + 0%;
-    padding-left: calc((45 /320) * 100) + 0%;
+    padding-left: calc((45 / 320) * 100) + 0%;
     padding-bottom: calc((160 / 320) * 100) + 0%;
     padding-right: calc((140 / 320) * 100) + 0%;
-  }
-}
-
-.games__text::after {
-  content: "";
-  position: absolute;
-  border: 1px solid $color-default-white;
-  width: 4em;
-  top: calc((270 / 1200) * 100) + 0%;
-  right: calc((240 / 1200) * 100) + 0%;
-
-  @include vp-1199 {
-    width: 2.625em;
-  }
-}
-
-.games__text::before {
-  content: "";
-  position: absolute;
-  border: 1px solid $color-default-white;
-  width: 5.8em;
-  top: calc((500 / 1200) * 100) + 0%;
-  right: calc((200 / 1200) * 100) + 0%;
-
-  @include vp-1199 {
-    width: 3.5em;
-    top: calc((316 / 768) * 100) + 0%;
-  right: calc((116 / 768) * 100) + 0%;
   }
 }
 
@@ -92,7 +64,7 @@
   padding-left: calc((120 / 1200) * 100) + 0%;
   margin: 0;
   font-family: $ff-as;
-  font-size: 5.125em;
+  font-size: 5.13em;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 2.46px;
@@ -112,7 +84,7 @@
 .games__header {
   padding: 0;
   margin: 0;
-  font-size: 1.125em;
+  font-size: 1.13em;
   font-style: normal;
   font-weight: 400;
   padding-bottom: calc((156 / 1200) * 100) + 0%;
@@ -126,10 +98,46 @@
   }
 }
 
+.games__text::after {
+  content: "";
+  position: absolute;
+  border: 1px solid $color-default-white;
+  width: 4em;
+  top: calc((270 / 1200) * 100) + 0%;
+  right: calc((240 / 1200) * 100) + 0%;
+
+  @include vp-1199 {
+    width: 2.63em;
+  }
+
+  @include vp-767 {
+    width: 3em;
+  }
+
+  @include vp-374 {
+    width: 2.63em;
+  }
+}
+
+.games__text::before {
+  content: "";
+  position: absolute;
+  border: 1px solid $color-default-white;
+  width: 5.8em;
+  top: calc((500 / 1200) * 100) + 0%;
+  right: calc((200 / 1200) * 100) + 0%;
+
+  @include vp-1199 {
+    width: 3.5em;
+    top: calc((316 / 768) * 100) + 0%;
+    right: calc((116 / 768) * 100) + 0%;
+  }
+}
+
 .games__dait {
   padding: 0;
   margin: 0;
-  font-size: 1.125em;
+  font-size: 1.13em;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -163,14 +171,14 @@
   padding: 0;
   margin: 0;
   position: absolute;
-  font-size: 0.875em;
+  font-size: 0.88em;
   font-style: normal;
   font-weight: 400;
   top: calc((280 / 1200) * 100) + 0%;
   right: calc((250 / 1200) * 100) + 0%;
 
   @include vp-1199 {
-    font-size: 0.625em;
+    font-size: 0.63em;
     top: calc((165 / 768) * 100) + 0%;
     right: calc((155 / 768) * 100) + 0%;
   }
@@ -180,14 +188,14 @@
   padding: 0;
   margin: 0;
   position: absolute;
-  font-size: 0.875em;
+  font-size: 0.88em;
   font-style: normal;
   font-weight: 400;
   top: calc((320 / 1200) * 100) + 0%;
   right: calc((270 / 1200) * 100) + 0%;
 
   @include vp-1199 {
-    font-size: 0.625em;
+    font-size: 0.63em;
     top: calc((195 / 768) * 100) + 0%;
     right: calc((163 / 768) * 100) + 0%;
   }
@@ -197,7 +205,7 @@
   padding: 0;
   margin: 0;
   position: absolute;
-  font-size: 1.125em;
+  font-size: 1.13em;
   font-style: normal;
   font-weight: 400;
   top: calc((420 / 1200) * 100) + 0%;
@@ -233,20 +241,20 @@
 
 .games__buttom {
   display: block;
-    color: #fff;
-    width: 28.4375em;
-    font-family: "Roboto Condensed","Arial",sans-serif;
-    font-size: .75em;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: .0375em;
-    text-transform: uppercase;
-    border: 4px solid #fff;
-    padding: 23px 63px;
-    text-align: center;
-    background: #ed0233;
-    margin-left: 6.9166666667%;
+  color: #ffffff;
+  width: 28.44em;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 0.75em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 4px solid #ffffff;
+  padding: 23px 63px;
+  text-align: center;
+  background: #ed0233;
+  margin-left: 6.92%;
 
   @include vp-1199 {
     position: absolute;
@@ -254,7 +262,7 @@
     padding: 12px 16px;
     margin: 0;
     text-align: center;
-    top: calc((525 / 768) * 100) + 0%;;
+    top: calc((525 / 768) * 100) + 0%;
     left: 43px;
     border: 2px solid $color-default-white;
     letter-spacing: 0;

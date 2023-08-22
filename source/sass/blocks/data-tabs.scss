@@ -28,7 +28,9 @@
   visibility: hidden;
   opacity: 0;
 
-  transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+  transition:
+    opacity 0.3s ease-in,
+    visibility 0.3s ease-in;
 }
 
 [data-tabs="element"].for-load {

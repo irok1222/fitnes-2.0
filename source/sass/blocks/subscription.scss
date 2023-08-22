@@ -27,7 +27,7 @@
   letter-spacing: 1.62px;
 
   @include vp-1199 {
-    font-size: 2.625em;
+    font-size: 2.63em;
     letter-spacing: 1.26px;
   }
 
@@ -45,7 +45,6 @@
   gap: 36px;
   position: relative;
 
-
   @include vp-1199 {
     padding-top: 22px;
     gap: 44px;
@@ -55,11 +54,10 @@
 .subscription__controls::after {
   content: "";
   position: absolute;
-  width: 21.3125em;
+  width: 21.31em;
   border-bottom: 2px solid #787878;
   opacity: 0.2;
   bottom: -17px;
-
 
   @include vp-1199 {
     width: 20.75em;
@@ -81,7 +79,7 @@
   font-weight: 400;
 
   @include vp-1199 {
-    font-size: 1.125em;
+    font-size: 1.13em;
   }
 
   @include vp-767 {
@@ -195,7 +193,7 @@
   font-family: $ff-rc;
   background: $color-default-white;
   padding-top: calc((65 / 1200) * 100) + 0%;
-  padding-bottom: calc((61 / 1200) * 100) + 0%;
+  padding-bottom: calc((85 / 1200) * 100) + 0%;
   padding-right: calc((60 / 1200) * 100) + 0%;
   padding-left: calc((60 / 1200) * 100) + 0%;
   border: 7px solid transparent;
@@ -208,7 +206,7 @@
 
   @include vp-1199 {
     padding-top: 58px;
-    padding-bottom: 61px;
+    padding-bottom: 84px;
     padding-right: 110px;
     padding-left: 110px;
   }
@@ -216,9 +214,9 @@
   @include vp-767 {
     width: 290px;
     padding-top: 45px;
-    padding-bottom: 55px;
-    padding-right: 42px;
-    padding-left: 42px;
+    padding-bottom: 81px;
+    padding-right: 33px;
+    padding-left: 33px;
   }
 }
 
@@ -226,12 +224,12 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  font-size: 1.625em;
+  font-size: 1.63em;
   font-style: normal;
   font-weight: 700;
 
   @include vp-767 {
-    font-size: 1.375em;
+    font-size: 1.38em;
   }
 }
 
@@ -257,18 +255,20 @@
   position: relative;
   z-index: 3;
   padding-right: calc((490 / 1200) * 100) + 0%;
+  margin-bottom: 90px;
 
   @include vp-767 {
     font-size: 3em;
     padding-top: 80px;
     padding-left: calc((40 / 320) * 100) + 0%;
+    margin-bottom: 71px;
   }
 }
 
 .subscription__shadow {
   position: absolute;
   color: #e8e8e8;
-  opacity: 0.47999998927116394;
+  opacity: 0.48;
   font-family: $ff-rc;
   font-size: 6.25em;
   font-style: normal;
@@ -344,16 +344,10 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: 0.0375em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   border: 2px solid #102654;
   padding: 25px 44px;
-  margin-top: 68px;
-
-  @include vp-767 {
-    margin-top: 52px;
-    margin-left: -7px;
-  }
 
   @include hover {
     background: $gradient;
@@ -362,10 +356,10 @@
   }
 
   &:active {
-    opacity: 0.699999988079071;
+    opacity: 0.7;
   }
 
   &:disabled {
-    opacity: 0.30000001192092896;
+    opacity: 0.3;
   }
 }

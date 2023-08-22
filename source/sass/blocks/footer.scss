@@ -1,5 +1,5 @@
 .footer__wrapper {
-  background: #030A1A;
+  background: #030a1a;
   padding-top: 41px;
   padding-bottom: 32px;
   display: grid;
@@ -20,7 +20,6 @@
     padding-bottom: 85px;
     display: block;
     position: relative;
-
   }
 }
 
@@ -30,13 +29,13 @@
   position: relative;
 
   @include vp-1199 {
-    width: 5.125em;
-    height: 1.125em;
+    width: 5.13em;
+    height: 1.13em;
   }
 
   @include vp-767 {
     width: 4.25em;
-    height: 0.9375em;
+    height: 0.94em;
     position: absolute;
     top: 51px;
   }
@@ -53,12 +52,12 @@
 .footer-nav__list {
   margin: 0;
   list-style-type: none;
-  display:flex;
+  display: flex;
   justify-content: center;
   gap: 2.5em;
 
   @include vp-1199 {
-    gap:calc((46/ 768) * 100) + 0%;
+    gap: calc((46 / 768) * 100) + 0%;
     padding-left: 13px;
   }
 
@@ -73,6 +72,7 @@
 
 .footer-nav__item--first {
   display: none;
+
   @include vp-767 {
     display: block;
   }
@@ -110,7 +110,7 @@
 
 .footer-nav__link {
   font-family: $ff-rc;
-  font-size: 0.875em;
+  font-size: 0.88em;
   font-weight: 400;
   line-height: normal;
   padding-top: 8px;
@@ -119,20 +119,19 @@
   @include hover {
     border-bottom: 1px solid $color-default-white;
 
+    &:active {
+      border: 1px solid $color-default-white;
+    }
 
-  &:active {
-    border: 1px solid $color-default-white;
+    &:disabled {
+      opacity: 0.4;
+    }
   }
 
-  &:disabled  {
-  opacity: 0.4 ;
-}
-}
-
-  @include vp-767  {
+  @include vp-767 {
     font-size: 1em;
-   }
   }
+}
 
 .footer__social-list {
   margin: 0;
@@ -140,7 +139,7 @@
   display: flex;
   gap: 10px;
   justify-content: center;
-  padding-left: 13.875em;
+  padding-left: 13.88em;
 
   @include vp-1199 {
     padding-left: 0;
@@ -153,23 +152,7 @@
   }
 }
 
-.footer__social-link {
-  @include hover {
-    background: #103AAE;
-    color: $color-default-white;
-
-
- &:active {
-    background: #102654;
-  }
-
-  &:disabled  {
-  opacity: "0.3" ;
-}
-}
-}
-
-.footer__social-item {
+.footer__social-item svg {
   background: $color-default-white;
   width: 25px;
   height: 25px;
@@ -177,19 +160,15 @@
   position: relative;
 
   @include hover {
-    background: #103AAE;
+    background: #103aae;
+    color: $color-default-white;
   }
 
   &:active {
     background: #102654;
   }
 
-  &:disabled  {
-  opacity: "0.3" ;
-}
-}
-
-.footer__icon--vk {
-  position: absolute;
-  transform: translate(41%, 41%);
+  &:disabled {
+    opacity: "0.3";
+  }
 }
