@@ -134,7 +134,7 @@
   }
 }
 
-.feedback__button--next {
+.feedback-button--next {
   position: absolute;
   width: 56px;
   height: 56px;
@@ -173,7 +173,7 @@
   }
 }
 
-.feedback__button--next svg {
+.feedback-button--next svg {
   position: absolute;
   color: #102654;
   right: calc((383 / 1200) * 100) + 0%;
@@ -192,7 +192,7 @@
   }
 }
 
-.feedback__button--prev {
+.feedback-button--prev {
   position: absolute;
   width: 56px;
   height: 56px;
@@ -231,7 +231,7 @@
   }
 }
 
-.feedback__button--prev svg {
+.feedback-button--prev svg {
   position: absolute;
   color: rgb(16, 38, 84);
   left: calc((383 / 1200) * 100) + 0%;

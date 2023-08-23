@@ -318,7 +318,7 @@
 .subscription__price::after {
   content: "";
   position: absolute;
-  background-image: url("/source/img/svg/rubl.svg");
+  background-image: url("../img/svg/rubl.svg");
   background-repeat: no-repeat;
   width: 30px;
   height: 42px;
@@ -326,7 +326,7 @@
   right: calc((113 / 1200) * 100) + 0%;
 
   @include vp-767 {
-    background-image: url("/source/img/svg/ruble-tbl.svg");
+    background-image: url("../img/svg/ruble-tbl.svg");
     background-repeat: no-repeat;
     width: 24px;
     height: 33px;

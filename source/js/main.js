@@ -23,9 +23,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
   btn.addEventListener('click', handleButtonClick);
 
-  const video = document.querySelector('.video');
-  const button = document.querySelector('.video-play');
-  const shadow = document.querySelector('.video__shadow');
+  const video = document.querySelector('.gym__video');
+  const button = document.querySelector('.gym-play');
+  const shadow = document.querySelector('.gym__shadow');
 
   button.addEventListener('click', function () {
     if (video.paused) {

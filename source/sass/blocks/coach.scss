@@ -17,7 +17,7 @@
   }
 }
 
-.coach__button--prev {
+.coach-button--prev {
   position: absolute;
   width: 56px;
   height: 56px;
@@ -53,7 +53,7 @@
   }
 }
 
-.coach__button--prev svg {
+.coach-button--prev svg {
   position: absolute;
   color: #102654;
   left: calc((383 / 1200) * 100) + 0%;
@@ -76,7 +76,7 @@
   }
 }
 
-.coach__button--next {
+.coach-button--next {
   position: absolute;
   width: 56px;
   height: 56px;
@@ -112,7 +112,7 @@
   }
 }
 
-.coach__button--next svg {
+.coach-button--next svg {
   position: absolute;
   color: #102654;
   right: calc((383 / 1200) * 100) + 0%;
@@ -189,7 +189,7 @@
   gap: calc((11 / 1200) * 100) + 0%;
 }
 
-.coach__card--name {
+.coach-card__name {
   opacity: 1;
   font-family: $ff-rc;
   padding: 0;
@@ -199,7 +199,7 @@
   font-weight: 700;
 }
 
-.coach__card {
+.coach-card {
   opacity: 0;
   position: absolute;
 
@@ -237,7 +237,7 @@
   }
 }
 
-.coach__card--line {
+.coach-card__line {
   color: #b6bdcc;
   font-size: 1em;
   font-style: normal;
@@ -248,12 +248,12 @@
   padding-bottom: 28px;
 }
 
-.coach__card--list {
+.coach-card__list {
   margin: 0;
   list-style-type: disc;
 }
 
-.coach__card--item {
+.coach-card__item {
   text-align: left;
   font-size: 0.88em;
   font-style: normal;

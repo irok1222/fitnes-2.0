@@ -119,6 +119,14 @@
   }
 }
 
+.contacts__description--phone {
+  color:#102654;
+}
+
+.contacts__description--mail {
+  color:#102654;
+}
+
 .contacts__block--second {
   @include vp-767 {
     order: 2;

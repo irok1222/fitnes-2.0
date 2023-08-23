@@ -250,7 +250,7 @@
 .faq__toggle {
   background-color: transparent;
   border: none;
-  background-image: url("/source/img/faq/open.svg");
+  background-image: url("../img/faq/open.svg");
   background-repeat: no-repeat;
   position: absolute;
   right: calc((-22 / 1200) * 100) + 0%;
@@ -283,7 +283,7 @@
 }
 
 .faq__item.is-active .faq__toggle {
-  background-image: url("/source/img/faq/close.svg");
+  background-image: url("../img/faq/close.svg");
   top: 24px;
 
   @include vp-767 {

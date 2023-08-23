@@ -1,7 +1,7 @@
 .header__wrapper {
   color: $color-default-white;
   background-color: rgb(142, 6, 137);
-  background-image: url("/source/img/background.jpg");
+  background-image: url("../img/background.jpg");
   background-size: cover;
 }
 
@@ -56,6 +56,7 @@
 .header__phone {
   padding: 0;
   margin: 0;
+  color: #ffffff;
   font-family: $ff-as;
   font-size: 1.63em;
   font-style: normal;

@@ -114,7 +114,7 @@
   }
 }
 
-video {
+.gym__video {
   width: 26%;
   height: auto;
   position: absolute;
@@ -150,7 +150,7 @@ video {
   }
 }
 
-.video__shadow::after {
+.gym__shadow::after {
   position: absolute;
   content: "";
   width: 26%;
@@ -192,13 +192,13 @@ video {
   }
 }
 
-.video-play {
+.gym-play {
   position: absolute;
   top: 511px;
   right: calc((528 / 1200) * 100) + 0%;
   background: transparent;
   border: none;
-  background-image: url("/source/img/svg/video_btn.svg");
+  background-image: url("../img/svg/video_btn.svg");
   width: 6.25em;
   height: 6.25em;
   z-index: 3;
@@ -243,14 +243,14 @@ video {
   }
 
   @include hover {
-    background-image: url("/source/img/svg/video-btn-hover.svg");
+    background-image: url("..img/svg/video-btn-hover.svg");
   }
 
   &:active {
-    background-image: url("/source/img/svg/video-btn-active.svg");
+    background-image: url("../img/svg/video-btn-active.svg");
   }
 
   &:disabled {
-    background-image: url("/source/img/svg/video-btn-disabled.svg");
+    background-image: url("../img/svg/video-btn-disabled.svg");
   }
 }

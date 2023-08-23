@@ -3,8 +3,8 @@ const swiper = new Swiper('.coach__swiper', {
   loop: true,
   slidesPerView: 1,
   navigation: {
-    nextEl: '.coach__button--next',
-    prevEl: '.coach__button--prev',
+    nextEl: '.coach-button--next',
+    prevEl: '.coach-button--prev',
   },
 
   breakpoints: {
