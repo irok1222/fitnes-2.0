@@ -3,6 +3,10 @@
   background-color: rgb(142, 6, 137);
   background-image: url("../img/background.jpg");
   background-size: cover;
+
+  @include vp-767 {
+    background-image: url("../img/background-mbl.jpg");
+  }
 }
 
 .header__intro {

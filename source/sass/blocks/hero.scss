@@ -1,22 +1,82 @@
 .hero__wrapper {
-  position: relative;
-  padding-left: calc((155 / 1200) * 100) + 0%;
-  padding-right: calc((760 / 1200) * 100) + 0%;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  align-items: flex-end;
-  text-align: right;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: calc((70 / 1200) * 100) + 0%;
 
   @include vp-1199 {
-    padding-left: $padding-tbl;
-    padding-right: calc((395 / 768) * 100) + 0%;
+    padding-left: calc((12 / 1200) * 100) + 0%;
   }
 
   @include vp-767 {
-    padding-right: $padding-mbl;
-    padding-left: $padding-mbl;
-    text-align: right;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.hero__list {
+  margin: 0;
+  padding-top: 293px;
+  padding-bottom: 239px;
+  list-style-type: none;
+  text-align: right;
+
+  @include vp-1199 {
+    padding-top: 208px;
+    padding-bottom: 221px;
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+  }
+}
+
+.hero__item {
+  padding: 0;
+  margin: 0;
+  font-family: $ff-rc;
+  font-size: 0.88em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.hero img {
+  width: 41%;
+  height: 30vw;
+  position: absolute;
+  top: 46px;
+  right: calc((265 / 1200) * 100) + 0%;
+  object-fit: cover;
+  padding-left: 64px;
+
+  @include vp-1439 {
+    height: auto;
+  }
+
+  @include vp-1199 {
+    width: 51%;
+    height: 40vw;
+    top: 75px;
+    right: calc((45 / 768) * 100) + 0%;
+  }
+
+  @include vp-1023 {
+    height: 45vw;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.hero__text {
+  text-align: right;
+  padding-left: 17px;
+
+  @include vp-767 {
+    padding-left: 0;
   }
 }
 
@@ -26,8 +86,8 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  padding-right: calc((205 / 1200) * 100) + 0%;
   padding-top: 98px;
+  padding-right: calc((270 / 1200) * 100) + 0%;
   margin: 0;
 
   @include vp-1199 {
@@ -37,6 +97,7 @@
   }
 
   @include vp-767 {
+    padding-left: 0;
     padding-right: 0;
     padding-top: 68px;
     font-size: 1.75em;
@@ -52,6 +113,7 @@
   margin: 0;
   text-transform: uppercase;
   padding-top: 14px;
+  padding-bottom: 66px;
   letter-spacing: 4.6px;
 
   @include vp-1199 {
@@ -59,42 +121,13 @@
     font-size: 4.5em;
     letter-spacing: 3.6px;
     text-transform: lowercase;
+    padding-bottom: 58px;
   }
 
   @include vp-767 {
     padding-top: 15px;
-    font-size: 4.5em;
     font-weight: 700;
-    padding-right: 0;
   }
-}
-
-.hero__list {
-  list-style-type: none;
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  top: calc((588 / 1200) * 100) + 0%;
-  left: calc((110 / 1200) * 100) + 0%;
-
-  @include vp-1199 {
-    top: calc((320 / 768) * 100) + 0%;
-    left: calc((45 / 768) * 100) + 0%;
-  }
-
-  @include vp-767 {
-    top: calc((139 / 320) * 100) + 0%;
-  }
-}
-
-.hero__item {
-  padding: 0;
-  margin: 0;
-  font-family: $ff-rc;
-  font-size: 0.88em;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
 }
 
 .hero__button {
@@ -141,25 +174,5 @@
     margin-bottom: 80px;
     width: 290px;
     text-align: center;
-  }
-}
-
-.hero img {
-  max-width: 50%;
-  height: auto;
-  position: absolute;
-  top: calc((-17 / 1200) * 100) + 0%;
-  right: calc((260 / 1200) * 100) + 0%;
-  object-fit: cover;
-
-  @include vp-1199 {
-    width: 42%;
-    height: 79%;
-    top: calc((28 / 768) * 100) + 0%;
-    right: calc((45 / 768) * 100) + 0%;
-  }
-
-  @include vp-767 {
-    display: none;
   }
 }
