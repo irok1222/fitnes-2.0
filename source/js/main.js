@@ -3,8 +3,10 @@ import { Form } from './modules/form-validate/form';
 import { initModals } from './modules/modals/init-modals';
 import { swiper } from './modules/slide/coach';
 import { initSwiper } from './modules/slide/feedback';
+import { clickButton } from './modules/gym';
 import { initTabs } from './modules/init-tabs';
 import { initAccordions } from './modules/init-accordion';
+
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -14,31 +16,9 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
 
   // Modules
-  const viewElement = document.getElementById('subscription');
-  const btn = document.querySelector('.hero__button');
-
-  function handleButtonClick() {
-    viewElement.scrollIntoView({block: 'center', behavior: 'smooth'});
-  }
-
-  btn.addEventListener('click', handleButtonClick);
-
-  const video = document.querySelector('.gym__video');
-  const button = document.querySelector('.gym-play');
-  const shadow = document.querySelector('.gym__shadow');
-
-  button.addEventListener('click', function () {
-    if (video.paused) {
-      video.play();
-      shadow.style.opacity = '0';
-      button.style.opacity = '0';
-    } else {
-      video.pause();
-      button.style.opacity = '1';
-    }
-  }, false);
   initTabs();
   initAccordions();
+
 
   // ---------------------------------
 

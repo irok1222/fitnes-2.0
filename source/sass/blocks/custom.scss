@@ -100,7 +100,9 @@
 .custom-input input {
   font-family: $ff-rc;
   width: 192px;
-  border: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
   background: #102654;
   padding-bottom: 5px;
   color: $color-default-white;

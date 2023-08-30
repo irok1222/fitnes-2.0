@@ -270,11 +270,11 @@
   }
 
   @include hover {
-    background-image: url("/source/img/faq/hover.svg");
+    background-image: url("../img/faq/hover.svg");
   }
 
   &:disabled {
-    background-image: url("/source/img/faq/disabled.svg");
+    background-image: url("../img/faq/disabled.svg");
   }
 }
 

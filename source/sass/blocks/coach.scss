@@ -13,7 +13,7 @@
   @include vp-767 {
     padding-left: calc((47 / 320) * 100) + 0%;
     padding-right: calc((47 / 320) * 100) + 0%;
-    padding-bottom: 51px;
+    padding-bottom: 50px;
   }
 }
 
@@ -156,13 +156,13 @@
   }
 }
 
-.swiper {
+.coach__swiper {
   width: 100%;
   height: 100%;
   margin: 20px auto;
 }
 
-.swiper-slide {
+.coach__swiper-slide {
   text-align: center;
   font-size: 1.13em;
   background: #ffffff;
@@ -173,7 +173,7 @@
   position: relative;
 }
 
-.swiper-slide img {
+.coach__swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
@@ -185,7 +185,7 @@
   }
 }
 
-.swiper-wrapper {
+.coach__swiper-wrapper {
   gap: calc((11 / 1200) * 100) + 0%;
 }
 
