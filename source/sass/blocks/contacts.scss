@@ -3,8 +3,12 @@
   padding-top: 56px;
   padding-left: calc((122 / 1200) * 100) + 0%;
   padding-bottom: 63px;
-  padding-right: calc((122 / 1200) * 100) + 0%;
+  padding-right: calc((470 / 1200) * 100) + 0%;
   font-family: $ff-rc;
+
+  @include vp-1439 {
+    padding: 56px  calc((122 / 1200) * 100) + 0% 70px calc((122 / 1200) * 100) + 0%;
+  }
 
   @include vp-1199 {
     padding-top: 62px;

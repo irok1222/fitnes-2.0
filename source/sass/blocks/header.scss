@@ -10,24 +10,20 @@
 }
 
 .header__intro {
-  padding-left: $padding-dst;
-  padding-right: $padding-dst;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 25px;
-  gap: 10px;
+  gap: 880px;
 
   @include vp-1199 {
-    padding-left: $padding-tbl;
-    padding-right: $padding-tbl;
+    gap: 458px;
   }
 
   @include vp-767 {
     padding-top: 15px;
     padding-bottom: 0;
-    padding-left: $padding-mbl;
-    padding-right: $padding-mbl;
+    gap: 106px;
   }
 }
 

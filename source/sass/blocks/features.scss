@@ -1,9 +1,13 @@
 .features__wrapper {
-  padding-left: calc((123 / 1200) * 100) + 0%;
-  padding-right: calc((123 / 1200) * 100) + 0%;
+  padding-left: calc((255 / 1200) * 100) + 0%;
+  padding-right: calc((255 / 1200) * 100) + 0%;
   padding-top: 108px;
   padding-bottom: 129px;
-  background: #f8f9fc;
+
+  @include vp-1439 {
+    padding-left: calc((123 / 1200) * 100) + 0%;
+    padding-right: calc((123 / 1200) * 100) + 0%;
+  }
 
   @include vp-1199 {
     padding-left: $padding-tbl;

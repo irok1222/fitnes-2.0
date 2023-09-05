@@ -1,8 +1,13 @@
 .promo__wrapper {
-  padding-left: $padding-dst;
-  padding-right: $padding-dst;
+  padding-left: calc((245 / 1200) * 100) + 0%;
+  padding-right: calc((245 / 1200) * 100) + 0%;
   padding-top: 132px;
   padding-bottom: 120px;
+
+  @include vp-1439 {
+    padding-left: $padding-dst;
+    padding-right: $padding-dst;
+  }
 
   @include vp-1199 {
     padding-left: $padding-tbl;

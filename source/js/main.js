@@ -18,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   initTabs();
   initAccordions();
+  clickButton();
 
 
   // ---------------------------------

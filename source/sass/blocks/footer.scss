@@ -4,8 +4,13 @@
   padding-bottom: 32px;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  padding-left: $padding-dst;
-  padding-right: $padding-dst;
+  padding-left: calc((245 / 1200) * 100) + 0%;
+  padding-right: calc((245 / 1200) * 100) + 0%;
+
+  @include vp-1439 {
+    padding-left: $padding-tbl;
+    padding-right: $padding-tbl;
+  }
 
   @include vp-1199 {
     grid-template-columns: min-content auto min-content;

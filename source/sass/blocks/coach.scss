@@ -1,8 +1,13 @@
 .coach__wrapper {
-  padding-left: $padding-dst;
-  padding-right: $padding-dst;
+  padding-left: calc((230 / 1200) * 100) + 0%;
+  padding-right: calc((230 / 1200) * 100) + 0%;
   padding-bottom: 82px;
   position: relative;
+
+  @include vp-1439 {
+    padding-left: $padding-dst;
+    padding-right: $padding-dst;
+  }
 
   @include vp-1199 {
     padding-left: calc((90 / 768) * 100) + 0%;
@@ -22,8 +27,12 @@
   width: 56px;
   height: 56px;
   border: 1px solid transparent;
-  left: calc((23 / 1200) * 100) + 0%;
+  left: calc((190 / 1200) * 100) + 0%;
   top: 230px;
+
+  @include vp-1439 {
+    left: calc((23 / 1200) * 100) + 0%;
+  }
 
   @include vp-1199 {
     width: 56px;
@@ -81,8 +90,12 @@
   width: 56px;
   height: 56px;
   border: 1px solid transparent;
-  right: calc((23 / 1200) * 100) + 0%;
+  right: calc((190 / 1200) * 100) + 0%;
   top: 230px;
+
+  @include vp-1439 {
+    right: calc((23 / 1200) * 100) + 0%;
+  }
 
   @include vp-1199 {
     width: 56px;

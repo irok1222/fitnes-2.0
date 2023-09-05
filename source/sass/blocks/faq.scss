@@ -1,6 +1,11 @@
 .faq__wrapper {
-  padding: 120px $padding-dst 120px $padding-dst;
+  padding: 120px calc((245 / 1200) * 100) + 0% 120px calc((245 / 1200) * 100) + 0%;
   background: #f8f9fc;
+
+  @include vp-1439 {
+    padding-left: $padding-dst;
+    padding-right: $padding-dst;
+  }
 
   @include vp-1199 {
     padding-left: $padding-tbl;

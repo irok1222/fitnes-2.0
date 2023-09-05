@@ -1,9 +1,23 @@
 .feedback__wrapper {
   padding-top: 120px;
-  padding-left: $padding-dst;
-  padding-bottom: 102px;
-  padding-right: $padding-dst;
+  padding-bottom: 120px;
+  padding-left: calc((245 / 1200) * 100) + 0%;
+  padding-right: calc((245 / 1200) * 100) + 0%;
   position: relative;
+
+  @include vp-1439 {
+    padding-top: 120px;
+    padding-left: $padding-dst;
+
+    padding-right: $padding-dst;
+  }
+
+  @include vp-1199 {
+    padding-left: calc((105 / 768) * 100) + 0%;
+    padding-right: calc((105 / 768) * 100) + 0%;
+    padding-top: 87px;
+    padding-bottom: 83px;
+  }
 
   @include vp-1199 {
     padding-left: calc((105 / 768) * 100) + 0%;
@@ -27,7 +41,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  padding-bottom: 17px;
+  padding-bottom: 40px;
   margin: 0;
   text-align: center;
 
@@ -83,8 +97,12 @@
   width: 14%;
   top: 61px;
   left: calc((145 / 1200) * 100) + 0%;
-  height: 6vw;
+  height: 4vw;
   border-radius: 57px;
+
+  @include vp-1199 {
+    height: 6vw;
+  }
 
   @include vp-1199 {
     position: absolute;
@@ -139,8 +157,12 @@
   width: 56px;
   height: 56px;
   border: 1px solid transparent;
-  right: calc((287 / 1200) * 100) + 0%;
+  right: calc((370 / 1200) * 100) + 0%;
   top: 316px;
+
+  @include vp-1199 {
+    right: calc((287 / 1200) * 100) + 0%;
+  }
 
   @include vp-1199 {
     right: calc((28 / 768) * 100) + 0%;
@@ -197,8 +219,12 @@
   width: 56px;
   height: 56px;
   border: 1px solid transparent;
-  left: calc((287 / 1200) * 100) + 0%;
+  left: calc((370 / 1200) * 100) + 0%;
   top: 316px;
+
+  @include vp-1199 {
+    left: calc((287 / 1200) * 100) + 0%;
+  }
 
   @include vp-1199 {
     left: calc((28 / 768) * 100) + 0%;

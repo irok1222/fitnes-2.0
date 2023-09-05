@@ -1,9 +1,16 @@
 .hero__wrapper {
   padding-left: calc((70 / 1200) * 100) + 0%;
+  padding-right: 891px;
   display: grid;
-  grid-template-columns: max-content min-content auto;
+  grid-template-columns: max-content min-content min-content;
   grid-template-rows: min-content;
   position: relative;
+  justify-content: center;
+
+  @include vp-1439 {
+    padding-left: calc((70 / 1200) * 100) + 0%;
+    padding-right: 871px;
+  }
 
   @include vp-1199 {
     padding-left: calc((12 / 1200) * 100) + 0%;
@@ -44,22 +51,23 @@
 }
 
 .hero img {
-  width: 32%;
+  width: 30%;
   height: 30vw;
   position: absolute;
   top: -12px;
-  right: calc((265 / 1200) * 100) + 0%;
+  right: calc((350 / 1200) * 100) + 0%;
   object-fit: cover;
   padding-left: 64px;
 
   @include vp-1439 {
     width: 41%;
     height: auto;
+    right: calc((265 / 1200) * 100) + 0%;
   }
 
   @include vp-1199 {
     width: 44%;
-    height: 40vw;
+    height: 39vw;
     top: 21px;
     right: calc((45 / 768) * 100) + 0%;
   }

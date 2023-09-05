@@ -1,10 +1,15 @@
 .gym__wrapper {
-  padding-left: calc((140 / 1200) * 100) + 0%;
-  padding-right: calc((745 / 1200) * 100) + 0%;
+  padding-left: calc((265 / 1200) * 100) + 0%;
+  padding-right: calc((700 / 1200) * 100) + 0%;
   padding-top: 120px;
   padding-bottom: 262px;
   color: #102654;
   position: relative;
+
+  @include vp-1439 {
+    padding-left: calc((140 / 1200) * 100) + 0%;
+    padding-right: calc((745 / 1200) * 100) + 0%;
+  }
 
   @include vp-1199 {
     padding-top: 100px;
@@ -93,11 +98,16 @@
 }
 
 .gym img {
+  width: 34%;
   position: absolute;
-  width: 48%;
-  left: calc((531 / 1200) * 100) + 0%;
+  left: calc((600 / 1200) * 100) + 0%;
   top: calc((201 / 1200) * 100) + 0%;
   object-fit: cover;
+
+  @include vp-1439 {
+    width: 48%;
+    left: calc((531 / 1200) * 100) + 0%;
+  }
 
   @include vp-1199 {
     width: 89%;
@@ -118,9 +128,8 @@
   width: 364px;
   height: 228px;
   position: absolute;
-  top: calc((1300 / 1920) * 100) + 0%;
-  left: calc((770 / 1920) * 100) + 0%;
-
+  top: calc((550 / 1200) * 100) + 0%;
+  left: calc((510 / 1200) * 100) + 0%;
 
   @include vp-1439 {
     top: calc((660 / 1200) * 100) + 0%;
@@ -155,8 +164,8 @@
   width: 364px;
   height: 228px;
   background: rgba(20, 54, 122, 0.5);
-  top: calc((1300 / 1920) * 100) + 0%;
-  left: calc((770 / 1920) * 100) + 0%;
+  top: calc((550 / 1200) * 100) + 0%;
+  left: calc((510 / 1200) * 100) + 0%;
   z-index: 2;
 
   @include vp-1439 {
@@ -188,8 +197,8 @@
 
 .gym-play {
   position: absolute;
-  top: 541px;
-  right: calc((575 / 1200) * 100) + 0%;
+  top: 407px;
+  right: calc((545 / 1200) * 100) + 0%;
   background: transparent;
   border: none;
   background-image: url("../img/svg/video_btn.svg");
@@ -198,8 +207,8 @@
   z-index: 3;
 
   @include vp-1919 {
-    top: calc((925 / 1200) * 100) + 0%;
-    right: calc((550 / 1200) * 100) + 0%;
+    top: calc((700 / 1200) * 100) + 0%;
+    right: calc((520 / 1200) * 100) + 0%;
   }
 
   @include vp-1439 {
@@ -234,7 +243,6 @@
     right: calc((144 / 320) * 100) + 0%;
     left: calc((150 / 320) * 100) + 0%;
   }
-
 
   @include vp-549 {
     width: 4em;

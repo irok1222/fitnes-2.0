@@ -10,9 +10,13 @@
 }
 
 .custom__wrapper {
-  padding: 56px 103px 70px 100px;
+  padding: 56px  calc((210 / 1200) * 100) + 0% 70px  calc((470 / 1200) * 100) + 0%;
   color: $color-default-white;
   background: #102654;
+
+  @include vp-1439 {
+    padding: 56px 103px 70px 100px;
+  }
 
   @include vp-1199 {
     padding-top: 54px;

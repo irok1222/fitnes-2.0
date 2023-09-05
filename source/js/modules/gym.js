@@ -1,11 +1,13 @@
-const video = document.getElementById('video');
 const button = document.querySelector('.gym-play');
 const shadow = document.querySelector('.gym__shadow');
-const closest = video.closest(('[data-validate="video"]'));
 
+const clickButton = () => {
+  const video = document.querySelector('.gym__video');
+  if (!video) {
+    return;
+  }
 
-function handler() {
-  if (closest) {
+  button.addEventListener('click', () => {
     if (video.paused) {
       video.play();
       shadow.style.opacity = '0';
@@ -14,9 +16,7 @@ function handler() {
       video.pause();
       button.style.opacity = '1';
     }
-  }
-}
-
-const clickButton = button.addEventListener('click', handler);
+  });
+};
 
 export { clickButton };
