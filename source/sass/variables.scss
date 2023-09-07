@@ -51,10 +51,12 @@ $vp-320: 320px;
 $vp-375: 375px;
 $vp-550: 550px;
 $vp-768: 768px;
+$vp-800: 800px;
 $vp-1024: 1024px;
 $vp-1200: 1200px;
 $vp-1280: 1280px;
 $vp-1440: 1440px;
+$vp-1800: 1800px;
 $vp-1920: 1920px;
 
 // Retina
@@ -65,6 +67,6 @@ $retina-dppx: 1.5dppx;
 
 //this proect
 
-$padding-dst: calc((93 / 1200) * 100) + 0%;
-$padding-tbl: calc((45 / 768) * 100) + 0%;
-$padding-mbl: calc((15 / 320) * 100) + 0%;
+$padding-dst: 103px;
+$padding-tbl: 45px;
+$padding-mbl: 15px;

@@ -1,16 +1,14 @@
-.footer__wrapper {
+.footer {
   background: #030a1a;
+}
+
+.footer__wrapper {
   padding-top: 41px;
   padding-bottom: 32px;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  padding-left: calc((245 / 1200) * 100) + 0%;
-  padding-right: calc((245 / 1200) * 100) + 0%;
-
-  @include vp-1439 {
-    padding-left: $padding-tbl;
-    padding-right: $padding-tbl;
-  }
+  padding-left: $padding-dst;
+  padding-right: $padding-dst;
 
   @include vp-1199 {
     grid-template-columns: min-content auto min-content;
@@ -69,7 +67,7 @@
   @include vp-767 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 34px;
+    column-gap: 57px;
     row-gap: 16px;
     padding: 0;
   }

@@ -1,36 +1,26 @@
+.feedback {
+  background-color: $color-default-white;
+}
+
 .feedback__wrapper {
   padding-top: 120px;
-  padding-bottom: 120px;
-  padding-left: calc((245 / 1200) * 100) + 0%;
-  padding-right: calc((245 / 1200) * 100) + 0%;
+  padding-bottom: 119px;
+  padding-left: $padding-dst;
+  padding-right: $padding-dst;
   position: relative;
 
-  @include vp-1439 {
-    padding-top: 120px;
-    padding-left: $padding-dst;
-
-    padding-right: $padding-dst;
-  }
-
   @include vp-1199 {
-    padding-left: calc((105 / 768) * 100) + 0%;
-    padding-right: calc((105 / 768) * 100) + 0%;
+    padding-left: $padding-tbl;
+    padding-right: $padding-tbl;
     padding-top: 87px;
-    padding-bottom: 83px;
-  }
-
-  @include vp-1199 {
-    padding-left: calc((105 / 768) * 100) + 0%;
-    padding-right: calc((105 / 768) * 100) + 0%;
-    padding-top: 87px;
-    padding-bottom: 83px;
+    padding-bottom: 100px;
   }
 
   @include vp-767 {
-    padding-left: calc((47 / 320) * 100) + 0%;
-    padding-right: calc((47 / 320) * 100) + 0%;
+    padding-left: $padding-mbl;
+    padding-right: $padding-mbl;
     padding-top: 66px;
-    padding-bottom: 50px;
+    padding-bottom: 67px;
   }
 }
 
@@ -58,7 +48,11 @@
   width: 50%;
 
   @include vp-1199 {
-    width: 100%;
+    width: 566px;
+  }
+
+  @include vp-767 {
+    width: 226px;
   }
 }
 
@@ -73,14 +67,14 @@
   background: #1c3374;
   font-family: $ff-rc;
   color: $color-default-white;
-  padding-top: 56px;
+  padding-top: 57px;
   padding-left: calc((372 / 1200) * 100) + 0%;
   padding-right: calc((135 / 1200) * 100) + 0%;
-  padding-bottom: 57px;
+  padding-bottom: 56px;
   text-align: left;
 
   @include vp-1199 {
-    padding-left: calc((225 / 768) * 100) + 0%;
+    padding-left: calc((230 / 768) * 100) + 0%;
   }
 
   @include vp-767 {
@@ -94,32 +88,21 @@
 .feedback__slide img {
   display: block;
   position: absolute;
-  width: 14%;
+  width: 80px;
+  height: 80px;
   top: 61px;
   left: calc((145 / 1200) * 100) + 0%;
-  height: 4vw;
   border-radius: 57px;
 
   @include vp-1199 {
-    height: 6vw;
-  }
-
-  @include vp-1199 {
     position: absolute;
-    width: 13%;
     top: 64px;
     left: calc((90 / 768) * 100) + 0%;
-    height: 11vw;
   }
 
   @include vp-767 {
     width: 68px;
     height: 68px;
-    top: 1.5em;
-    left: 40px;
-  }
-
-  @include vp-374 {
     top: 2.5em;
     left: 40px;
   }
@@ -157,15 +140,11 @@
   width: 56px;
   height: 56px;
   border: 1px solid transparent;
-  right: calc((370 / 1200) * 100) + 0%;
+  right: calc((287 / 1200) * 100) + 0%;
   top: 316px;
 
   @include vp-1199 {
-    right: calc((287 / 1200) * 100) + 0%;
-  }
-
-  @include vp-1199 {
-    right: calc((28 / 768) * 100) + 0%;
+    right: 23px;
     top: 275px;
   }
 
@@ -219,15 +198,11 @@
   width: 56px;
   height: 56px;
   border: 1px solid transparent;
-  left: calc((370 / 1200) * 100) + 0%;
+  left: calc((287 / 1200) * 100) + 0%;
   top: 316px;
 
   @include vp-1199 {
-    left: calc((287 / 1200) * 100) + 0%;
-  }
-
-  @include vp-1199 {
-    left: calc((28 / 768) * 100) + 0%;
+    left: 23px;
     top: 275px;
   }
 

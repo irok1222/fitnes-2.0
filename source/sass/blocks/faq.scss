@@ -1,24 +1,25 @@
-.faq__wrapper {
-  padding: 120px calc((245 / 1200) * 100) + 0% 120px calc((245 / 1200) * 100) + 0%;
+.faq {
   background: #f8f9fc;
+}
 
-  @include vp-1439 {
-    padding-left: $padding-dst;
-    padding-right: $padding-dst;
-  }
+.faq__wrapper {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  padding-left: $padding-dst;
+  padding-right: $padding-dst;
 
   @include vp-1199 {
     padding-left: $padding-tbl;
     padding-right: $padding-tbl;
     padding-top: 100px;
-    padding-bottom: 87px;
+    padding-bottom: 74px;
   }
 
   @include vp-767 {
     padding-left: $padding-mbl;
     padding-right: $padding-mbl;
     padding-top: 70px;
-    padding-bottom: 62px;
+    padding-bottom: 51px;
   }
 }
 
@@ -41,7 +42,7 @@
   @include vp-767 {
     font-size: 2em;
     letter-spacing: 1px;
-    padding-bottom: 35px;
+    padding-bottom: 28px;
   }
 }
 
@@ -72,7 +73,7 @@
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     row-gap: 8px;
-    padding-bottom: 18px;
+    padding-bottom: 10px;
   }
 }
 
@@ -145,9 +146,9 @@
   }
 
   @include vp-767 {
-    padding-right: 0;
+    padding-right: 41px;
     padding-bottom: 23px;
-    padding-top: 7px;
+    padding-top: 13px;
   }
 }
 
@@ -171,7 +172,7 @@
 
   @include vp-1199 {
     padding-right: 0;
-    padding-bottom: 15px;
+    padding-bottom: 21px;
   }
 
   @include vp-767 {
@@ -196,7 +197,7 @@
   }
 
   @include vp-767 {
-    top: -14px;
+    top: -4px;
     padding-right: calc((89 / 768) * 100) + 0%;
   }
 }
@@ -213,8 +214,8 @@
     top: 94px;
   }
 
-  @include vp-767 {
-    top: 72px;
+  @include vp-1199 {
+    top: 66px;
   }
 }
 

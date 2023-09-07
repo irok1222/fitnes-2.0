@@ -1,13 +1,12 @@
+.promo {
+  background-color: $color-default-white;
+}
+
 .promo__wrapper {
-  padding-left: calc((245 / 1200) * 100) + 0%;
-  padding-right: calc((245 / 1200) * 100) + 0%;
+  padding-left: $padding-dst;
+  padding-right: $padding-dst;
   padding-top: 132px;
   padding-bottom: 120px;
-
-  @include vp-1439 {
-    padding-left: $padding-dst;
-    padding-right: $padding-dst;
-  }
 
   @include vp-1199 {
     padding-left: $padding-tbl;
@@ -208,9 +207,10 @@
 
   @include vp-767 {
     padding-top: 36px;
-    padding-bottom: 15px;
+    padding-bottom: 39px;
     padding-right: calc((45 / 320) * 100) + 0%;
     padding-left: calc((45 / 320) * 100) + 0%;
+    justify-items: center;
   }
 }
 
@@ -252,6 +252,10 @@
 
   @include vp-1199 {
     padding-top: 46px;
+  }
+
+  @include vp-767 {
+    padding-top: 29px;
   }
 
   @include hover {

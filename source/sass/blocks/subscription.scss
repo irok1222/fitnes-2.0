@@ -1,12 +1,12 @@
-.subscription__wrapper {
-  padding: 120px $padding-dst 62px $padding-dst;
+.subscription {
   background: #f8f9fc;
   color: #102654;
   position: relative;
+}
 
-  @include vp-1439 {
-    padding-bottom: 120px;
-  }
+
+.subscription__wrapper {
+  padding: 122px $padding-dst 119px $padding-dst;
 
   @include vp-1199 {
     padding: 100px $padding-tbl 100px $padding-tbl;
@@ -20,17 +20,19 @@
   }
 }
 
-.subscription__wrapper::after {
+.subscription::after {
   position: absolute;
   content: url("../img/pancakes.png");
-  right: -5px;
+  left: calc((1520 / 1920) * 100) + 0%;
   top: 510px;
   z-index: 2;
+  overflow: hidden;
 
   @include vp-1199 {
     position: absolute;
     content: url("../img/pancake-tbl.png");
-    top: 2862px;
+    left: calc((420 / 768) * 100) + 0%;
+    top: 1459px;
   }
 
   @include vp-767 {

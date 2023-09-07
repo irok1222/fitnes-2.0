@@ -1,17 +1,11 @@
 .games__wrapper {
-  padding-right: calc((210 / 1200) * 100) + 0%;
-  padding-left: calc((210 / 1200) * 100) + 0%;
+  padding-right: $padding-dst;
+  padding-left: $padding-dst;
   padding-top: 123px;
   padding-bottom: 109px;
   position: relative;
   display: flex;
   justify-content: center;
-
-
-  @include vp-1439 {
-    padding-left: $padding-dst;
-    padding-right: $padding-dst;
-  }
 
   @include vp-1199 {
     padding-left: $padding-tbl;

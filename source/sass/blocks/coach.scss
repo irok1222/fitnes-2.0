@@ -1,23 +1,22 @@
+.coach {
+  background-color: $color-default-white;
+}
+
 .coach__wrapper {
-  padding-left: calc((230 / 1200) * 100) + 0%;
-  padding-right: calc((230 / 1200) * 100) + 0%;
+  padding-left: $padding-dst;
+  padding-right: $padding-dst;
   padding-bottom: 82px;
   position: relative;
 
-  @include vp-1439 {
-    padding-left: $padding-dst;
-    padding-right: $padding-dst;
-  }
-
   @include vp-1199 {
-    padding-left: calc((90 / 768) * 100) + 0%;
-    padding-right: calc((90 / 768) * 100) + 0%;
-    padding-bottom: 78px;
+    padding-left: 101px;
+    padding-right: 101px;
+    padding-bottom: 83px;
   }
 
   @include vp-767 {
-    padding-left: calc((47 / 320) * 100) + 0%;
-    padding-right: calc((47 / 320) * 100) + 0%;
+    padding-left: $padding-mbl;
+    padding-right: $padding-mbl;
     padding-bottom: 50px;
   }
 }
@@ -27,25 +26,22 @@
   width: 56px;
   height: 56px;
   border: 1px solid transparent;
-  left: calc((190 / 1200) * 100) + 0%;
+  left: calc((23 / 1200) * 100) + 0%;
   top: 230px;
-
-  @include vp-1439 {
-    left: calc((23 / 1200) * 100) + 0%;
-  }
 
   @include vp-1199 {
     width: 56px;
     height: 56px;
-    left: calc((23 / 768) * 100) + 0%;
-    top: 210px;
+    left: calc((25 / 768) * 100) + 0%;
+    top: 213px;
   }
 
   @include vp-767 {
     width: 47px;
     height: 47px;
-    left: calc((0.6 / 320) * 100) + 0%;
+    left: 1px;
     top: 210px;
+    z-index: 3;
   }
 
   @include hover {
@@ -90,25 +86,22 @@
   width: 56px;
   height: 56px;
   border: 1px solid transparent;
-  right: calc((190 / 1200) * 100) + 0%;
+  right: calc((23 / 1200) * 100) + 0%;
   top: 230px;
-
-  @include vp-1439 {
-    right: calc((23 / 1200) * 100) + 0%;
-  }
 
   @include vp-1199 {
     width: 56px;
     height: 56px;
-    right: calc((0.6 / 768) * 100) + 0%;
-    top: 210px;
+    right: calc((25 / 768) * 100) + 0%;
+    top: 213px;
   }
 
   @include vp-767 {
     width: 47px;
     height: 47px;
-    right: calc((23 / 320) * 100) + 0%;
+    right: 26px;
     top: 210px;
+    z-index: 3;
   }
 
   @include hover {

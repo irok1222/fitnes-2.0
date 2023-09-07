@@ -9,26 +9,27 @@
   }
 }
 
-.custom__wrapper {
-  padding: 56px  calc((210 / 1200) * 100) + 0% 70px  calc((470 / 1200) * 100) + 0%;
+.custom {
   color: $color-default-white;
   background: #102654;
+}
 
-  @include vp-1439 {
-    padding: 56px 103px 70px 100px;
-  }
+.custom__wrapper {
+  padding: 57px 167px 70px $padding-dst;
+  text-align: end;
 
   @include vp-1199 {
-    padding-top: 54px;
-    padding-left: calc((129 / 768) * 100) + 0%;
+    padding-top: 51px;
     padding-bottom: 70px;
-    padding-right: calc((100 / 768) * 100) + 0%;
+    padding-left: 133px;
+    padding-right: 163px;
+    text-align: start;
   }
 
   @include vp-767 {
     padding-top: 57px;
-    padding-left: $padding-mbl;
     padding-bottom: 70px;
+    padding-left: $padding-mbl;
     padding-right: $padding-mbl;
   }
 }
@@ -42,6 +43,7 @@
   padding-bottom: 17px;
   letter-spacing: 2.62px;
   line-height: 156%;
+  padding-right: 15px;
 
   @include vp-1199 {
     font-size: 2.63em;
@@ -58,11 +60,18 @@
 
 .custom__intro {
   display: flex;
-  gap: calc((60 / 1200) * 100) + 0%;
+  gap: 26px;
+  justify-content: flex-end;
+
+  @include vp-1199 {
+    gap: 74px;
+    justify-content: flex-start;
+  }
 
   @include vp-767 {
     flex-direction: column;
     row-gap: 31px;
+    width: 290px;
   }
 }
 

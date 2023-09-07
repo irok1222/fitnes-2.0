@@ -1,13 +1,12 @@
+.features {
+  background-color: $color-default-white;
+}
+
 .features__wrapper {
-  padding-left: calc((255 / 1200) * 100) + 0%;
-  padding-right: calc((255 / 1200) * 100) + 0%;
+  padding-left: 182px;
+  padding-right: 174px;
   padding-top: 108px;
   padding-bottom: 129px;
-
-  @include vp-1439 {
-    padding-left: calc((123 / 1200) * 100) + 0%;
-    padding-right: calc((123 / 1200) * 100) + 0%;
-  }
 
   @include vp-1199 {
     padding-left: $padding-tbl;
@@ -52,13 +51,14 @@
   grid-template-rows: min-content;
   margin: 0;
   padding: 0;
-  column-gap: 24px;
-  row-gap: 97px;
+  column-gap: 55px;
+  row-gap: 98px;
 
   @include vp-1199 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content;
     row-gap: 24px;
+    column-gap: 44px;
     margin-top: 24px;
   }
 
@@ -78,7 +78,6 @@
   display: flex;
   gap: calc((110 / 1200) * 100) + 0%;
   padding-top: 29px;
-  padding-left: 39px;
 
   @include vp-1199 {
     padding-left: 0;
