@@ -120,13 +120,13 @@
   border: 1px solid #74819c;
   width: 102px;
   transform: rotate(90deg);
-  top: 95px;
-  left: 181px;
+  top: 45px;
+  right: 117px;
 
   @include vp-1199 {
     width: 129px;
-    left: 95px;
-    top: 102px;
+    right: 123px;
+    top: 70px;
   }
 
   @include vp-767 {

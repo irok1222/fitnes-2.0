@@ -117,6 +117,7 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 150px;
+    position: relative;
   }
 
   @include vp-767 {
@@ -127,7 +128,6 @@
 .gym img {
   margin-left: 77px;
   object-fit: cover;
-  position: relative;
 
   @include vp-1199 {
     width: 678px;
@@ -146,28 +146,17 @@
   width: 364px;
   height: 228px;
   position: absolute;
-  top: calc((650 / 1200) * 100) + 0%;
-  left: calc((510 / 1200) * 100) + 0%;
+  top: 408px;
 
-  @include vp-1439 {
-    top: calc((640 / 1200) * 100) + 0%;
-    left: calc((477 / 1200) * 100) + 0%;
-  }
+  // @include vp-1439 {
+  //   top: calc((640 / 1200) * 100) + 0%;
+  //   left: calc((477 / 1200) * 100) + 0%;
+  // }
 
   @include vp-1199 {
     width: 266px;
     height: 167px;
-    left: calc((320 / 768) * 100) + 0%;
-    top: calc((510 / 768) * 100) + 0%;
-  }
-
-  @include vp-1023 {
-    left: calc((295 / 768) * 100) + 0%;
-    top: calc((530 / 768) * 100) + 0%;
-  }
-
-  @include vp-799 {
-    left: calc((255 / 768) * 100) + 0%;
+    top: 306px;
   }
 
   @include vp-767 {
@@ -175,17 +164,10 @@
     width: 320px;
     height: 170px;
     margin: auto;
-    margin-top: 55px;
+    margin-top: 85px;
     left: 0;
     right: 0;
   }
-
-  // @include vp-374 {
-  //   width: 320px;
-  //   height: 170px;
-  //   top: calc((170 / 320) * 100) + 0%;
-  //   left: 0;
-  // }
 }
 
 .gym__shadow::after {
@@ -194,71 +176,60 @@
   width: 364px;
   height: 228px;
   background: rgba(20, 54, 122, 0.5);
-  top: calc((650 / 1200) * 100) + 0%;
-  left: calc((510 / 1200) * 100) + 0%;
-  z-index: 2;
+  top: 408px;
+  z-index: 3;
 
-  @include vp-1439 {
-    top: calc((640 / 1200) * 100) + 0%;
-    left: calc((477 / 1200) * 100) + 0%;
-  }
+  // @include vp-1439 {
+  //   top: calc((640 / 1200) * 100) + 0%;
+  //   left: calc((477 / 1200) * 100) + 0%;
+  // }
 
   @include vp-1199 {
     width: 266px;
     height: 167px;
-    left: calc((320 / 768) * 100) + 0%;
-    top: calc((510 / 768) * 100) + 0%;
+    top: 306px;
+    left: 207px;
   }
 
-  @include vp-1023 {
-    left: calc((295 / 768) * 100) + 0%;
-    top: calc((530 / 768) * 100) + 0%;
-  }
+  // @include vp-1023 {
+  //   left: calc((295 / 768) * 100) + 0%;
+  //   top: calc((530 / 768) * 100) + 0%;
+  // }
 
-  @include vp-799 {
-    left: calc((255 / 768) * 100) + 0%;
-  }
+  // @include vp-799 {
+  //   left: calc((255 / 768) * 100) + 0%;
+  // }
 
   @include vp-767 {
     width: 320px;
     height: 170px;
     margin: auto;
-    margin-top: 55px;
+    margin-top: 85px;
     left: 0;
     right: 0;
   }
-
-  // @include vp-374 {
-  //   width: 320px;
-  //   height: 170px;
-  //   top: calc((170 / 320) * 100) + 0%;
-  //   left: 0;
-  // }
 }
 
 .gym-play {
   content: "";
   position: absolute;
-  top: 474px;
-  right: calc((545 / 1200) * 100) + 0%;
   background: transparent;
   border: none;
   background-image: url("../img/svg/video_btn.svg");
   width: 6.25em;
   height: 6.25em;
-  z-index: 3;
-
-  @include vp-1799 {
-    left: calc((600 / 1200) * 100) + 0%;
-  }
+  z-index: 4;
+  margin: auto;
+  top: 474px;
+  left: 43px;
+  right: 0;
 
   @include vp-1439 {
-    top: calc((755 / 1200) * 100) + 0%;
-    left: calc((600 / 1200) * 100) + 0%;
+    left: 63px;
   }
 
   @include vp-1279 {
-    top: 483px;
+    left: 84px;
   }
 
   @include vp-1199 {
@@ -267,18 +238,10 @@
     height: 4.56em;
     background-size: cover;
     background-repeat: no-repeat;
-    top: calc((555 / 768) * 100) + 0%;
-    left: calc((390 / 768) * 100) + 0%;
-  }
-
-  @include vp-1023 {
-    top: calc((570 / 768) * 100) + 0%;
-    left: calc((375 / 768) * 100) + 0%;
-  }
-
-  @include vp-799 {
-    top: calc((570 / 768) * 100) + 0%;
-    left: calc((350 / 768) * 100) + 0%;
+    margin: auto;
+    top: 355px;
+    left: 2px;
+    right: 0;
   }
 
   @include vp-767 {
@@ -286,28 +249,9 @@
     height: 4em;
     background-size: cover;
     margin: auto;
-    top: calc((630 / 768) * 100) + 0%;
-    left: 0;
+    top: 435px;
+    left: 2px;
     right: 0;
-  }
-
-  @include vp-549 {
-    width: 4em;
-    height: 4em;
-    background-size: cover;
-    margin: auto;
-    left: 0;
-    right: 0;
-  }
-
-  @include vp-374 {
-    width: 4.56em;
-    height: 4.56em;
-    background-size: cover;
-    top: 735px;
-    left: 0;
-    right: 0;
-    margin: auto;
   }
 
   &:hover {

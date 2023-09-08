@@ -4,6 +4,24 @@
   position: relative;
 }
 
+.subscription::after {
+  position: absolute;
+  content: url("../img/pancakes.png");
+  right: 0;
+  top: 510px;
+  z-index: 2;
+  overflow-x: hidden;
+
+  @include vp-1199 {
+    position: absolute;
+    content: url("../img/pancake-tbl.png");
+    top: 1459px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
 
 .subscription__wrapper {
   padding: 122px $padding-dst 119px $padding-dst;
@@ -17,26 +35,6 @@
     padding-right: $padding-mbl;
     padding-top: 68px;
     padding-bottom: 63px;
-  }
-}
-
-.subscription::after {
-  position: absolute;
-  content: url("../img/pancakes.png");
-  left: calc((1520 / 1920) * 100) + 0%;
-  top: 510px;
-  z-index: 2;
-  overflow: hidden;
-
-  @include vp-1199 {
-    position: absolute;
-    content: url("../img/pancake-tbl.png");
-    left: calc((420 / 768) * 100) + 0%;
-    top: 1459px;
-  }
-
-  @include vp-767 {
-    display: none;
   }
 }
 

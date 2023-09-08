@@ -1603,25 +1603,17 @@ button,
   }
 }
 
-.hero {
-  padding-left: 122px;
-  padding-right: 303px;
-}
 @media (max-width: 1199px) {
   .hero {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    padding-left: 45px;
   }
 }
 @media (max-width: 767px) {
   .hero {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    padding-left: 15px;
-    padding-right: 15px;
+    display: block;
   }
 }
 
@@ -1637,6 +1629,20 @@ button,
   grid-template-rows: -webkit-min-content;
   grid-template-rows: min-content;
   position: relative;
+  padding-left: 122px;
+  padding-right: 303px;
+  margin: 0;
+}
+@media (max-width: 1199px) {
+  .hero__wrapper {
+    padding-left: 45px;
+  }
+}
+@media (max-width: 767px) {
+  .hero__wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .hero__list {
@@ -1675,14 +1681,14 @@ button,
   position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
-  left: 441px;
+  left: 564px;
 }
 @media (max-width: 1199px) {
   .hero img {
     width: 324px;
     height: 390px;
     top: 21px;
-    left: 354px;
+    left: 402px;
   }
 }
 @media (max-width: 767px) {
@@ -1959,6 +1965,7 @@ button,
         -ms-flex-align: center;
             align-items: center;
     padding-bottom: 150px;
+    position: relative;
   }
 }
 @media (max-width: 767px) {
@@ -1971,7 +1978,6 @@ button,
   margin-left: 77px;
   -o-object-fit: cover;
      object-fit: cover;
-  position: relative;
 }
 @media (max-width: 1199px) {
   .gym img {
@@ -1992,32 +1998,13 @@ button,
   width: 364px;
   height: 228px;
   position: absolute;
-  top: 54.1666666667%;
-  left: 42.5%;
-}
-@media (max-width: 1439px) {
-  .gym__video {
-    top: 53.3333333333%;
-    left: 39.75%;
-  }
+  top: 408px;
 }
 @media (max-width: 1199px) {
   .gym__video {
     width: 266px;
     height: 167px;
-    left: 41.6666666667%;
-    top: 66.40625%;
-  }
-}
-@media (max-width: 1023px) {
-  .gym__video {
-    left: 38.4114583333%;
-    top: 69.0104166667%;
-  }
-}
-@media (max-width: 799px) {
-  .gym__video {
-    left: 33.203125%;
+    top: 306px;
   }
 }
 @media (max-width: 767px) {
@@ -2027,7 +2014,7 @@ button,
     width: 320px;
     height: 170px;
     margin: auto;
-    margin-top: 55px;
+    margin-top: 85px;
     left: 0;
     right: 0;
   }
@@ -2039,33 +2026,15 @@ button,
   width: 364px;
   height: 228px;
   background: rgba(20, 54, 122, 0.5);
-  top: 54.1666666667%;
-  left: 42.5%;
-  z-index: 2;
-}
-@media (max-width: 1439px) {
-  .gym__shadow::after {
-    top: 53.3333333333%;
-    left: 39.75%;
-  }
+  top: 408px;
+  z-index: 3;
 }
 @media (max-width: 1199px) {
   .gym__shadow::after {
     width: 266px;
     height: 167px;
-    left: 41.6666666667%;
-    top: 66.40625%;
-  }
-}
-@media (max-width: 1023px) {
-  .gym__shadow::after {
-    left: 38.4114583333%;
-    top: 69.0104166667%;
-  }
-}
-@media (max-width: 799px) {
-  .gym__shadow::after {
-    left: 33.203125%;
+    top: 306px;
+    left: 207px;
   }
 }
 @media (max-width: 767px) {
@@ -2073,7 +2042,7 @@ button,
     width: 320px;
     height: 170px;
     margin: auto;
-    margin-top: 55px;
+    margin-top: 85px;
     left: 0;
     right: 0;
   }
@@ -2082,29 +2051,25 @@ button,
 .gym-play {
   content: "";
   position: absolute;
-  top: 474px;
-  right: 45.4166666667%;
   background: transparent;
   border: none;
   background-image: url("../img/svg/video_btn.svg");
   width: 6.25em;
   height: 6.25em;
-  z-index: 3;
-}
-@media (max-width: 1799px) {
-  .gym-play {
-    left: 50%;
-  }
+  z-index: 4;
+  margin: auto;
+  top: 474px;
+  left: 43px;
+  right: 0;
 }
 @media (max-width: 1439px) {
   .gym-play {
-    top: 62.9166666667%;
-    left: 50%;
+    left: 63px;
   }
 }
 @media (max-width: 1279px) {
   .gym-play {
-    top: 483px;
+    left: 84px;
   }
 }
 @media (max-width: 1199px) {
@@ -2114,20 +2079,10 @@ button,
     height: 4.56em;
     background-size: cover;
     background-repeat: no-repeat;
-    top: 72.265625%;
-    left: 50.78125%;
-  }
-}
-@media (max-width: 1023px) {
-  .gym-play {
-    top: 74.21875%;
-    left: 48.828125%;
-  }
-}
-@media (max-width: 799px) {
-  .gym-play {
-    top: 74.21875%;
-    left: 45.5729166667%;
+    margin: auto;
+    top: 355px;
+    left: 2px;
+    right: 0;
   }
 }
 @media (max-width: 767px) {
@@ -2136,30 +2091,9 @@ button,
     height: 4em;
     background-size: cover;
     margin: auto;
-    top: 82.03125%;
-    left: 0;
+    top: 435px;
+    left: 2px;
     right: 0;
-  }
-}
-@media (max-width: 549px) {
-  .gym-play {
-    width: 4em;
-    height: 4em;
-    background-size: cover;
-    margin: auto;
-    left: 0;
-    right: 0;
-  }
-}
-@media (max-width: 374px) {
-  .gym-play {
-    width: 4.56em;
-    height: 4.56em;
-    background-size: cover;
-    top: 735px;
-    left: 0;
-    right: 0;
-    margin: auto;
   }
 }
 .gym-play:hover {
@@ -2178,6 +2112,27 @@ button,
   position: relative;
 }
 
+.subscription::after {
+  position: absolute;
+  content: url("../img/pancakes.png");
+  right: 0;
+  top: 510px;
+  z-index: 2;
+  overflow-x: hidden;
+}
+@media (max-width: 1199px) {
+  .subscription::after {
+    position: absolute;
+    content: url("../img/pancake-tbl.png");
+    top: 1459px;
+  }
+}
+@media (max-width: 767px) {
+  .subscription::after {
+    display: none;
+  }
+}
+
 .subscription__wrapper {
   padding: 122px 103px 119px 103px;
 }
@@ -2192,28 +2147,6 @@ button,
     padding-right: 15px;
     padding-top: 68px;
     padding-bottom: 63px;
-  }
-}
-
-.subscription::after {
-  position: absolute;
-  content: url("../img/pancakes.png");
-  left: 79.1666666667%;
-  top: 510px;
-  z-index: 2;
-  overflow: hidden;
-}
-@media (max-width: 1199px) {
-  .subscription::after {
-    position: absolute;
-    content: url("../img/pancake-tbl.png");
-    left: 54.6875%;
-    top: 1459px;
-  }
-}
-@media (max-width: 767px) {
-  .subscription::after {
-    display: none;
   }
 }
 
@@ -3599,6 +3532,10 @@ button,
 @media (max-width: 767px) {
   .features__item--three {
     padding-bottom: 9px;
+    padding-top: 45px;
+    padding-left: 39px;
+    padding-right: 39px;
+    margin: 0;
   }
 }
 
@@ -5095,14 +5032,14 @@ button,
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
-  top: 95px;
-  left: 181px;
+  top: 45px;
+  right: 117px;
 }
 @media (max-width: 1199px) {
   .contacts__block--second::after {
     width: 129px;
-    left: 95px;
-    top: 102px;
+    right: 123px;
+    top: 70px;
   }
 }
 @media (max-width: 767px) {
