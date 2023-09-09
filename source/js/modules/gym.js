@@ -19,4 +19,4 @@ const clickButton = () => {
   });
 };
 
-export { clickButton };
+export {clickButton};
