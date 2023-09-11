@@ -1287,7 +1287,7 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Placeholder", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2760,7 +2760,7 @@ button,
 }
 
 .promo__hit-link {
-  padding-top: 213px;
+  margin-top: 213px;
   color: #ffffff;
   font-size: 0.88em;
   font-style: normal;
@@ -2855,7 +2855,7 @@ button,
   line-height: normal;
   letter-spacing: 0.6px;
   text-transform: uppercase;
-  padding-top: 71px;
+  margin-top: 71px;
 }
 
 .promo__link:active {
@@ -3708,7 +3708,7 @@ button,
 
   .subscription::after {
     position: absolute;
-    content: url("../img/pancake-tbl.png");
+    content: url("../img/pancakes-tbl.png");
     top: 1459px;
   }
 

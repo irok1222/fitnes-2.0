@@ -110,7 +110,7 @@
 }
 
 .promo__hit-link {
-  padding-top: 213px;
+  margin-top: 213px;
   color: $color-default-white;
   font-size: 0.88em;
   font-style: normal;
@@ -248,7 +248,7 @@
   line-height: normal;
   letter-spacing: 0.6px;
   text-transform: uppercase;
-  padding-top: 71px;
+  margin-top: 71px;
 
   @include vp-1199 {
     padding-top: 46px;
