@@ -12,11 +12,12 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --customSyntax postcss-scss",
     "test": "npm run editorconfig & npm run stylelint & eslint source/js/",
-    "build": "gulp build",
     "dev": "gulp dev",
     "start": "gulp start",
     "webp": "gulp webp",
-    "deploy": "gulp build && gh-pages -d build"
+    "deploy": "gulp build && gh-pages -d build",
+    "vinyl-source-stream": "2.0.0",
+    "predeploy": "npm run build"
   },
   "editorconfig-cli": [
     "*.json",
@@ -37,6 +38,7 @@
     "browserify": "17.0.0",
     "del": "6.1.1",
     "eslint": "7.32.0",
+    "gh-pages": "^6.0.0",
     "gulp": "4.0.2",
     "gulp-concat": "2.6.1",
     "gulp-csso": "4.0.1",
@@ -58,8 +60,8 @@
     "sass": "1.53.0",
     "stylelint": "^14.16.1",
     "stylelint-config-htmlacademy": "1.1.4",
-    "vinyl-buffer": "1.0.1",
-    "vinyl-source-stream": "2.0.0"
+    "vinyl-buffer": "1.0.1"
+
   },
   "engines": {
     "node": ">=16.15.1"
