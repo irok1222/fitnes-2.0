@@ -7,9 +7,10 @@
   padding-top: 57px;
   padding-bottom: 63px;
   padding-left: 123px;
-  padding-right: 159px;
+  padding-right: 54px;
 
   @include vp-1199 {
+    border-top:none;
     padding-top: 62px;
     padding-bottom: 65px;
     padding-left: 133px;
@@ -45,12 +46,9 @@
 }
 
 .contacts__intro {
-  display: grid;
-  grid-template-columns: max-content max-content;
-  row-gap: 18px;
-  column-gap: 120px;
-  position: relative;
-  padding-top: 38px;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 37px;
 
   @include vp-1199 {
     padding-top: 32px;
@@ -59,8 +57,9 @@
   }
 
   @include vp-767 {
-    display: flex;
     flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
     padding-top: 38px;
     gap: 24px;
   }
@@ -114,23 +113,29 @@
   }
 }
 
-.contacts__block--second::after {
-  content: "";
-  position: absolute;
-  border: 1px solid #74819c;
-  width: 102px;
-  transform: rotate(90deg);
-  top: 45px;
-  right: 117px;
-
-  @include vp-1199 {
-    width: 129px;
-    right: 123px;
-    top: 70px;
-  }
+.contacts__line {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-right: 1px solid #74819c;
+  padding-right: 62px;
 
   @include vp-767 {
-    display: none;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.contacts__noline {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 56px;
+
+  @include vp-767 {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

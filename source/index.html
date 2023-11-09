@@ -8,7 +8,6 @@
   <meta name="description" content="Описание проекта">
   <meta http-equiv="Cache-Control" content="public, max-age=3600" />
   <title>Fitnes-2.0</title>
-  <link rel="icon" href="favicon.ico">
   <link rel="preload" href="./fonts/robotocondensed.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -21,7 +20,7 @@
         <div class="header__wrapper">
 
           <a class="header__logo" href="index.html" aria-label="Логотип Суперджим.">
-            <svg class="header__svg" aria-hidden="true" focusable="false" fill="currentColor" width="122" height="44" >
+            <svg class="header__svg" aria-hidden="true" focusable="false" fill="currentColor" width="122" height="44">
               <use xlink:href="img/sprite.svg#logo"></use>
             </svg>
           </a>
@@ -30,22 +29,26 @@
 
         <section class="hero">
           <div class="container">
+
             <div class="hero__wrapper">
+              <div class="hero__intro">
+                <ul class="hero__list">
+                  <li class="hero__item">Тренажёрный зал</li>
+                  <li class="hero__item"> Групповые занятия</li>
+                  <li class="hero__item">Кардио-зона </li>
+                </ul>
 
-              <ul class="hero__list">
-                <li class="hero__item">Тренажёрный зал</li>
-                <li class="hero__item"> Групповые занятия</li>
-                <li class="hero__item">Кардио-зона </li>
-              </ul>
-
-              <p class="hero__city">омск</p>
-              <p class="hero__title">фитнес <br> центр</p>
-              <a class="hero__button buttom" href="#subscription"> Купить абонимент</a>
-              <picture>
-                <source type="image/webp" srcset="./img/hero-dst.webp 1x, ./img/hero-dst@2x.webp 2x">
-                <img src="./img/hero-dst.jpg" width="500" height="556" srcset="./img/hero-dst@2x.jpg"
-                  alt="Мужчина спортивного телосложения в футболке супермена.">
-              </picture>
+                <p class="hero__city">омск</p>
+                <p class="hero__title">Фитнес <br> центр</p>
+                <a class="hero__button buttom" href="#subscription"> Купить абонимент</a>
+              </div>
+              <div class="hero__img">
+                <picture>
+                  <source type="image/webp" srcset="./img/hero-dst.webp 1x, ./img/hero-dst@2x.webp 2x">
+                  <img src="./img/hero-dst.jpg" width="500" height="556" srcset="./img/hero-dst@2x.jpg"
+                    alt="Мужчина спортивного телосложения в футболке супермена.">
+                </picture>
+              </div>
 
             </div>
           </div>
@@ -78,15 +81,17 @@
                 <img src="./img/gym.jpg" width="660" height="410" srcset="./img/gym@2x.jpg"
                   alt="Фото спортивного зала Супер Джим.">
               </picture>
+              <div class="gym__inro">
+                <div class="gym__shadow"></div>
+                <video class="gym__video" id="video" data-validate="video" width="364" height="228"
+                  poster="./img/video/video.jpg">
+                  <source src="./img/video/video.ogv" type='video/ogg; codecs="theora, vorbis"'>
+                  <source src="./img/video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                  <source src="./img/video/video.webm" type='video/webm; codecs="vp8, vorbis"'>
+                </video>
 
-              <div class="gym__shadow"></div>
-              <video class="gym__video" id="video" data-validate="video" width="364" height="228"
-                poster="./img/video/video.jpg">
-                <source src="./img/video/video.ogv" type='video/ogg; codecs="theora, vorbis"'>
-                <source src="./img/video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                <source src="./img/video/video.webm" type='video/webm; codecs="vp8, vorbis"'>
-              </video>
-              <button class="gym-play" type="button" aria-label="Включить или выключить видео."></button>
+                <button class="gym-play" type="button" aria-label="Включить или выключить видео."></button>
+              </div>
             </div>
           </div>
         </div>
@@ -99,12 +104,14 @@
 
 
             <div class="subscription__controls" data-tabs="controls">
+              <div class="subscription__intro">
               <button class="subscription__control subscription__control--month is-active" type="button"
                 data-tabs="control">1 месяц</button>
               <button class="subscription__control subscription__control--six-month" type="button" data-tabs="control">6
                 месяцев</button>
               <button class="subscription__control subscription__control--year" type="button" data-tabs="control">12
                 месяцев</button>
+              </div>
             </div>
 
             <div class="subscription__programs" data-tabs="content">
@@ -200,16 +207,20 @@
         <div class="container">
           <div class="games__wrapper">
             <div class="games__intro">
+              <div class="games__text">
               <h2 class="games__title"> Super <br> games </h2>
-              <p class="games__header">Ежегодные соревнования по CrossFit</p>
 
+              <div class="games__date">
               <p class="games__dait">Дата</p>
               <p class="games__number">7</p>
               <p class="games__month">Марта</p>
               <p class="games__year">2019</p>
               <p class="games__time">Время</p>
               <p class="games__hours">12:00</p>
+            </div>
+            </div>
 
+              <p class="games__header">Ежегодные соревнования по CrossFit</p>
               <a class="games__buttom" href="#">заполнить заявку</a>
             </div>
             <picture>
@@ -229,7 +240,7 @@
             <div class="swiper coach__swiper">
               <div class="swiper-wrapper coach__swiper-wrapper">
 
-                <div class="swiper-slide coach__swiper-slide">
+                <div class="swiper-slide coach__swiper-slide" tabindex="0">
                   <picture>
                     <source type="image/webp" srcset="./img/coach/coach1.webp 1x, ./img/coach/coach1@2x.webp 2x">
                     <img src="./img/coach1.jpg" width="260" height="294" srcset="./img/coach/coach1@2x.jpg 2x"
@@ -251,7 +262,7 @@
                   </div>
                 </div>
 
-                <div class="swiper-slide coach__swiper-slide">
+                <div class="swiper-slide coach__swiper-slide" tabindex="0">
                   <p class="coach__name">Алексей Лавров</p>
                   <picture>
                     <source type="image/webp" srcset="./img/coach/coach.webp 1x, ./img/coach/coach@2x.webp 2x">
@@ -260,21 +271,21 @@
                   </picture>
 
                   <div class="coach coach-card">
-                    <p class="coach coach-card__name">Александр Пашков</p>
-                    <p class="coach coach-card__line">CrossFit</p>
-                    <ul class="coach coach-card__list">
-                      <li class="coach coach-card__item">
+                    <p class="coach-card__name">Александр Пашков</p>
+                    <p class="coach-card__line">CrossFit</p>
+                    <ul class="coach-card__list">
+                      <li class="coach-card__item">
                         Certified Level 3 Trainer
                       </li>
-                      <li class="coach coach-card__item">
+                      <li class="coach-card__item">
                         Победитель чемпионата России по CrossFit
                       </li>
-                      <li class="coach coach-card__item">Опыт — 6 лет</li>
+                      <li class="coach-card__item">Опыт — 6 лет</li>
                     </ul>
                   </div>
                 </div>
 
-                <div class="swiper-slide coach__swiper-slide">
+                <div class="swiper-slide coach__swiper-slide" tabindex="0">
                   <p class="coach__name">Александр Пашков</p>
                   <picture>
                     <source type="image/webp" srcset="./img/coach/coach4.webp 1x, ./img/coach/coach4@2x.webp 2x">
@@ -297,7 +308,7 @@
                   </div>
                 </div>
 
-                <div class="swiper-slide coach__swiper-slide">
+                <div class="swiper-slide coach__swiper-slide" tabindex="0">
                   <p class="coach__name">Мария Кетова</p>
                   <picture>
                     <source type="image/webp" srcset="./img/coach/coach2.webp 1x, ./img/coach/coach2@2x.webp 2x">
@@ -320,7 +331,7 @@
                   </div>
                 </div>
 
-                <div class="swiper-slide coach__swiper-slide">
+                <div class="swiper-slide coach__swiper-slide" tabindex="0">
                   <p class="coach__name">Анна Павлова</p>
                   <picture>
                     <source type="image/webp" srcset="./img/coach/coach1.webp 1x, ./img/coach/coach1@2x.webp 2x">
@@ -343,7 +354,7 @@
                   </div>
                 </div>
 
-                <div class="swiper-slide coach__swiper-slide">
+                <div class="swiper-slide coach__swiper-slide" tabindex="0">
                   <p class="coach__name">Алексей Лавров</p>
                   <picture>
                     <source type="image/webp" srcset="./img/coach/coach.webp 1x, ./img/coach/coach@2x.webp 2x">
@@ -366,7 +377,7 @@
                   </div>
                 </div>
 
-                <div class="swiper-slide coach__swiper-slide">
+                <div class="swiper-slide coach__swiper-slide" tabindex="0">
                   <p class="coach__name">Александр Пашков</p>
                   <picture>
                     <source type="image/webp" srcset="./img/coach/coach4.webp 1x, ./img/coach/coach4@2x.webp 2x">
@@ -403,7 +414,7 @@
                   </div>
                 </div>
 
-                <div class="swiper-slide coach__swiper-slide">
+                <div class="swiper-slide coach__swiper-slide" tabindex="0">
                   <p class="coach__name">Мария Кетова</p>
                   <picture>
                     <source type="image/webp" srcset="./img/coach/coach2.webp 1x, ./img/coach/coach2@2x.webp 2x">
@@ -426,7 +437,7 @@
                   </div>
                 </div>
 
-                <div class="swiper-slide coach__swiper-slide">
+                <div class="swiper-slide coach__swiper-slide" tabindex="0">
                   <p class="coach__name">Мария Кетова</p>
                   <picture>
                     <source type="image/webp" srcset="./img/coach/coach2.webp 1x, ./img/coach/coach2@2x.webp 2x">
@@ -449,7 +460,7 @@
                   </div>
                 </div>
 
-                <div class="swiper-slide coach__swiper-slide">
+                <div class="swiper-slide coach__swiper-slide" tabindex="0">
                   <p class="coach__name">Мария Кетова</p>
                   <picture>
                     <source type="image/webp" srcset="./img/coach/coach2.webp 1x, ./img/coach/coach2@2x.webp 2x">
@@ -471,19 +482,25 @@
                     </ul>
                   </div>
                 </div>
-
               </div>
             </div>
+
             <div class="coach-button coach-button--next">
-              <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Вперед.">
-                <path d="M17 1L0.999999 17L17 33" stroke="currentColor"/>
+              <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-label="Вперед.">
+                <path d="M17 1L0.999999 17L17 33" stroke="currentColor" />
               </svg>
             </div>
+
             <div class="coach-button coach-button--prev">
-              <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg"  aria-label="Назад.">
-                <path d="M17 1L0.999999 17L17 33" stroke="currentColor"/>
+              <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-label="Назад.">
+                <path d="M17 1L0.999999 17L17 33" stroke="currentColor" />
               </svg>
             </div>
+
+
+
           </div>
         </div>
       </section>
@@ -548,15 +565,17 @@
           <div class="promo__wrapper">
             <h2 class="promo__title">Акции</h2>
 
-            <div class="promo__inro">
+            <div class="promo__intro">
               <section class="promo__hit">
-                <p class="promo__hit-header">Год</p>
-                <p class="promo__hit-price">4999</p>
-                <p class="promo__hit-description">Безлимитный абонемент в тренажерный зал</p>
-                <a class="promo__hit-link" href="#">подробнее</a>
+                <div class="promo__text">
+                  <p class="promo__hit-header">Год</p>
+                  <p class="promo__hit-price">4999</p>
+                  <p class="promo__hit-description">Безлимитный абонемент <br> в тренажерный зал</p>
+                  <a class="promo__hit-link" href="#">подробнее</a>
+                </div>
                 <picture>
                   <source type="image/webp" srcset="./img/promo.webp 1x, ./img/promo@2x.webp 2x">
-                  <img src="./img/promo.jpg" width="399" height="462" srcset="./img/promo@2x.jpg"
+                  <img src="./img/promo.jpg" width="280" height="462" srcset="./img/promo@2x.jpg"
                     alt="Девушка в спортивной голубом топе и штанах в полуобороте.">
                 </picture>
               </section>
@@ -652,7 +671,7 @@
                     </li>
 
                     <li class="faq__item" data-accordion="element">
-                      <p class="faq__header">Сколько тренеров работает в клубе и какова их квалификация? </p>
+                      <p class="faq__header">Сколько тренеров работает в клубе и какова <br> их квалификация? </p>
                       <div class="faq__content" data-accordion="content">
                         <div class="faq__description">
                           <p>При посещении тренажерного зала вам необходимо оплатить занятия с
@@ -932,17 +951,20 @@
                   </div>
                 </div>
 
+
               </div>
             </div>
 
             <div class="feedback-button feedback-button--next">
-              <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Вперед.">
+              <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-label="Вперед.">
                 <path d="M17 1L0.999999 17L17 33" stroke="currentColor" />
               </svg>
             </div>
             <div class="feedback-button feedback-button--prev">
-              <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Назад.">
-                <path d="M17 1L0.999999 17L17 33" stroke="currentColor"/>
+              <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-label="Назад.">
+                <path d="M17 1L0.999999 17L17 33" stroke="currentColor" />
               </svg>
             </div>
 
@@ -950,65 +972,78 @@
         </div>
       </section>
 
-      <div class="wrapper__section">
-        <div class="custom" data-form-validate data-callback="base">
-          <form method="post">
-            <div class="container">
-              <div class="custom__wrapper">
-                <h2>Бесплатное занятие </h2>
-                <div class="custom__intro">
-                  <div class="custom-input" data-validate-type="text" data-limitation="letters"
-                    data-message-base="Поле обязательно к заполнению"
-                    data-message-extra="Проверьте корректность заполнения поля" data-required>
-                    <label for="username" aria-label="введите ваше имя">
-                      <input type="text" id="username" name="user-name" placeholder="Имя">
-                    </label>
-                  </div>
+          <div class="wrapper__intro">
+            <div class="custom" data-form-validate data-callback="base">
+              <form method="post">
 
-                  <div class="custom-input" data-validate-type="phone" data-matrix-limitation="digit"
-                    data-message-base="Поле обязательно к заполнению"
-                    data-message-extra="Проверьте корректность заполнения поля" data-required data-phone-length>
-                    <label for="phone" aria-label="введите ваш телефон">
-                      <input type="tel" id="phone" name="user-phone" placeholder="Телефон" autocomplete="off">
-                    </label>
+                <div class="custom__wrapper">
+                  <h2>Бесплатное занятие </h2>
+                  <div class="custom__intro">
+                    <div class="custom-input" data-validate-type="text"
+                      data-message-base="Поле обязательно к заполнению"
+                      data-message-extra="Проверьте корректность заполнения поля" data-required>
+                      <label for="username" aria-label="введите ваше имя">
+                        <input type="text" id="username" name="user-name" placeholder="Имя">
+                      </label>
+                    </div>
+
+                    <div class="custom-input" data-validate-type="phone" data-matrix-limitation="digit"
+                      data-message-base="Поле обязательно к заполнению"
+                      data-message-extra="Проверьте корректность заполнения поля" data-required data-phone-length>
+                      <label for="phone" aria-label="введите ваш телефон">
+                        <input type="tel" id="phone" name="user-phone" placeholder="Телефон" autocomplete="off">
+                      </label>
+                    </div>
                   </div>
+                  <button class="custom__buttom buttom" type="submit">отправить</button>
                 </div>
-                <button class="custom__buttom buttom" type="submit">отправить</button>
-              </div>
+
+
+              </form>
             </div>
 
-          </form>
-        </div>
+            <section class="contacts">
+              <div class="contacts__wrapper">
+                <h2>Контакты</h2>
 
-        <section class="contacts">
-          <div class="container">
-            <div class="contacts__wrapper">
-              <h2>Контакты</h2>
+                <div class="contacts__intro">
 
-              <div class="contacts__intro">
-                <div class="contacts__block contacts__block--first">
-                  <p class="contacts__header">Адрес:</p>
-                  <p class="contacts__description">г. Омск, ул. 60 лет Октября, 7</p>
+                  <div class="contacts__line">
+
+                  <div class="contacts__block contacts__block--first">
+                    <p class="contacts__header">Адрес:</p>
+                    <p class="contacts__description">г. Омск, ул. 60 лет Октября, 7</p>
+                  </div>
+
+                  <div class="contacts__block contacts__block--third">
+                    <p class="contacts__header ">График работы:</p>
+                    <p class="contacts__description">Пн-Вс: с 8:00 до 22:00</p>
+                  </div>
+
                 </div>
+
+                <div class="contacts__noline">
+
                 <div class="contacts__block contacts__block--second">
                   <p class="contacts__header">Телефон:</p>
                   <a class=" contacts__description contacts__description--phone"
                     href="tel:88005555555">8-800-555-55-55</a>
                 </div>
-                <div class="contacts__block contacts__block--third">
-                  <p class="contacts__header ">График работы:</p>
-                  <p class="contacts__description">Пн-Вс: с 8:00 до 22:00</p>
+
+                  <div class="contacts__block contacts__block--four">
+                    <p class="contacts__header">Email:</p>
+                    <a class="contacts__description contacts__description--mail"
+                      href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+                  </div>
+
+                 </div>
+
                 </div>
-                <div class="contacts__block contacts__block--four">
-                  <p class="contacts__header">Email:</p>
-                  <a class="contacts__description contacts__description--mail"
-                    href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
-                </div>
+
               </div>
-            </div>
+            </section>
+
           </div>
-        </section>
-      </div>
 
     </main>
 
@@ -1016,13 +1051,13 @@
       <div class="container">
         <div class="footer__wrapper">
 
-          <a class="footer__logo" href="index.html"  aria-label="Логотип Суперджим."npm run dev>
+          <a class="footer__logo" href="index.html" aria-label="Логотип Суперджим." npm run dev>
             <svg class="footer__svg" aria-hidden="true" focusable="false" fill="currentColor" width="88" height="33">
               <use xlink:href="img/sprite.svg#logo"></use>
             </svg>
           </a>
-          <nav class="footer-nav ">
 
+          <nav class="footer-nav ">
             <ul class="footer-nav__list">
 
               <li class="footer-nav__item footer-nav__item--first">

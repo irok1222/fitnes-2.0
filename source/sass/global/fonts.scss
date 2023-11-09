@@ -37,3 +37,13 @@
     url("../fonts/alumnisanssemibold.woff") format("woff");
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Alumni Sans";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("../fonts/alumnisansextrabold.woff2") format("woff2"),
+    url("../fonts/alumnisansextrabold.woff") format("woff");
+  font-display: swap;
+}

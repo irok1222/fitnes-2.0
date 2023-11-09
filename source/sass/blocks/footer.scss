@@ -27,8 +27,8 @@
 }
 
 .footer__logo {
-  width: 5.5em;
-  height: 2em;
+  width: 88px;
+  height: 32px;
   position: relative;
 
   @include vp-1199 {
@@ -56,6 +56,7 @@
   margin: 0;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2.5em;
 
@@ -167,11 +168,22 @@
     color: $color-default-white;
   }
 
+  &:focus {
+    background: #103aae;
+    color: $color-default-white;
+  }
+
   &:active {
     background: #102654;
+    color: $color-default-white;
   }
 
   &:disabled {
     opacity: "0.3";
   }
+}
+
+.footer__social-item .footer__icon--vk {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }

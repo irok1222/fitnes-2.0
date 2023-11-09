@@ -10,9 +10,9 @@
 }
 
 .header__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: max-content auto;
+  justify-items: end;
   padding-left: $padding-dst;
   padding-right: $padding-dst;
   padding-top: 25px;

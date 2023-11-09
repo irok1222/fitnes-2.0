@@ -1,32 +1,26 @@
-.hero {
-  @include vp-1199 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @include vp-767 {
-    display: block;
-    //grid-template-columns: 1fr;
-  }
-}
-
 .hero__wrapper {
-  display: grid;
-  grid-template-columns: max-content min-content;
-  grid-template-rows: min-content;
-  position: relative;
+  display: flex;
+  justify-content: center;
   padding-left: 122px;
   padding-right: 303px;
   margin: 0;
 
   @include vp-1199 {
     padding-left: $padding-tbl;
+    padding-right: $padding-tbl;
   }
 
   @include vp-767 {
     padding-left: $padding-mbl;
     padding-right: $padding-mbl;
   }
+}
+
+.hero__intro {
+  display: grid;
+  grid-template-columns: max-content min-content;
+  grid-template-rows: min-content;
+  position: relative;
 }
 
 .hero__list {
@@ -57,16 +51,16 @@
   line-height: 150%;
 }
 
-.hero img {
-  position: absolute;
+.hero__img {
+  margin-left: 58px;
   object-fit: cover;
-  left: 564px;
 
   @include vp-1199 {
+    position: static;
     width: 324px;
     height: 390px;
-    top: 21px;
-    left: 402px;
+    margin-top:18px;
+    margin-left: 30px;
   }
 
   @include vp-767 {
@@ -117,11 +111,10 @@
   padding-left: 17px;
 
   @include vp-1199 {
-    padding-right: 13px;
     padding-top: 8px;
     font-size: 4.5em;
     letter-spacing: 3.6px;
-    text-transform: lowercase;
+    text-transform: none;
     padding-bottom: 12px;
   }
 
@@ -154,6 +147,11 @@
   margin-bottom: 95px;
 
   @include hover {
+    background-color: $color-default-white;
+    color: #103aae;
+  }
+
+  &:focus {
     background-color: $color-default-white;
     color: #103aae;
   }

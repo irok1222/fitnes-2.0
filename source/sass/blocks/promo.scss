@@ -19,7 +19,7 @@
     padding-left: $padding-mbl;
     padding-right: $padding-mbl;
     padding-bottom: 68px;
-    padding-top: 64px;
+    padding-top: 66px;
   }
 }
 
@@ -42,10 +42,11 @@
 
   @include vp-767 {
     font-size: 2em;
+    padding-bottom: 43px;
   }
 }
 
-.promo__inro {
+.promo__intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: calc((40 / 1200) * 100) + 0%;
@@ -56,27 +57,39 @@
 }
 
 .promo__hit {
+  display: grid;
+  grid-template-columns: max-content auto;
+  padding: 0;
+  margin: 0;
   color: $color-default-white;
   font-family: $ff-rc;
-  position: relative;
   background: #ed0233;
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.promo__text {
   padding-top: 44px;
   padding-bottom: 44px;
-  padding-left: calc((90 / 1200) * 100) + 0%;
-  padding-right: calc((685 / 1200) * 100) + 0%;
+  padding-right: 45px;
+  padding-left: 45px;
 
   @include vp-1199 {
-    padding-left: calc((50 / 768) * 100) + 0%;
-    padding-right: calc((492 / 768) * 100) + 0%;
+    padding-top: 45px;
+    padding-left: 45px;
+    padding-bottom: 45px;
+    padding-right: 45px;
   }
 
   @include vp-767 {
     text-align: center;
     padding-top: 45px;
-    padding-left: calc((50 / 320) * 100) + 0%;
-    padding-right: calc((50 / 320) * 100) + 0%;
+    padding-left: 50px;
+    padding-right: 50px;
     padding-bottom: 45px;
-    margin-bottom: 299px;
   }
 }
 
@@ -145,21 +158,11 @@
 
 .promo img {
   object-fit: cover;
-  width: 52%;
+  width: 100%;
   height: 100%;
-  position: absolute;
-  left: calc((580 / 1200) * 100) + 0%;
-  top: 0;
-
-  @include vp-1199 {
-    left: calc((320 / 768) * 100) + 0%;
-    width: 59%;
-  }
 
   @include vp-767 {
-    left: 0;
-    top: 300px;
-    width: 100%;
+    height: 90vh;
   }
 }
 
@@ -206,7 +209,7 @@
   }
 
   @include vp-767 {
-    padding-top: 36px;
+    padding-top: 31px;
     padding-bottom: 39px;
     padding-right: calc((45 / 320) * 100) + 0%;
     padding-left: calc((45 / 320) * 100) + 0%;
@@ -251,11 +254,13 @@
   margin-top: 71px;
 
   @include vp-1199 {
+    margin: 0;
     padding-top: 46px;
   }
 
   @include vp-767 {
-    padding-top: 29px;
+    margin-top: 0;
+    padding-top: 24px;
   }
 
   @include hover {
@@ -265,7 +270,7 @@
     border-bottom-color: rgb(28, 51, 116, 0.6);
   }
 
-  @mixin focus {
+  &:focus {
     border: 2px solid #1c3374;
   }
 

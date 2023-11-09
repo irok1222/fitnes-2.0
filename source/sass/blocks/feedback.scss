@@ -10,6 +10,11 @@
   position: relative;
 
   @include vp-1199 {
+    width: 768px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
     padding-left: $padding-tbl;
     padding-right: $padding-tbl;
     padding-top: 87px;
@@ -17,6 +22,7 @@
   }
 
   @include vp-767 {
+    width: 100%;
     padding-left: $padding-mbl;
     padding-right: $padding-mbl;
     padding-top: 66px;
@@ -52,7 +58,7 @@
   }
 
   @include vp-767 {
-    width: 226px;
+    width: 77%;
   }
 }
 
@@ -78,7 +84,7 @@
   }
 
   @include vp-767 {
-    padding-top: 53px;
+    padding-top: 48px;
     padding-left: calc((32 / 320) * 100) + 0%;
     padding-right: calc((32 / 320) * 100) + 0%;
     padding-bottom: 36px;
@@ -130,7 +136,7 @@
   line-height: 140%;
 
   @include vp-767 {
-    padding-top: 10px;
+    padding-top: calc((32 / 320) * 100) + 0%;;
     text-align: center;
   }
 }
@@ -141,7 +147,7 @@
   height: 56px;
   border: 1px solid transparent;
   right: calc((287 / 1200) * 100) + 0%;
-  top: 316px;
+  top: calc((640 / 1200) * 100) + 0%;
 
   @include vp-1199 {
     right: 23px;
@@ -199,7 +205,7 @@
   height: 56px;
   border: 1px solid transparent;
   left: calc((287 / 1200) * 100) + 0%;
-  top: 316px;
+  top: calc((640 / 1200) * 100) + 0%;
 
   @include vp-1199 {
     left: 23px;

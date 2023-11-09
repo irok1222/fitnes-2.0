@@ -1,7 +1,7 @@
 .games__wrapper {
   padding-right: $padding-dst;
   padding-left: $padding-dst;
-  padding-top: 123px;
+  padding-top: 121px;
   padding-bottom: 109px;
   position: relative;
   display: flex;
@@ -17,7 +17,7 @@
   @include vp-767 {
     padding-left: $padding-mbl;
     padding-right: $padding-mbl;
-    padding-top: 69px;
+    padding-top: 74px;
     padding-bottom: 51px;
     flex-direction: column;
   }
@@ -47,7 +47,7 @@
 
   @include vp-1199 {
     align-content: center;
-    padding-top: calc((51 / 768) * 100) + 0%;
+    padding-top: calc((58 / 768) * 100) + 0%;
     padding-left: calc((45 / 768) * 100) + 0%;
     padding-bottom: 48px;
     padding-right: calc((50 / 768) * 100) + 0%;
@@ -59,6 +59,11 @@
   }
 }
 
+.games__text {
+  display: grid;
+  grid-template-columns: max-content max-content;
+}
+
 .games__title {
   margin: 0;
   font-family: $ff-as;
@@ -68,37 +73,24 @@
   letter-spacing: 2.46px;
   line-height: 96%;
   text-transform: uppercase;
-  grid-column: 1;
-  grid-row: 1;
   padding-left: 36px;
   padding-bottom: calc((105 / 1200) * 100) + 0%;
 
   @include vp-1199 {
     font-size: 3em;
     letter-spacing: 1.44px;
-    padding-top: calc((13 / 768) * 100) + 0%;
-    padding-left: calc((40 / 768) * 100) + 0%;
-    padding-bottom: calc((27 / 768) * 100) + 0%;
-    padding-right: calc((360 / 768) * 100) + 0%;
+    padding-top: 0;
+    padding-left: 13px;
+  }
+
+  @include vp-767 {
+    padding-top: 4px;
+    padding-left: 10px;
   }
 }
 
-.games__header {
-  padding: 0;
-  margin: 0;
-  font-size: 1.13em;
-  font-style: normal;
-  font-weight: 400;
-  padding-bottom: 43px;
-  padding-left: calc((75 / 1200) * 100) + 0%;
-  grid-column: 1;
-  grid-row: 2;
-
-  @include vp-1199 {
-    font-size: 0.75em;
-    padding-bottom: 24px;
-    padding-left: calc((20 / 768) * 100) + 0%;
-  }
+.games__date {
+  position: relative;
 }
 
 .games__dait {
@@ -108,18 +100,16 @@
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  grid-column: 1;
-  grid-row: 1;
-  padding-left: 274px;
+  padding-left: 61px;
   position: relative;
 
   @include vp-1199 {
-    padding-left: 152px;
+    padding-left: 33px;
     font-size: 0.75em;
   }
 
   @include vp-767 {
-    padding-left: calc((232 / 320) * 100) + 0%;
+    padding-left: 30px;
   }
 }
 
@@ -128,13 +118,13 @@
   position: absolute;
   border: 1px solid $color-default-white;
   width: 3.5em;
-  top: calc((175 / 1200) * 100) + 0%;
-  right: calc((100 / 1200) * 100) + 0%;
+  top: 102%;
+  right: 19%;
 
   @include vp-1199 {
     width: 3.5em;
-    top: calc((140 / 768) * 100) + 0%;
-    right: calc((55 / 768) * 100) + 0%;
+    top: 90%;
+    right: 16%;
   }
 
   @include vp-767 {
@@ -152,19 +142,17 @@
   font-size: 2.5em;
   font-style: normal;
   font-weight: 700;
-  grid-column: 1;
-  grid-row: 1;
-  padding-left: 274px;
-  padding-top: 40px;
+  padding-left: 61px;
+  padding-top: 14px;
 
   @include vp-1199 {
     font-size: 1.5em;
-    padding-top: 24px;
-    padding-left: 152px;
+    padding-top: 5px;
+    padding-left: 33px;
   }
 
   @include vp-767 {
-    padding-left: calc((232 / 320) * 100) + 0%;
+    padding-left: 30px;
   }
 }
 
@@ -174,19 +162,17 @@
   font-size: 0.88em;
   font-style: normal;
   font-weight: 400;
-  grid-column: 1;
-  grid-row: 1;
-  padding-top: 30px;
-  padding-left: 301px;
+  padding-left: 89px;
+  margin-top: -32px;
 
   @include vp-1199 {
     font-size: 0.63em;
-    padding-top: 17px;
-    padding-left: 168px;
+    padding-left: 48px;
+    margin-top: -32px;
   }
 
   @include vp-767 {
-    padding-left: calc((260 / 320) * 100) + 0%;
+    padding-left: 46px;
   }
 }
 
@@ -196,19 +182,17 @@
   font-size: 0.88em;
   font-style: normal;
   font-weight: 400;
-  grid-column: 1;
-  grid-row: 1;
-  padding-top: 49px;
-  padding-left: 300px;
+  padding-left: 87px;
+  margin-top: -6px;
 
   @include vp-1199 {
     font-size: 0.63em;
-    padding-top: 29px;
-    padding-left: 167px;
+    margin-top: -10px;
+    padding-left: 48px;
   }
 
   @include vp-767 {
-    padding-left: calc((260 / 320) * 100) + 0%;
+    padding-left: 46px;
   }
 }
 
@@ -218,20 +202,19 @@
   font-size: 1.13em;
   font-style: normal;
   font-weight: 400;
-  grid-column: 1;
-  grid-row: 1;
-  padding-top: 93px;
-  padding-left: 274px;
+  padding-top: 20px;
+  padding-left: 61px;
   position: relative;
 
   @include vp-1199 {
     font-size: 0.75em;
-    padding-top: 50px;
-    padding-left: 152px;
+    padding-top: 0;
+    padding-left: 33px;
+    margin-top: -4px;
   }
 
   @include vp-767 {
-    padding-left: calc((232 / 320) * 100) + 0%;
+    padding-left: 30px;
   }
 }
 
@@ -240,12 +223,12 @@
   position: absolute;
   border: 1px solid $color-default-white;
   width: 5em;
-  top: calc((770 / 1200) * 100) + 0%;
+  top: 109%;
   right: calc((20 / 1200) * 100) + 0%;
 
   @include vp-1199 {
     width: 4.5em;
-    top: calc((540 / 768) * 100) + 0%;
+    top: 86%;
     right: calc((5 / 768) * 100) + 0%;
   }
 }
@@ -256,19 +239,37 @@
   font-size: 2.5em;
   font-style: normal;
   font-weight: 700;
-  grid-column: 1;
-  grid-row: 1;
-  padding-left: 274px;
-  padding-top: 135px;
+  padding-left: 61px;
+  padding-top: 16px;
 
   @include vp-1199 {
     font-size: 1.5em;
-    padding-top: 75px;
-    padding-left: 152px;
+    padding-top: 0;
+    padding-left: 33px;
   }
 
   @include vp-767 {
-    padding-left: calc((232 / 320) * 100) + 0%;
+    padding-left: 30px;
+  }
+}
+
+.games__header {
+  padding: 0;
+  margin: 0;
+  font-size: 1.13em;
+  font-style: normal;
+  font-weight: 400;
+  padding-bottom: 43px;
+  padding-left: calc((75 / 1200) * 100) + 0%;
+  padding-top: 13px;
+  grid-column: 1;
+  grid-row: 2;
+
+  @include vp-1199 {
+    font-size: 0.75em;
+    padding-top: 0;
+    padding-bottom: 24px;
+    padding-left: calc((20 / 768) * 100) + 0%;
   }
 }
 
@@ -298,5 +299,19 @@
     border: 2px solid $color-default-white;
     letter-spacing: 0;
     margin-left: calc((30 / 768) * 100) + 0%;
+  }
+
+  &:focus {
+    background-color: $color-default-white;
+    color: #ed0233;
+  }
+
+  &:active {
+    background-color: $color-default-white;
+    color: #ed0233;
+  }
+
+  &:disabled {
+    opacity: 0.5;
   }
 }
